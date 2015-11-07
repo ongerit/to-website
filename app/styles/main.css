@@ -3,9 +3,11 @@
   height: 100%;
   width: 100%;
   background: #2a333b;
+  position: absolute;
+  display: block;
 }
-/* line 5, ../scss/main.scss */
-.main-container #splash-background {
+/* line 9, ../scss/main.scss */
+.main-container #splash-back {
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -15,7 +17,7 @@
   position: absolute;
   display: block;
 }
-/* line 15, ../scss/main.scss */
+/* line 20, ../scss/main.scss */
 .main-container .center-content {
   position: relative;
   max-width: 768px;
@@ -26,25 +28,23 @@
   box-sizing: border-box;
   z-index: 10;
 }
-/* line 25, ../scss/main.scss */
-.main-container .center-content header .title {
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-  color: #ffffff;
-}
 /* line 30, ../scss/main.scss */
-.main-container .center-content header .title h1 {
-  font-size: 2.5em;
+.main-container .center-content header h1 {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 4.5em;
   font-weight: 700;
   margin: 10px 0;
+  text-align: center;
+  color: #ffffff;
 }
-/* line 35, ../scss/main.scss */
-.main-container .center-content header .title h2 {
+/* line 38, ../scss/main.scss */
+.main-container .center-content header h2 {
   font-size: 1.4em;
-  font-weight: 200;
   font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  color: #ffffff;
 }
-/* line 41, ../scss/main.scss */
+/* line 44, ../scss/main.scss */
 .main-container .center-content header .social {
   text-align: center;
 }
