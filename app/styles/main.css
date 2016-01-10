@@ -28,25 +28,57 @@
   box-sizing: border-box;
   z-index: 10;
 }
-/* line 30, ../scss/main.scss */
+/* line 29, ../scss/main.scss */
+.main-container .center-content header {
+  margin: 0 auto;
+  background-color: #fff;
+  position: relative;
+  max-width: 100%;
+  width: 400px;
+  padding: 4.5em 3em 3em 3em;
+  background: #ffffff;
+  border-radius: 4px;
+  cursor: default;
+  opacity: 0.95;
+  text-align: center;
+  -moz-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -moz-transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -moz-transition: opacity 1s ease, -moz-transform 1s ease;
+  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+  -ms-transition: opacity 1s ease, -ms-transform 1s ease;
+  transition: opacity 1s ease, transform 1s ease;
+}
+/* line 55, ../scss/main.scss */
 .main-container .center-content header h1 {
+  border-top: 1px solid #ddd;
   font-family: 'Titillium Web', sans-serif;
-  font-size: 4.5em;
+  font-size: 2.5em;
   font-weight: 700;
   margin: 10px 0;
   text-align: center;
-  color: #ffffff;
+  color: #313f47;
 }
-/* line 38, ../scss/main.scss */
+/* line 64, ../scss/main.scss */
 .main-container .center-content header h2 {
   font-size: 1.4em;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
-  color: #ffffff;
+  color: #313f47;
 }
-/* line 44, ../scss/main.scss */
+/* line 70, ../scss/main.scss */
 .main-container .center-content header .social {
+  padding: 4em 0 1em 0;
   text-align: center;
+}
+/* line 74, ../scss/main.scss */
+.main-container .center-content header .social img {
+  border-radius: 100px;
 }
 
 /*
@@ -105,11 +137,9 @@
 
   }
 }
-
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
 */
+/* line 144, ../scss/main.scss */
+.avatar img {
+  width: 33%;
+  border-radius: 777px;
+}
