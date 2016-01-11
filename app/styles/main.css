@@ -56,7 +56,6 @@
 }
 /* line 55, ../scss/main.scss */
 .main-container .center-content header h1 {
-  border-top: 1px solid #ddd;
   font-family: 'Titillium Web', sans-serif;
   font-size: 2.5em;
   font-weight: 700;
@@ -140,6 +139,19 @@
 */
 /* line 144, ../scss/main.scss */
 .avatar img {
-  width: 33%;
+  width: 11em;
+  border: 15px solid white;
   border-radius: 777px;
+}
+/* line 150, ../scss/main.scss */
+.avatar::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 28%;
+  left: 0em;
+  width: calc(100% + 0em);
+  height: 1px;
+  z-index: -1;
+  background: #c8cccf;
 }
