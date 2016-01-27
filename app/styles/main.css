@@ -1,12 +1,16 @@
 /* line 1, ../scss/main.scss */
+body {
+  margin: 0;
+}
+
+/* line 4, ../scss/main.scss */
 .main-container {
-  height: 100%;
   width: 100%;
   background: #2a333b;
   position: absolute;
   display: block;
 }
-/* line 9, ../scss/main.scss */
+/* line 11, ../scss/main.scss */
 .main-container #splash-back {
   background-size: cover;
   -moz-background-size: cover;
@@ -16,11 +20,14 @@
   width: 100%;
   position: absolute;
   display: block;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-/* line 20, ../scss/main.scss */
+/* line 23, ../scss/main.scss */
 .main-container .center-content {
   position: relative;
   max-width: 768px;
+  width: 100%;
   margin: 0 auto;
   padding: 10em 2em 1em;
   -webkit-box-sizing: border-box;
@@ -28,14 +35,15 @@
   box-sizing: border-box;
   z-index: 10;
 }
-/* line 29, ../scss/main.scss */
+/* line 33, ../scss/main.scss */
 .main-container .center-content header {
   margin: 0 auto;
   background-color: #fff;
   position: relative;
-  max-width: 100%;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   padding: 4.5em 3em 3em 3em;
+  box-sizing: border-box;
   background: #ffffff;
   border-radius: 4px;
   cursor: default;
@@ -54,7 +62,7 @@
   -ms-transition: opacity 1s ease, -ms-transform 1s ease;
   transition: opacity 1s ease, transform 1s ease;
 }
-/* line 55, ../scss/main.scss */
+/* line 59, ../scss/main.scss */
 .main-container .center-content header h1 {
   font-family: 'Titillium Web', sans-serif;
   font-size: 2.5em;
@@ -63,87 +71,30 @@
   text-align: center;
   color: #313f47;
 }
-/* line 64, ../scss/main.scss */
+/* line 68, ../scss/main.scss */
 .main-container .center-content header h2 {
   font-size: 1.4em;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
   color: #313f47;
 }
-/* line 70, ../scss/main.scss */
+/* line 74, ../scss/main.scss */
 .main-container .center-content header .social {
   padding: 4em 0 1em 0;
   text-align: center;
 }
-/* line 74, ../scss/main.scss */
+/* line 78, ../scss/main.scss */
 .main-container .center-content header .social img {
   border-radius: 100px;
 }
 
-/*
-
-
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: rgba(58, 59, 54, 0.38);
-  color: #fff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  .bg-image-loader {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0;
-    -webkit-transition: opacity 3s ease;
-    -moz-transition: opacity 3s ease;
-    -o-transition: opacity 3s ease;
-    transition: opacity 3s ease;
-  }
-
-  .center-content{
-    position: relative;
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 10em 2em 1em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    header{
-      .title{
-        text-align: center;
-        font-family: 'Quicksand', sans-serif;
-
-        h1{
-          font-size: 2.5rem;
-          font-weight: 700;
-          margin: 10px 0;
-        }
-        h2{
-          font-size: 1.4rem;
-          font-weight: 200;
-          font-family: 'Quicksand', sans-serif;
-        }
-      }
-    }
-
-  }
-}
-*/
-/* line 144, ../scss/main.scss */
+/* line 87, ../scss/main.scss */
 .avatar img {
   width: 11em;
   border: 15px solid white;
   border-radius: 777px;
 }
-/* line 150, ../scss/main.scss */
+/* line 93, ../scss/main.scss */
 .avatar::before {
   content: '';
   display: block;

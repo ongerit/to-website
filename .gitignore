@@ -6,3 +6,4 @@ app/.sass-cache/
 .sass-cache/
 app/.DS_Store
 .DS_Store
+npm-debug.log
