@@ -9,6 +9,7 @@ body {
   background: #2a333b;
   position: absolute;
   display: block;
+  height: 100%;
 }
 /* line 11, ../scss/main.scss */
 .main-container #splash-back {
@@ -63,6 +64,12 @@ body {
   transition: opacity 1s ease, transform 1s ease;
 }
 /* line 59, ../scss/main.scss */
+.main-container .center-content header .header {
+  -vendor-animation-duration: 10s;
+  -vendor-animation-delay: 10s;
+  -vendor-animation-iteration-count: infinite;
+}
+/* line 65, ../scss/main.scss */
 .main-container .center-content header h1 {
   font-family: 'Titillium Web', sans-serif;
   font-size: 2.5em;
@@ -71,30 +78,30 @@ body {
   text-align: center;
   color: #313f47;
 }
-/* line 68, ../scss/main.scss */
+/* line 74, ../scss/main.scss */
 .main-container .center-content header h2 {
   font-size: 1.4em;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
   color: #313f47;
 }
-/* line 74, ../scss/main.scss */
+/* line 80, ../scss/main.scss */
 .main-container .center-content header .social {
   padding: 4em 0 1em 0;
   text-align: center;
 }
-/* line 78, ../scss/main.scss */
+/* line 83, ../scss/main.scss */
 .main-container .center-content header .social img {
   border-radius: 100px;
 }
 
-/* line 87, ../scss/main.scss */
+/* line 92, ../scss/main.scss */
 .avatar img {
-  width: 11em;
+  width: 50%;
   border: 15px solid white;
   border-radius: 777px;
 }
-/* line 93, ../scss/main.scss */
+/* line 97, ../scss/main.scss */
 .avatar::before {
   content: '';
   display: block;

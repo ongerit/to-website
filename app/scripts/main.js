@@ -9,4 +9,18 @@ $(window).load(function() {
     .hide()
     .fadeIn(5000);
 
+    $('.social img, .avatar img, .title').hide();
+
+    function animateCss() {
+    	$('.header').addClass('animated flipInX')
+    		.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    			$('.social img, .avatar img, .title')
+    				.show()
+    				.addClass('animated bounceIn');
+    		});
+    }
+
+
+    animateCss();
 });
+
