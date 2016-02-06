@@ -19,8 +19,6 @@ $(window).load(function() {
     				.addClass('animated bounceIn');
     		});
     }
-
-
     animateCss();
 });
 
