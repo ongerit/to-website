@@ -20,5 +20,24 @@ $(window).load(function() {
     		});
     }
     animateCss();
+
+    // Vue.js
+
+var vm = new Vue({
+        el: '#app',
+        data: {
+            copyright: ' Thomas Ongeri',
+            year: ''
+        },
+        methods: {
+            getYear: function () {
+                var getYear = new Date;
+                this.$set('year',getFullYear(getYear));
+            }
+        }
+    })
+
+
 });
+
 

@@ -57,8 +57,9 @@
   color: #FFF;
   opacity: 1;
   text-decoration: none;
+  cursor: pointer;
 }
-/* line 52, ../scss/header.scss */
+/* line 53, ../scss/header.scss */
 .og__header__title {
   position: absolute;
   top: 0;
@@ -71,7 +72,7 @@
   text-align: center;
   line-height: 40px;
 }
-/* line 64, ../scss/header.scss */
+/* line 65, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -80,4 +81,36 @@
   margin-top: 27px;
   text-transform: uppercase;
   color: #fff;
+}
+
+/* line 1, ../scss/footer.scss */
+.og__footer {
+  margin: 0;
+  background-color: #FB6964;
+  position: relative;
+  padding: 0 30px;
+}
+
+/* line 1, ../scss/contact.scss */
+.og__contact {
+  margin: 0;
+  background-color: orange;
+  position: relative;
+  padding: 0 30px;
+}
+
+/* line 1, ../scss/profile.scss */
+.og__profile {
+  margin: 0;
+  background-color: white;
+  position: relative;
+  padding: 0 30px;
+}
+
+/* line 1, ../scss/recommendations.scss */
+.og__recommendations {
+  margin: 0;
+  background-color: yellow;
+  position: relative;
+  padding: 0 30px;
 }
