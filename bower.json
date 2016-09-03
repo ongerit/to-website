@@ -3,5 +3,8 @@
   "private": true,
   "dependencies": {
     "jquery": "~2.2.0",
-    "vue": "~1.0.15"  }
+    "vue": "~1.0.15",
+    "gumby": "~2.6.4",
+    "modernizr": "~3.3.1"
+  }
 }

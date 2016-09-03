@@ -1,115 +1,37 @@
-/* line 1, ../scss/main.scss */
-body {
+/* line 1, ../scss/type.scss */
+.heading-1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 5, ../scss/type.scss */
+.body-1 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* line 1, ../scss/header.scss */
+.og__header {
   margin: 0;
+  background-color: #21b57f;
 }
-
-/* line 4, ../scss/main.scss */
-.main-container {
-  width: 100%;
-  background: #2a333b;
-  position: absolute;
-  display: block;
-  height: 100%;
+/* line 9, ../scss/header.scss */
+.og__header__nav-container {
+  display: flex;
+  align-content: flex-end;
 }
-/* line 11, ../scss/main.scss */
-.main-container #splash-back {
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  display: block;
-  background-repeat: no-repeat;
-  background-position: center;
+/* line 14, ../scss/header.scss */
+.og__header__logo {
+  width: 70%;
 }
-/* line 23, ../scss/main.scss */
-.main-container .center-content {
-  position: relative;
-  max-width: 768px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 10em 2em 1em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  z-index: 10;
+/* line 16, ../scss/header.scss */
+.og__header__logo h3 {
+  color: #fff;
 }
-/* line 33, ../scss/main.scss */
-.main-container .center-content header {
-  margin: 0 auto;
-  background-color: #fff;
-  position: relative;
-  max-width: 400px;
-  width: 100%;
-  padding: 4.5em 3em 3em 3em;
-  box-sizing: border-box;
-  background: #ffffff;
-  border-radius: 4px;
-  cursor: default;
-  opacity: 0.95;
-  text-align: center;
-  -moz-transform-origin: 50% 50%;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -moz-transform: rotateX(0deg);
-  -webkit-transform: rotateX(0deg);
-  -ms-transform: rotateX(0deg);
-  transform: rotateX(0deg);
-  -moz-transition: opacity 1s ease, -moz-transform 1s ease;
-  -webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-  -ms-transition: opacity 1s ease, -ms-transform 1s ease;
-  transition: opacity 1s ease, transform 1s ease;
+/* line 21, ../scss/header.scss */
+.og__header__links {
+  width: 30%;
+  color: #fff;
 }
-/* line 59, ../scss/main.scss */
-.main-container .center-content header .header {
-  -vendor-animation-duration: 10s;
-  -vendor-animation-delay: 10s;
-  -vendor-animation-iteration-count: infinite;
-}
-/* line 65, ../scss/main.scss */
-.main-container .center-content header h1 {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 2.5em;
-  font-weight: 700;
-  margin: 10px 0;
-  text-align: center;
-  color: #313f47;
-}
-/* line 74, ../scss/main.scss */
-.main-container .center-content header h2 {
-  font-size: 1.4em;
-  font-family: 'Quicksand', sans-serif;
-  text-align: center;
-  color: #313f47;
-}
-/* line 80, ../scss/main.scss */
-.main-container .center-content header .social {
-  padding: 4em 0 1em 0;
-  text-align: center;
-}
-/* line 83, ../scss/main.scss */
-.main-container .center-content header .social img {
-  border-radius: 100px;
-}
-
-/* line 92, ../scss/main.scss */
-.avatar img {
-  width: 50%;
-  border: 15px solid white;
-  border-radius: 777px;
-}
-/* line 97, ../scss/main.scss */
-.avatar::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 28%;
-  left: 0em;
-  width: calc(100% + 0em);
-  height: 1px;
-  z-index: -1;
-  background: #c8cccf;
+/* line 25, ../scss/header.scss */
+.og__header__links li {
+  display: inline-block;
 }
