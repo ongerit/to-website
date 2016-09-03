@@ -6,9 +6,10 @@ Error: Undefined variable: "$background-color".
 2:   margin: 0;
 3:   background-color: $background-color;
 4:   position: relative;
-5:   padding: 0 30px;
+5:   padding: 50px 30px;;
 6: 
-7: }
+7:   &__copyright {
+8:     color: $white;
 
 Backtrace:
 /Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/footer.scss:3
@@ -65,4 +66,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$background-color\".\A         on line 3 of /Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/footer.scss\A \A 1: .og__footer {\A 2:   margin: 0;\A 3:   background-color: $background-color;\A 4:   position: relative;\A 5:   padding: 0 30px;\A 6: \A 7: }"; }
+  content: "Error: Undefined variable: \"$background-color\".\A         on line 3 of /Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/footer.scss\A \A 1: .og__footer {\A 2:   margin: 0;\A 3:   background-color: $background-color;\A 4:   position: relative;\A 5:   padding: 50px 30px;;\A 6: \A 7:   &__copyright {\A 8:     color: $white;"; }

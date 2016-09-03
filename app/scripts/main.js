@@ -1,5 +1,6 @@
-$(window).load(function() {
 
+// jquery
+$(window).load(function() {
     'use strict';
 
     var url = Math.floor((Math.random() * 33) + 1);
@@ -22,22 +23,26 @@ $(window).load(function() {
     animateCss();
 
     // Vue.js
+    var vm = new Vue({  // jshint ignore:line
 
-var vm = new Vue({
         el: '#app',
         data: {
-            copyright: ' Thomas Ongeri',
-            year: ''
+            year: '',
+            icons: ['fa fa-heart', 'fa fa-heart'],
+            iconCopy: {}
         },
+
+        ready: function() {
+            this.getYear();
+        },
+
         methods: {
             getYear: function () {
-                var getYear = new Date;
-                this.$set('year',getFullYear(getYear));
+                var getYear = new Date();
+                this.$set('year',getYear.getFullYear());
             }
         }
-    })
-
-
+    });
+    console.log(vm);
 });
-
 

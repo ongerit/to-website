@@ -88,7 +88,11 @@
   margin: 0;
   background-color: #FB6964;
   position: relative;
-  padding: 0 30px;
+  padding: 50px 30px;
+}
+/* line 7, ../scss/footer.scss */
+.og__footer__copyright {
+  color: #fff;
 }
 
 /* line 1, ../scss/contact.scss */

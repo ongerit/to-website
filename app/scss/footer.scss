@@ -2,6 +2,10 @@
   margin: 0;
   background-color: $background-color;
   position: relative;
-  padding: 0 30px;
+  padding: 50px 30px;;
+
+  &__copyright {
+    color: $white;
+  }
 
 }

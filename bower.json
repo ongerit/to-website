@@ -5,6 +5,7 @@
     "jquery": "~2.2.0",
     "vue": "~1.0.15",
     "gumby": "~2.6.4",
-    "modernizr": "~3.3.1"
+    "modernizr": "~3.3.1",
+    "font-awesome": "~4.6.3"
   }
 }
