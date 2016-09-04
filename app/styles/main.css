@@ -8,7 +8,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* line 1, ../scss/header.scss */
+/* line 3, ../scss/header.scss */
 .og__header {
   margin: 0;
   background-color: #FB6964;
@@ -16,7 +16,7 @@
   height: 100%;
   padding: 0 30px;
 }
-/* line 8, ../scss/header.scss */
+/* line 10, ../scss/header.scss */
 .og__header__nav-container {
   display: flex;
   align-items: flex-end;
@@ -27,7 +27,7 @@
   z-index: 999;
   background: rgba(255, 255, 255, 0);
 }
-/* line 20, ../scss/header.scss */
+/* line 22, ../scss/header.scss */
 .og__header__logo h3 {
   color: #fff;
   float: left;
@@ -39,12 +39,12 @@
   margin-top: 45px;
   text-transform: uppercase;
 }
-/* line 33, ../scss/header.scss */
+/* line 35, ../scss/header.scss */
 .og__header__links {
   color: #fff;
   margin-left: auto;
 }
-/* line 37, ../scss/header.scss */
+/* line 39, ../scss/header.scss */
 .og__header__links li {
   display: inline-block;
   float: right;
@@ -59,20 +59,17 @@
   text-decoration: none;
   cursor: pointer;
 }
-/* line 53, ../scss/header.scss */
+/* line 55, ../scss/header.scss */
 .og__header__title {
-  position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+  margin: 200px auto;
   width: 100%;
   height: 50px;
   text-align: center;
   line-height: 40px;
 }
-/* line 65, ../scss/header.scss */
+/* line 64, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -82,38 +79,44 @@
   text-transform: uppercase;
   color: #fff;
 }
+/* line 75, ../scss/header.scss */
+.og__header__down {
+  margin: auto;
+  color: #fff;
+  text-align: center;
+}
 
-/* line 1, ../scss/footer.scss */
+/* line 3, ../scss/footer.scss */
 .og__footer {
   margin: 0;
   background-color: #FB6964;
   position: relative;
   padding: 50px 30px;
 }
-/* line 7, ../scss/footer.scss */
+/* line 9, ../scss/footer.scss */
 .og__footer__copyright {
   color: #fff;
 }
 
 /* line 1, ../scss/contact.scss */
 .og__contact {
-  margin: 0;
-  background-color: orange;
+  margin-top: 45px;
+  background-color: #fff;
   position: relative;
   padding: 0 30px;
 }
 
-/* line 1, ../scss/profile.scss */
+/* line 3, ../scss/profile.scss */
 .og__profile {
-  margin: 0;
-  background-color: white;
+  margin-top: 45px;
+  background-color: #fff;
   position: relative;
   padding: 0 30px;
 }
 
 /* line 3, ../scss/recommendations.scss */
 .og__recommendations {
-  margin: 0;
+  margin-top: 45px;
   background-color: #fff;
   position: relative;
   padding: 0 30px;

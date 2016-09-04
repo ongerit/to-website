@@ -1,7 +1,7 @@
-/* line 1, ../scss/profile.scss */
+/* line 3, ../scss/profile.scss */
 .og__profile {
-  margin: 0;
-  background-color: white;
+  margin-top: 45px;
+  background-color: #fff;
   position: relative;
   padding: 0 30px;
 }
