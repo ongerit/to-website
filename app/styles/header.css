@@ -74,4 +74,8 @@
   margin: auto;
   color: #fff;
   text-align: center;
+  display: block;
+  bottom: 0;
+  position: absolute;
+  left: 50%;
 }

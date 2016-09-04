@@ -1,7 +1,7 @@
 @import "colors";
 
 .og__recommendations {
-  margin-top: 45px;
+  margin: 45px 0;
   background-color: $white;
   position: relative;
   padding: 0 30px;
@@ -18,6 +18,20 @@
 
   &__item {
     padding-right: 15px;
+    width: 100%;
+
+    &:hover {
+      .og__recommendations__hover {
+        display: block;
+      }
+
+      .og__recommendations__intro {
+        visibility: hidden;
+        height: 0;
+        opacity: 0;
+        transition: visibility 0s 1s, opacity 1s linear, height 0s 1s,;
+      }
+    }
   }
 
   &__author {
@@ -28,9 +42,19 @@
   &__intro {
     margin: 0 auto;
     text-align: center;
+    cursor: pointer;
 
     .fa {
       font-size: 40px;
     }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__hover {
+    display: none;
   }
 }

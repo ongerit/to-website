@@ -84,6 +84,10 @@
   margin: auto;
   color: #fff;
   text-align: center;
+  display: block;
+  bottom: 0;
+  position: absolute;
+  left: 50%;
 }
 
 /* line 3, ../scss/footer.scss */
@@ -126,7 +130,7 @@
 
 /* line 3, ../scss/recommendations.scss */
 .og__recommendations {
-  margin-top: 45px;
+  margin: 45px 0;
   background-color: #fff;
   position: relative;
   padding: 0 30px;
@@ -144,18 +148,40 @@
 /* line 19, ../scss/recommendations.scss */
 .og__recommendations__item {
   padding-right: 15px;
+  width: 100%;
 }
-/* line 23, ../scss/recommendations.scss */
+/* line 24, ../scss/recommendations.scss */
+.og__recommendations__item:hover .og__recommendations__hover {
+  display: block;
+}
+/* line 28, ../scss/recommendations.scss */
+.og__recommendations__item:hover .og__recommendations__intro {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear, height 0s 1s;
+}
+/* line 38, ../scss/recommendations.scss */
 .og__recommendations__author {
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 28, ../scss/recommendations.scss */
+/* line 43, ../scss/recommendations.scss */
 .og__recommendations__intro {
   margin: 0 auto;
   text-align: center;
+  cursor: pointer;
 }
-/* line 32, ../scss/recommendations.scss */
+/* line 48, ../scss/recommendations.scss */
 .og__recommendations__intro .fa {
   font-size: 40px;
+}
+/* line 53, ../scss/recommendations.scss */
+.og__recommendations__title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 58, ../scss/recommendations.scss */
+.og__recommendations__hover {
+  display: none;
 }
