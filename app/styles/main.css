@@ -111,10 +111,28 @@
   padding: 0 30px;
 }
 
-/* line 1, ../scss/recommendations.scss */
+/* line 3, ../scss/recommendations.scss */
 .og__recommendations {
   margin: 0;
-  background-color: yellow;
+  background-color: #fff;
   position: relative;
   padding: 0 30px;
+}
+/* line 9, ../scss/recommendations.scss */
+.og__recommendations h3 {
+  text-align: center;
+}
+/* line 13, ../scss/recommendations.scss */
+.og__recommendations__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+/* line 18, ../scss/recommendations.scss */
+.og__recommendations__item {
+  padding-right: 15px;
+}
+/* line 22, ../scss/recommendations.scss */
+.og__recommendations__author {
+  text-transform: uppercase;
+  font-weight: bold;
 }

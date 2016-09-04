@@ -1,6 +1,26 @@
+@import "colors";
+
 .og__recommendations {
   margin: 0;
-  background-color: yellow;
+  background-color: $white;
   position: relative;
   padding: 0 30px;
+
+  h3 {
+    text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__item {
+    padding-right: 15px;
+  }
+
+  &__author {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 }

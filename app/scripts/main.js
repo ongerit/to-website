@@ -57,17 +57,16 @@ $(window).load(function() {
                     arr.push(i);
                 }
                 this.$set('favorites',_.sample(arr));  // jshint ignore:line
-                console.log('ran');
+
             },
 
             setTheInterval: function () {
-                setInterval(function() {
-                    vm.getIcon();
-                    $('.fa , .fb').removeClass('animated flipInX fadeIn');
+
+                this.$nextTick(function () {
                     setInterval(function() {
-                        $('.fa , .fb').addClass('animated fadeIn');
-                    },500);
-                }, 2000);
+                        vm.getIcon();
+                    }, 2000);
+                })
             }
         }
     });
