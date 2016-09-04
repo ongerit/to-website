@@ -1,6 +1,13 @@
+@import "colors";
 .og__contact {
   margin-top: 45px;
   background-color: $white;
   position: relative;
   padding: 0 30px;
+
+
+  h3 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }

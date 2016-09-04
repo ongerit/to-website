@@ -98,20 +98,30 @@
   color: #fff;
 }
 
-/* line 1, ../scss/contact.scss */
+/* line 2, ../scss/contact.scss */
 .og__contact {
   margin-top: 45px;
   background-color: #fff;
   position: relative;
   padding: 0 30px;
 }
+/* line 9, ../scss/contact.scss */
+.og__contact h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
 /* line 3, ../scss/profile.scss */
 .og__profile {
-  margin-top: 45px;
-  background-color: #fff;
+  padding-top: 45px;
+  background-color: #f2f2f2;
   position: relative;
   padding: 0 30px;
+}
+/* line 9, ../scss/profile.scss */
+.og__profile h3 {
+  text-align: center;
+  padding-bottom: 30px;
 }
 
 /* line 3, ../scss/recommendations.scss */
@@ -124,18 +134,28 @@
 /* line 9, ../scss/recommendations.scss */
 .og__recommendations h3 {
   text-align: center;
+  margin-bottom: 30px;
 }
-/* line 13, ../scss/recommendations.scss */
+/* line 14, ../scss/recommendations.scss */
 .og__recommendations__wrapper {
   display: flex;
   flex-direction: row;
 }
-/* line 18, ../scss/recommendations.scss */
+/* line 19, ../scss/recommendations.scss */
 .og__recommendations__item {
   padding-right: 15px;
 }
-/* line 22, ../scss/recommendations.scss */
+/* line 23, ../scss/recommendations.scss */
 .og__recommendations__author {
   text-transform: uppercase;
   font-weight: bold;
+}
+/* line 28, ../scss/recommendations.scss */
+.og__recommendations__intro {
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 32, ../scss/recommendations.scss */
+.og__recommendations__intro .fa {
+  font-size: 40px;
 }

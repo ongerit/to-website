@@ -1,7 +1,12 @@
 /* line 3, ../scss/profile.scss */
 .og__profile {
-  margin-top: 45px;
-  background-color: #fff;
+  padding-top: 45px;
+  background-color: #f2f2f2;
   position: relative;
   padding: 0 30px;
+}
+/* line 9, ../scss/profile.scss */
+.og__profile h3 {
+  text-align: center;
+  padding-bottom: 30px;
 }
