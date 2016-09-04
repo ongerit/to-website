@@ -1,4 +1,3 @@
-
 // jquery
 $(window).load(function() {
     'use strict';
@@ -28,18 +27,47 @@ $(window).load(function() {
         el: '#app',
         data: {
             year: '',
-            icons: ['fa fa-heart', 'fa fa-heart'],
-            iconCopy: {}
+            icons: {
+                code: 'fa-heart',
+                git: 'fa-github',
+                snapchat: 'fa-snapchat-ghost',
+                android: 'fa-android'
+            },
+            favorites: ''
         },
 
         ready: function() {
             this.getYear();
+            this.getIcon();
+            this.setTheInterval();
+
         },
 
         methods: {
             getYear: function () {
                 var getYear = new Date();
                 this.$set('year',getYear.getFullYear());
+            },
+
+            getIcon: function () {
+
+                var arr = [];
+
+                for (var i in this.icons) {
+                    arr.push(i);
+                }
+                this.$set('favorites',_.sample(arr));  // jshint ignore:line
+                console.log('ran');
+            },
+
+            setTheInterval: function () {
+                setInterval(function() {
+                    vm.getIcon();
+                    $('.fa , .fb').removeClass('animated flipInX fadeIn');
+                    setInterval(function() {
+                        $('.fa , .fb').addClass('animated fadeIn');
+                    },500);
+                }, 2000);
             }
         }
     });

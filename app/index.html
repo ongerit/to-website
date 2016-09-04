@@ -13,6 +13,8 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/gumby/css/gumby.css" />
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -36,7 +38,7 @@
         </div>
     </div>
     <div class="og__header__title">
-    <h1>I <span class="fa fa-heart"></span>Code</h1>
+    <h1>I <span class="fa" v-bind:class="icons[favorites]"></span><span class="fb"> {{favorites}}</span></h1>
     </div>
 </section>
 
@@ -63,6 +65,7 @@
 
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
 <script src="bower_components/vue/dist/vue.js"></script>
 <!-- endbower -->
 <!-- build:js(.) scripts/plugins.js -->
