@@ -5,15 +5,17 @@
   background-color: $white;
   position: relative;
   padding: 0 30px;
+  height: 206px;
 
   h3 {
     text-align: center;
-    margin-bottom: 30px;
   }
 
   &__wrapper {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    height: 100%;
   }
 
   &__item {
@@ -29,7 +31,7 @@
         visibility: hidden;
         height: 0;
         opacity: 0;
-        transition: visibility 0s 1s, opacity 1s linear, height 0s 1s,;
+        transition: visibility 0s 1s, opacity 1s linear, height 0s 1s;
       }
     }
   }
@@ -56,5 +58,10 @@
 
   &__hover {
     display: none;
+    background: $white;
+    p {
+      text-align: center;
+      font-size: 13px ;
+    }
   }
 }

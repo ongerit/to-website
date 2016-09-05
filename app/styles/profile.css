@@ -1,12 +1,43 @@
 /* line 3, ../scss/profile.scss */
 .og__profile {
-  padding-top: 45px;
   background-color: #f2f2f2;
   position: relative;
-  padding: 0 30px;
+  padding: 40px 30px;
+  display: inline-block;
+  width: 100%;
 }
-/* line 9, ../scss/profile.scss */
+/* line 11, ../scss/profile.scss */
+.og__profile__container {
+  margin: auto;
+  text-align: center;
+}
+/* line 17, ../scss/profile.scss */
+.og__profile__avatar img {
+  height: 100px;
+  border-radius: 100%;
+}
+/* line 23, ../scss/profile.scss */
 .og__profile h3 {
   text-align: center;
   padding-bottom: 30px;
+}
+/* line 28, ../scss/profile.scss */
+.og__profile--center {
+  margin: auto;
+}
+/* line 33, ../scss/profile.scss */
+.og__profile__social a {
+  color: #555;
+  font-size: 23px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  line-height: 0;
+  border-radius: 100%;
+  margin: 0;
+  display: inline-block;
+}
+/* line 43, ../scss/profile.scss */
+.og__profile__social a:hover {
+  color: #fff;
+  background: #FB6964;
 }

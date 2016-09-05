@@ -1,13 +1,52 @@
 @import "colors";
 
 .og__profile {
-  padding-top: 45px;
   background-color: $off-white;
   position: relative;
-  padding: 0 30px;
+  padding: 40px 30px;
+  display: inline-block;
+  width: 100%;
+
+
+  &__container {
+    margin: auto;
+    text-align: center;
+  }
+
+  &__avatar {
+    img {
+      height: 100px;
+      border-radius: 100%;
+    }
+  }
 
   h3 {
     text-align: center;
     padding-bottom: 30px;
   }
+
+  &--center {
+    margin: auto;
+  }
+
+  &__social {
+    a {
+      color: $grey;
+      font-size: 23px;
+      padding: 12px;
+      border: 1px solid $grey2;
+      line-height: 0;
+      border-radius: 100%;
+      margin: 0;
+      display: inline-block;
+
+      &:hover {
+        color: $white;
+        background: $primary;
+
+      }
+    }
+  }
+
+
 }
