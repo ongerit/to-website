@@ -2,6 +2,31 @@
 $(window).load(function() {
     'use strict';
 
+    //Headhesive
+
+    // Options
+    var options = {
+
+        offset: '.og__recommendations', // OR — offset: '.classToActivateAt',
+
+        // Custom classes
+        classes: {
+
+            // Cloned elem class
+            clone: 'banner--clone',
+
+            // Stick class
+            stick: 'banner--stick',
+
+            // Unstick class
+            unstick: 'banner--unstick'
+        }
+    }
+
+// Create a new instance of Headhesive.js and pass in some options
+    var header = new Headhesive('.banner', options );
+
+
     var url = Math.floor((Math.random() * 33) + 1);
     var link = 'images/' + url + '.jpg';
 
@@ -66,7 +91,7 @@ $(window).load(function() {
                     setInterval(function() {
                         vm.getIcon();
                     }, 2000);
-                })
+                });
             }
         }
     });

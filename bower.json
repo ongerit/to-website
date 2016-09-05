@@ -9,12 +9,20 @@
     "modernizr": "~3.3.1",
     "font-awesome": "~4.6.3",
     "components-font-awesome": "~4.6.3",
-    "animate.css": "~3.5.2"
+    "animate.css": "~3.5.2",
+    "waypoints": "~4.0.1",
+    "Headhesive.js": "headhesive#~1.2.4"
   },
   "overrides": {
     "fontawesome": {
       "main": [
         "css/font-awesome.css"
+      ]
+    },
+    "waypoints": {
+      "main": [
+        "lib/shortcuts/sticky.min.js",
+        "lib/noframework.waypoints.js"
       ]
     }
   }

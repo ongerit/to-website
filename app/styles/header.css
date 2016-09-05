@@ -10,16 +10,19 @@
 }
 /* line 12, ../scss/header.scss */
 .og__header__nav-container {
-  display: flex;
-  align-items: flex-end;
   font-family: 'Montserrat', sans-serif;
-  left: 30 px;
-  right: 30px;
   width: 100%;
   z-index: 999;
+  background: #FB6964;
+  display: inline-block;
+  color: #fff;
   position: fixed;
 }
-/* line 24, ../scss/header.scss */
+/* line 21, ../scss/header.scss */
+.og__header__nav-container nav {
+  margin: auto;
+}
+/* line 28, ../scss/header.scss */
 .og__header__logo h3 {
   color: #fff;
   float: left;
@@ -31,12 +34,12 @@
   margin-top: 45px;
   text-transform: uppercase;
 }
-/* line 37, ../scss/header.scss */
+/* line 41, ../scss/header.scss */
 .og__header__links {
-  color: #fff;
+  color: inherit;
   margin-left: auto;
 }
-/* line 41, ../scss/header.scss */
+/* line 46, ../scss/header.scss */
 .og__header__links li {
   display: inline-block;
   float: right;
@@ -46,12 +49,11 @@
   letter-spacing: 1px;
   font-weight: normal;
   text-transform: uppercase;
-  color: #FFF;
   opacity: 1;
   text-decoration: none;
   cursor: pointer;
 }
-/* line 57, ../scss/header.scss */
+/* line 61, ../scss/header.scss */
 .og__header__title {
   text-align: center;
   line-height: 40px;
@@ -64,7 +66,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-/* line 69, ../scss/header.scss */
+/* line 73, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -74,7 +76,7 @@
   text-transform: uppercase;
   color: #fff;
 }
-/* line 80, ../scss/header.scss */
+/* line 84, ../scss/header.scss */
 .og__header__down {
   margin: auto;
   color: #fff;

@@ -25,17 +25,19 @@
 </head>
 <body id="app">
 <section class="og__header">
-    <div class="og__header__nav-container ">
-        <div class="og__header__logo">
-            <h3>Thomas Ongeri</h3>
-        </div>
-        <div class="og__header__links">
-            <ul>
-                <li>contact</li>
-                <li>brands</li>
-                <li>profile</li>
-            </ul>
-        </div>
+    <div class="og__header__nav-container banner">
+        <nav>
+            <div class="og__header__logo">
+                <h3>Thomas Ongeri</h3>
+            </div>
+            <div class="og__header__links">
+                <ul>
+                    <li>contact</li>
+                    <li>brands</li>
+                    <li>profile</li>
+                </ul>
+            </div>
+        </nav>
     </div>
     <div class="og__header__title">
     <h1>I <span class="fa" v-bind:class="icons[favorites]"></span><span class="fb"> {{favorites}}</span></h1>
@@ -112,6 +114,8 @@
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/lodash/lodash.js"></script>
 <script src="bower_components/vue/dist/vue.js"></script>
+<script src="bower_components/waypoints/lib/noframework.waypoints.js"></script>
+<script src="bower_components/Headhesive.js/dist/headhesive.js"></script>
 <!-- endbower -->
 <!-- build:js(.) scripts/plugins.js -->
 <!-- endbuild -->

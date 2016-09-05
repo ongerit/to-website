@@ -10,14 +10,18 @@
   width: 100%;
 
   &__nav-container {
-    display: flex;
-    align-items: flex-end;
     font-family: 'Montserrat', sans-serif;
-    left: 30 px;
-    right: 30px;
     width: 100%;
-    z-index: 999;
+    z-index: 99;
+    background: $primary;
+    display: inline-block;
+    color: $white;
     position: fixed;
+
+    nav {
+      margin: auto;
+    }
+
   }
 
   &__logo {
@@ -35,8 +39,9 @@
   }
 
   &__links {
-    color: $white;
+    color: inherit;
     margin-left: auto;
+
 
     li {
       display: inline-block;
@@ -47,7 +52,6 @@
       letter-spacing: 1px;
       font-weight: normal;
       text-transform: uppercase;
-      color: #FFF;
       opacity: 1;
       text-decoration: none;
       cursor: pointer;
