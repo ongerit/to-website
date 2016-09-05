@@ -27,12 +27,18 @@
   display: inline-block;
   color: #fff;
   position: fixed;
+  left: 0;
 }
-/* line 21, ../scss/header.scss */
+/* line 22, ../scss/header.scss */
 .og__header__nav-container nav {
+  position: relative;
   margin: auto;
+  height: 100%;
+  display: inline-block;
+  width: 100%;
+  padding: 0 30px;
 }
-/* line 28, ../scss/header.scss */
+/* line 35, ../scss/header.scss */
 .og__header__logo h3 {
   color: #fff;
   float: left;
@@ -44,12 +50,14 @@
   margin-top: 45px;
   text-transform: uppercase;
 }
-/* line 41, ../scss/header.scss */
+/* line 47, ../scss/header.scss */
 .og__header__links {
-  color: inherit;
   margin-left: auto;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
 }
-/* line 46, ../scss/header.scss */
+/* line 53, ../scss/header.scss */
 .og__header__links li {
   display: inline-block;
   float: right;
@@ -63,7 +71,7 @@
   text-decoration: none;
   cursor: pointer;
 }
-/* line 61, ../scss/header.scss */
+/* line 68, ../scss/header.scss */
 .og__header__title {
   text-align: center;
   line-height: 40px;
@@ -76,7 +84,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-/* line 73, ../scss/header.scss */
+/* line 80, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -86,7 +94,7 @@
   text-transform: uppercase;
   color: #fff;
 }
-/* line 84, ../scss/header.scss */
+/* line 91, ../scss/header.scss */
 .og__header__down {
   margin: auto;
   color: #fff;
@@ -251,8 +259,6 @@
   /* Required styles */
   position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
   /* Additional styles */
   background: #fff;
   /* Translate -100% to move off screen */
@@ -264,7 +270,7 @@
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
-/* line 28, ../scss/headhesive.scss */
+/* line 26, ../scss/headhesive.scss */
 .banner--clone h3,
 .banner--clone .og__header__links {
   color: #555;
@@ -281,7 +287,7 @@
  *   }
  * }
  */
-/* line 59, ../scss/headhesive.scss */
+/* line 57, ../scss/headhesive.scss */
 .banner--stick {
   /* Translate back to 0%; */
   -webkit-transform: translateY(0%);
@@ -301,7 +307,7 @@
  *   }
  * }
  */
-/* line 81, ../scss/headhesive.scss */
+/* line 79, ../scss/headhesive.scss */
 .banner--unstick {
   /* Not required to use, but could be useful to have */
 }

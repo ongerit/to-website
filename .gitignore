@@ -9,3 +9,5 @@ app/.DS_Store
 npm-debug.log
 .sass-cache/
 .sass-cache/1e7b09985b92de977e9b1f4f00db8b375d4047dd .sass-cache/2e2383719ab9f04c14e95aeb6ad5083c5ca6b2b4 .sass-cache/31187202757b8f99af9ccdae25fcc5a455050bba .sass-cache/b87baa09219bb6aac0e04215c03efdd553c23ec2
+.rocketeer/
+.idea/workspace.xml

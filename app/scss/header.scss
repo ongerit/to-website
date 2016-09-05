@@ -17,9 +17,16 @@
     display: inline-block;
     color: $white;
     position: fixed;
+    left: 0;
 
     nav {
+      position: relative;
       margin: auto;
+      height: 100%;
+      display: inline-block;
+      width: 100%;
+      padding: 0 30px;
+
     }
 
   }
@@ -37,11 +44,11 @@
       text-transform: uppercase;
     }
   }
-
   &__links {
-    color: inherit;
     margin-left: auto;
-
+    position: absolute;
+    bottom: 10px;
+    right: 0;
 
     li {
       display: inline-block;

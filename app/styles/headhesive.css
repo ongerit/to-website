@@ -17,8 +17,6 @@
   /* Required styles */
   position: fixed;
   z-index: 1;
-  top: 0;
-  left: 0;
   /* Additional styles */
   background: #fff;
   /* Translate -100% to move off screen */
@@ -30,7 +28,7 @@
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
-/* line 28, ../scss/headhesive.scss */
+/* line 26, ../scss/headhesive.scss */
 .banner--clone h3,
 .banner--clone .og__header__links {
   color: #555;
@@ -47,7 +45,7 @@
  *   }
  * }
  */
-/* line 59, ../scss/headhesive.scss */
+/* line 57, ../scss/headhesive.scss */
 .banner--stick {
   /* Translate back to 0%; */
   -webkit-transform: translateY(0%);
@@ -67,7 +65,7 @@
  *   }
  * }
  */
-/* line 81, ../scss/headhesive.scss */
+/* line 79, ../scss/headhesive.scss */
 .banner--unstick {
   /* Not required to use, but could be useful to have */
 }

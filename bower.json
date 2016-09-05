@@ -18,12 +18,6 @@
       "main": [
         "css/font-awesome.css"
       ]
-    },
-    "waypoints": {
-      "main": [
-        "lib/shortcuts/sticky.min.js",
-        "lib/noframework.waypoints.js"
-      ]
     }
   }
 }
