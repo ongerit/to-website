@@ -30,7 +30,8 @@
 }
 /* line 26, ../scss/headhesive.scss */
 .banner--clone h3,
-.banner--clone .og__header__links {
+.banner--clone .og__header__links,
+.banner--clone a {
   color: #555;
 }
 
@@ -45,7 +46,7 @@
  *   }
  * }
  */
-/* line 57, ../scss/headhesive.scss */
+/* line 58, ../scss/headhesive.scss */
 .banner--stick {
   /* Translate back to 0%; */
   -webkit-transform: translateY(0%);
@@ -65,7 +66,7 @@
  *   }
  * }
  */
-/* line 79, ../scss/headhesive.scss */
+/* line 80, ../scss/headhesive.scss */
 .banner--unstick {
   /* Not required to use, but could be useful to have */
 }

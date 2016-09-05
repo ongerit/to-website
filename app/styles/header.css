@@ -48,6 +48,10 @@
   right: 0;
 }
 /* line 53, ../scss/header.scss */
+.og__header__links a {
+  color: #fff;
+}
+/* line 57, ../scss/header.scss */
 .og__header__links li {
   display: inline-block;
   float: right;
@@ -61,7 +65,7 @@
   text-decoration: none;
   cursor: pointer;
 }
-/* line 68, ../scss/header.scss */
+/* line 72, ../scss/header.scss */
 .og__header__title {
   text-align: center;
   line-height: 40px;
@@ -74,7 +78,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-/* line 80, ../scss/header.scss */
+/* line 84, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -84,7 +88,7 @@
   text-transform: uppercase;
   color: #fff;
 }
-/* line 91, ../scss/header.scss */
+/* line 95, ../scss/header.scss */
 .og__header__down {
   margin: auto;
   color: #fff;

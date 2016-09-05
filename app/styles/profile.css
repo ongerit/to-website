@@ -28,15 +28,23 @@
 /* line 33, ../scss/profile.scss */
 .og__profile__social a {
   color: #555;
-  font-size: 23px;
-  padding: 12px;
   border: 1px solid #ddd;
   line-height: 0;
   border-radius: 100%;
   margin: 0;
   display: inline-block;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 30px;
+  font-size: 16px;
+  padding: 10px;
+  width: 40px;
 }
-/* line 43, ../scss/profile.scss */
+/* line 47, ../scss/profile.scss */
+.og__profile__social a i {
+  margin: 0;
+}
+/* line 51, ../scss/profile.scss */
 .og__profile__social a:hover {
   color: #fff;
   background: #FB6964;

@@ -58,6 +58,10 @@
   right: 0;
 }
 /* line 53, ../scss/header.scss */
+.og__header__links a {
+  color: #fff;
+}
+/* line 57, ../scss/header.scss */
 .og__header__links li {
   display: inline-block;
   float: right;
@@ -71,7 +75,7 @@
   text-decoration: none;
   cursor: pointer;
 }
-/* line 68, ../scss/header.scss */
+/* line 72, ../scss/header.scss */
 .og__header__title {
   text-align: center;
   line-height: 40px;
@@ -84,7 +88,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-/* line 80, ../scss/header.scss */
+/* line 84, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -94,7 +98,7 @@
   text-transform: uppercase;
   color: #fff;
 }
-/* line 91, ../scss/header.scss */
+/* line 95, ../scss/header.scss */
 .og__header__down {
   margin: auto;
   color: #fff;
@@ -160,15 +164,23 @@
 /* line 33, ../scss/profile.scss */
 .og__profile__social a {
   color: #555;
-  font-size: 23px;
-  padding: 12px;
   border: 1px solid #ddd;
   line-height: 0;
   border-radius: 100%;
   margin: 0;
   display: inline-block;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 30px;
+  font-size: 16px;
+  padding: 10px;
+  width: 40px;
 }
-/* line 43, ../scss/profile.scss */
+/* line 47, ../scss/profile.scss */
+.og__profile__social a i {
+  margin: 0;
+}
+/* line 51, ../scss/profile.scss */
 .og__profile__social a:hover {
   color: #fff;
   background: #FB6964;
@@ -272,7 +284,8 @@
 }
 /* line 26, ../scss/headhesive.scss */
 .banner--clone h3,
-.banner--clone .og__header__links {
+.banner--clone .og__header__links,
+.banner--clone a {
   color: #555;
 }
 
@@ -287,7 +300,7 @@
  *   }
  * }
  */
-/* line 57, ../scss/headhesive.scss */
+/* line 58, ../scss/headhesive.scss */
 .banner--stick {
   /* Translate back to 0%; */
   -webkit-transform: translateY(0%);
@@ -307,7 +320,7 @@
  *   }
  * }
  */
-/* line 79, ../scss/headhesive.scss */
+/* line 80, ../scss/headhesive.scss */
 .banner--unstick {
   /* Not required to use, but could be useful to have */
 }

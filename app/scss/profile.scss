@@ -32,13 +32,21 @@
   &__social {
     a {
       color: $grey;
-      font-size: 23px;
-      padding: 12px;
       border: 1px solid $grey2;
       line-height: 0;
       border-radius: 100%;
       margin: 0;
       display: inline-block;
+      margin-right: 8px;
+      margin-left: 8px;
+      margin-top: 30px;
+      font-size: 16px;
+      padding: 10px;
+      width: 40px;
+
+      i {
+        margin: 0;
+      }
 
       &:hover {
         color: $white;
