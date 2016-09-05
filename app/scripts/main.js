@@ -1,6 +1,34 @@
 // jquery
 $(window).load(function() {
     'use strict';
+    //Scroll to hash
+
+    // Add smooth scrolling to all links
+    $('a').on('click', function(event) {
+
+        //set hash
+        var hash = window.location.hash;
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (hash !== '') {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+             hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html,body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+
+        } // End if
+    });
 
     //Headhesive
 
@@ -21,10 +49,10 @@ $(window).load(function() {
             // Unstick class
             unstick: 'banner--unstick'
         }
-    }
+    };
 
 // Create a new instance of Headhesive.js and pass in some options
-    var header = new Headhesive('.banner', options );
+    var header = new Headhesive('.banner', options );  // jshint ignore:line
 
 
     var url = Math.floor((Math.random() * 33) + 1);
@@ -95,6 +123,11 @@ $(window).load(function() {
             }
         }
     });
-    console.log(vm);
+
+    //Scroll reaveal
+
+    window.sr = ScrollReveal().reveal('section, .og__recommendations__item,  .og__profile ,.og__contact ');  // jshint ignore:line
+
+
 });
 
