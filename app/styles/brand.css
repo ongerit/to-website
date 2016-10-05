@@ -1,7 +1,6 @@
 /*
 Error: Invalid CSS after "      direction:": expected expression (e.g. 1px, bold), was "}"
         on line 51 of /Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/brand.scss
-        from line 6 of /Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/main.scss
 
 46:   @include when-wider-than(large_desktop) {
 47: 
@@ -14,7 +13,6 @@ Error: Invalid CSS after "      direction:": expected expression (e.g. 1px, bold
 
 Backtrace:
 /Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/brand.scss:51
-/Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/main.scss:6
 /usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:1162:in `expected'
 /usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/script/lexer.rb:221:in `expected!'
 /usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/script/parser.rb:573:in `assert_expr'
@@ -45,31 +43,6 @@ Backtrace:
 /usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:117:in `stylesheet'
 /usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:42:in `parse'
 /usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/engine.rb:403:in `_to_tree'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/engine.rb:309:in `to_tree'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/stack.rb:88:in `block in with_import'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/stack.rb:88:in `with_import'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `block in with_base'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `with_base'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `map'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/root_node.rb:36:in `css_tree'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/root_node.rb:20:in `render'
 /usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/engine.rb:278:in `render'
 /usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
 /usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
@@ -90,4 +63,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"      direction:\": expected expression (e.g. 1px, bold), was \"}\"\A         on line 51 of /Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/brand.scss\A         from line 6 of /Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/main.scss\A \A 46:   @include when-wider-than(large_desktop) {\A 47: \A 48:     &__container {\A 49:       display: flex;\A 50:       direction:\A 51:     }\A 52:   }\A 53: }"; }
+  content: "Error: Invalid CSS after \"      direction:\": expected expression (e.g. 1px, bold), was \"}\"\A         on line 51 of /Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/brand.scss\A \A 46:   @include when-wider-than(large_desktop) {\A 47: \A 48:     &__container {\A 49:       display: flex;\A 50:       direction:\A 51:     }\A 52:   }\A 53: }"; }
