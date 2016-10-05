@@ -14,4 +14,34 @@
   p {
     text-align: center;
   }
+
+  &__social {
+    margin: 0 auto;
+    padding-bottom: 30px;
+    text-align: center;
+    a {
+      color: $grey;
+      border: 1px solid $grey2;
+      line-height: 0;
+      border-radius: 100%;
+      margin: 0;
+      display: inline-block;
+      margin-right: 8px;
+      margin-left: 8px;
+      margin-top: 30px;
+      font-size: 16px;
+      padding: 10px;
+      width: 40px;
+
+      i {
+        margin: 0;
+      }
+
+      &:hover {
+        color: $white;
+        background: $primary;
+
+      }
+    }
+  }
 }

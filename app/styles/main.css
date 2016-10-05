@@ -1,93 +1,396 @@
-/*
-Error: Invalid CSS after "      direction:": expected expression (e.g. 1px, bold), was "}"
-        on line 51 of /Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/brand.scss
-        from line 6 of /Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/main.scss
+/* line 1, ../scss/type.scss */
+.heading-1 {
+  font-family: 'Montserrat', sans-serif;
+}
 
-46:   @include when-wider-than(large_desktop) {
-47: 
-48:     &__container {
-49:       display: flex;
-50:       direction:
-51:     }
-52:   }
-53: }
+/* line 5, ../scss/type.scss */
+.body-1 {
+  font-family: 'Montserrat', sans-serif;
+}
 
-Backtrace:
-/Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/brand.scss:51
-/Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/main.scss:6
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:1162:in `expected'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/script/lexer.rb:221:in `expected!'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/script/parser.rb:573:in `assert_expr'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/script/parser.rb:62:in `parse'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:1024:in `sass_script'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:877:in `value!'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:750:in `block in try_declaration'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:1138:in `call'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:1138:in `rethrow'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:763:in `try_declaration'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:693:in `declaration_or_ruleset'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:658:in `block_child'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:650:in `block_contents'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:639:in `block'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:708:in `declaration_or_ruleset'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:658:in `block_child'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:647:in `block_contents'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:639:in `block'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:242:in `include_directive'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:219:in `special_directive'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:194:in `directive'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:658:in `block_child'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:650:in `block_contents'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:639:in `block'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:632:in `ruleset'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:657:in `block_child'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:650:in `block_contents'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:117:in `stylesheet'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/scss/parser.rb:42:in `parse'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/engine.rb:403:in `_to_tree'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/engine.rb:309:in `to_tree'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/stack.rb:88:in `block in with_import'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/stack.rb:88:in `with_import'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `block in with_base'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/stack.rb:115:in `with_frame'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/stack.rb:79:in `with_base'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `map'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/root_node.rb:36:in `css_tree'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/tree/root_node.rb:20:in `render'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/engine.rb:278:in `render'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:209:in `each'
-/usr/local/lib/ruby/gems/2.1.0/gems/sass-3.4.16/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/local/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
-/usr/local/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
-/usr/local/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-/usr/local/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-/usr/local/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/usr/local/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/usr/local/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-/usr/local/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `call'
-/usr/local/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-/usr/local/bin/compass:23:in `load'
-/usr/local/bin/compass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"      direction:\": expected expression (e.g. 1px, bold), was \"}\"\A         on line 51 of /Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/brand.scss\A         from line 6 of /Users/tongeri/Dropbox/Personal/thomasongeri.com/app/scss/main.scss\A \A 46:   @include when-wider-than(large_desktop) {\A 47: \A 48:     &__container {\A 49:       display: flex;\A 50:       direction:\A 51:     }\A 52:   }\A 53: }"; }
+/* line 3, ../scss/header.scss */
+.og__header {
+  margin: 0;
+  background-color: #FB6964;
+  position: relative;
+  height: 100%;
+  padding: 0 30px;
+  display: inline-block;
+  width: 100%;
+}
+/* line 12, ../scss/header.scss */
+.og__header__nav-container {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  z-index: 99;
+  background: #FB6964;
+  display: inline-block;
+  color: #fff;
+  position: fixed;
+  left: 0;
+}
+/* line 22, ../scss/header.scss */
+.og__header__nav-container nav {
+  position: relative;
+  margin: auto;
+  height: 100%;
+  display: inline-block;
+  width: 100%;
+  padding: 0 30px;
+}
+/* line 35, ../scss/header.scss */
+.og__header__logo h3 {
+  color: #fff;
+  float: left;
+  z-index: 99999;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 5px;
+  margin-top: 45px;
+  text-transform: uppercase;
+}
+/* line 47, ../scss/header.scss */
+.og__header__links {
+  margin-left: auto;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+/* line 53, ../scss/header.scss */
+.og__header__links a {
+  color: #fff;
+}
+/* line 57, ../scss/header.scss */
+.og__header__links li {
+  display: inline-block;
+  position: relative;
+  padding: 20px 15px 0;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: normal;
+  text-transform: uppercase;
+  opacity: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 71, ../scss/header.scss */
+.og__header__title {
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  display: block;
+  top: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 83, ../scss/header.scss */
+.og__header__title h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-top: 27px;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* line 94, ../scss/header.scss */
+.og__header__down {
+  margin: auto;
+  color: #fff;
+  text-align: center;
+  display: block;
+  bottom: 0;
+  position: absolute;
+  left: 50%;
+}
+
+/* line 3, ../scss/footer.scss */
+.og__footer {
+  margin: 0;
+  background-color: #FB6964;
+  position: relative;
+  padding: 50px 30px;
+}
+/* line 9, ../scss/footer.scss */
+.og__footer__copyright {
+  color: #fff;
+}
+
+/* line 2, ../scss/contact.scss */
+.og__contact {
+  margin-top: 45px;
+  background-color: #fff;
+  position: relative;
+  padding: 0 30px;
+}
+/* line 9, ../scss/contact.scss */
+.og__contact h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* line 14, ../scss/contact.scss */
+.og__contact p {
+  text-align: center;
+}
+/* line 18, ../scss/contact.scss */
+.og__contact__social {
+  margin: 0 auto;
+  padding-bottom: 30px;
+  text-align: center;
+}
+/* line 22, ../scss/contact.scss */
+.og__contact__social a {
+  color: #555;
+  border: 1px solid #ddd;
+  line-height: 0;
+  border-radius: 100%;
+  margin: 0;
+  display: inline-block;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 30px;
+  font-size: 16px;
+  padding: 10px;
+  width: 40px;
+}
+/* line 36, ../scss/contact.scss */
+.og__contact__social a i {
+  margin: 0;
+}
+/* line 40, ../scss/contact.scss */
+.og__contact__social a:hover {
+  color: #fff;
+  background: #FB6964;
+}
+
+/* line 4, ../scss/brand.scss */
+.og__brand {
+  margin: 0;
+  background-color: #f2f2f2;
+  position: relative;
+  padding: 50px 30px;
+}
+/* line 10, ../scss/brand.scss */
+.og__brand__container {
+  display: flex;
+  padding: 30px 0;
+  flex-direction: column;
+}
+/* line 16, ../scss/brand.scss */
+.og__brand__item {
+  padding: 0 30px;
+}
+/* line 19, ../scss/brand.scss */
+.og__brand__item img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+/* line 26, ../scss/brand.scss */
+.og__brand__item img:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+/* line 36, ../scss/brand.scss */
+.og__brand h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+/* line 41, ../scss/brand.scss */
+.og__brand p {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  /* line 47, ../scss/brand.scss */
+  .og__brand__container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+/* line 3, ../scss/profile.scss */
+.og__profile {
+  background-color: #f2f2f2;
+  position: relative;
+  padding: 40px 30px;
+  display: inline-block;
+  width: 100%;
+}
+/* line 11, ../scss/profile.scss */
+.og__profile__container {
+  margin: auto;
+  text-align: center;
+}
+/* line 17, ../scss/profile.scss */
+.og__profile__avatar img {
+  height: 100px;
+  border-radius: 100%;
+}
+/* line 23, ../scss/profile.scss */
+.og__profile h3 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+/* line 28, ../scss/profile.scss */
+.og__profile p {
+  text-align: center;
+}
+/* line 32, ../scss/profile.scss */
+.og__profile--center {
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  /* line 37, ../scss/profile.scss */
+  .og__profile__desc {
+    padding: 0 80px;
+  }
+}
+
+/* line 3, ../scss/recommendations.scss */
+.og__recommendations {
+  margin: 45px 0;
+  background-color: #fff;
+  position: relative;
+  padding: 0 30px;
+  height: 206px;
+}
+/* line 10, ../scss/recommendations.scss */
+.og__recommendations h3 {
+  text-align: center;
+}
+/* line 14, ../scss/recommendations.scss */
+.og__recommendations__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+/* line 21, ../scss/recommendations.scss */
+.og__recommendations__item {
+  padding-right: 15px;
+  width: 100%;
+}
+/* line 26, ../scss/recommendations.scss */
+.og__recommendations__item:hover .og__recommendations__hover {
+  display: block;
+}
+/* line 30, ../scss/recommendations.scss */
+.og__recommendations__item:hover .og__recommendations__intro {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear, height 0s 1s;
+}
+/* line 39, ../scss/recommendations.scss */
+.og__recommendations__author {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 44, ../scss/recommendations.scss */
+.og__recommendations__intro {
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+}
+/* line 49, ../scss/recommendations.scss */
+.og__recommendations__intro .fa {
+  font-size: 40px;
+}
+/* line 54, ../scss/recommendations.scss */
+.og__recommendations__title {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 59, ../scss/recommendations.scss */
+.og__recommendations__hover {
+  display: none;
+  background: #fff;
+}
+/* line 62, ../scss/recommendations.scss */
+.og__recommendations__hover p {
+  text-align: center;
+  font-size: 13px;
+}
+
+/*----------------------------------------------------------------------------*\
+  Headhesive Specific Styles
+/*----------------------------------------------------------------------------*/
+/**
+ * Headhesive element clone
+ * > `clone` class for the cloned element:
+ *
+ * @example
+ * var options = {
+ *   classes {
+ *     clone: 'banner--clone';
+ *   }
+ * }
+ */
+/* line 18, ../scss/headhesive.scss */
+.banner--clone {
+  /* Required styles */
+  position: fixed;
+  z-index: 1;
+  /* Additional styles */
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
+  /* Translate -100% to move off screen */
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  /* Animations */
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+/* line 27, ../scss/headhesive.scss */
+.banner--clone h3,
+.banner--clone .og__header__links,
+.banner--clone a {
+  color: #555;
+}
+
+/**
+ * Headhesive stick
+ * > `stick` class for the cloned element:
+ *
+ * @example
+ * var options = {
+ *   classes {
+ *     stick: 'banner--stick';
+ *   }
+ * }
+ */
+/* line 59, ../scss/headhesive.scss */
+.banner--stick {
+  /* Translate back to 0%; */
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  z-index: 999;
+}
+
+/**
+ * Headhesive unstick
+ * > `unstick` class for the cloned element:
+ *
+ * @example
+ * var options = {
+ *   classes {
+ *     unstick: 'banner--unstick';
+ *   }
+ * }
+ */
+/* line 81, ../scss/headhesive.scss */
+.banner--unstick {
+  /* Not required to use, but could be useful to have */
+}

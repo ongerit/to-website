@@ -1,7 +1,6 @@
 @import "colors";
 @import "when-than";
 
-
 .og__brand {
   margin: 0;
   background-color: $off-white;
@@ -43,11 +42,11 @@
     text-align: center;
   }
 
-  @include when-wider-than(large_desktop) {
+  @include when-wider-than(tablet) {
 
     &__container {
       display: flex;
-      direction:
+      flex-direction: row;
     }
   }
 }

@@ -54,7 +54,6 @@
 /* line 57, ../scss/header.scss */
 .og__header__links li {
   display: inline-block;
-  float: right;
   position: relative;
   padding: 20px 15px 0;
   font-size: 11px;
@@ -65,7 +64,7 @@
   text-decoration: none;
   cursor: pointer;
 }
-/* line 72, ../scss/header.scss */
+/* line 71, ../scss/header.scss */
 .og__header__title {
   text-align: center;
   line-height: 40px;
@@ -78,7 +77,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-/* line 84, ../scss/header.scss */
+/* line 83, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -88,7 +87,7 @@
   text-transform: uppercase;
   color: #fff;
 }
-/* line 95, ../scss/header.scss */
+/* line 94, ../scss/header.scss */
 .og__header__down {
   margin: auto;
   color: #fff;
