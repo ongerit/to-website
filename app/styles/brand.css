@@ -13,9 +13,10 @@
 }
 /* line 16, ../scss/brand.scss */
 .og__brand__item {
-  padding: 0 30px;
+  padding: 0 70px;
+  margin: 0 auto;
 }
-/* line 19, ../scss/brand.scss */
+/* line 20, ../scss/brand.scss */
 .og__brand__item img {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -23,7 +24,7 @@
   -ms-filter: grayscale(100%);
   filter: grayscale(100%);
 }
-/* line 26, ../scss/brand.scss */
+/* line 27, ../scss/brand.scss */
 .og__brand__item img:hover {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -31,19 +32,23 @@
   -ms-filter: grayscale(0%);
   filter: grayscale(0%);
 }
-/* line 36, ../scss/brand.scss */
+/* line 37, ../scss/brand.scss */
 .og__brand h3 {
   text-align: center;
   margin-bottom: 30px;
 }
-/* line 41, ../scss/brand.scss */
+/* line 42, ../scss/brand.scss */
 .og__brand p {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 47, ../scss/brand.scss */
+  /* line 48, ../scss/brand.scss */
   .og__brand__container {
     display: flex;
     flex-direction: row;
+  }
+  /* line 53, ../scss/brand.scss */
+  .og__brand__item {
+    padding: 0 30px;
   }
 }

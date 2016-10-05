@@ -41,14 +41,14 @@
 /* line 35, ../scss/header.scss */
 .og__header__logo h3 {
   color: #fff;
-  float: left;
   z-index: 99999;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 25px;
   letter-spacing: 5px;
-  margin-top: 45px;
   text-transform: uppercase;
+  margin-top: 10px;
+  text-align: center;
 }
 /* line 47, ../scss/header.scss */
 .og__header__links {
@@ -56,12 +56,13 @@
   position: absolute;
   bottom: 10px;
   right: 0;
+  display: none;
 }
-/* line 53, ../scss/header.scss */
+/* line 54, ../scss/header.scss */
 .og__header__links a {
   color: #fff;
 }
-/* line 57, ../scss/header.scss */
+/* line 58, ../scss/header.scss */
 .og__header__links li {
   display: inline-block;
   position: relative;
@@ -74,7 +75,7 @@
   text-decoration: none;
   cursor: pointer;
 }
-/* line 71, ../scss/header.scss */
+/* line 72, ../scss/header.scss */
 .og__header__title {
   text-align: center;
   line-height: 40px;
@@ -87,7 +88,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-/* line 83, ../scss/header.scss */
+/* line 84, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -97,7 +98,7 @@
   text-transform: uppercase;
   color: #fff;
 }
-/* line 94, ../scss/header.scss */
+/* line 95, ../scss/header.scss */
 .og__header__down {
   margin: auto;
   color: #fff;
@@ -106,6 +107,18 @@
   bottom: 0;
   position: absolute;
   left: 50%;
+}
+@media screen and (min-width: 768px) {
+  /* line 106, ../scss/header.scss */
+  .og__header__links {
+    display: inline-block;
+  }
+  /* line 111, ../scss/header.scss */
+  .og__header__logo h3 {
+    margin-top: 20px;
+    text-align: left;
+    float: left;
+  }
 }
 
 /* line 3, ../scss/footer.scss */
@@ -182,9 +195,10 @@
 }
 /* line 16, ../scss/brand.scss */
 .og__brand__item {
-  padding: 0 30px;
+  padding: 0 70px;
+  margin: 0 auto;
 }
-/* line 19, ../scss/brand.scss */
+/* line 20, ../scss/brand.scss */
 .og__brand__item img {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -192,7 +206,7 @@
   -ms-filter: grayscale(100%);
   filter: grayscale(100%);
 }
-/* line 26, ../scss/brand.scss */
+/* line 27, ../scss/brand.scss */
 .og__brand__item img:hover {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -200,20 +214,24 @@
   -ms-filter: grayscale(0%);
   filter: grayscale(0%);
 }
-/* line 36, ../scss/brand.scss */
+/* line 37, ../scss/brand.scss */
 .og__brand h3 {
   text-align: center;
   margin-bottom: 30px;
 }
-/* line 41, ../scss/brand.scss */
+/* line 42, ../scss/brand.scss */
 .og__brand p {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 47, ../scss/brand.scss */
+  /* line 48, ../scss/brand.scss */
   .og__brand__container {
     display: flex;
     flex-direction: row;
+  }
+  /* line 53, ../scss/brand.scss */
+  .og__brand__item {
+    padding: 0 30px;
   }
 }
 
@@ -255,70 +273,82 @@
   }
 }
 
-/* line 3, ../scss/recommendations.scss */
+/* line 5, ../scss/recommendations.scss */
 .og__recommendations {
   margin: 45px 0;
   background-color: #fff;
   position: relative;
   padding: 0 30px;
-  height: 206px;
 }
-/* line 10, ../scss/recommendations.scss */
+/* line 11, ../scss/recommendations.scss */
 .og__recommendations h3 {
   text-align: center;
 }
-/* line 14, ../scss/recommendations.scss */
+/* line 15, ../scss/recommendations.scss */
 .og__recommendations__wrapper {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
 }
-/* line 21, ../scss/recommendations.scss */
+/* line 23, ../scss/recommendations.scss */
 .og__recommendations__item {
   padding-right: 15px;
   width: 100%;
+  text-align: center;
 }
-/* line 26, ../scss/recommendations.scss */
+/* line 29, ../scss/recommendations.scss */
 .og__recommendations__item:hover .og__recommendations__hover {
   display: block;
 }
-/* line 30, ../scss/recommendations.scss */
+/* line 33, ../scss/recommendations.scss */
 .og__recommendations__item:hover .og__recommendations__intro {
   visibility: hidden;
   height: 0;
   opacity: 0;
   transition: visibility 0s 1s, opacity 1s linear, height 0s 1s;
 }
-/* line 39, ../scss/recommendations.scss */
+/* line 42, ../scss/recommendations.scss */
 .og__recommendations__author {
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 44, ../scss/recommendations.scss */
+/* line 47, ../scss/recommendations.scss */
 .og__recommendations__intro {
   margin: 0 auto;
   text-align: center;
   cursor: pointer;
 }
-/* line 49, ../scss/recommendations.scss */
+/* line 52, ../scss/recommendations.scss */
 .og__recommendations__intro .fa {
   font-size: 40px;
 }
-/* line 54, ../scss/recommendations.scss */
+/* line 57, ../scss/recommendations.scss */
 .og__recommendations__title {
   text-transform: uppercase;
   font-weight: bold;
+  text-align: center;
 }
-/* line 59, ../scss/recommendations.scss */
+/* line 63, ../scss/recommendations.scss */
 .og__recommendations__hover {
   display: none;
   background: #fff;
 }
-/* line 62, ../scss/recommendations.scss */
+/* line 66, ../scss/recommendations.scss */
 .og__recommendations__hover p {
   text-align: center;
   font-size: 13px;
+}
+@media screen and (min-width: 768px) {
+  /* line 5, ../scss/recommendations.scss */
+  .og__recommendations {
+    height: 206px;
+  }
+  /* line 74, ../scss/recommendations.scss */
+  .og__recommendations__wrapper {
+    flex-direction: row;
+  }
 }
 
 /*----------------------------------------------------------------------------*\

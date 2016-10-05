@@ -1,65 +1,77 @@
-/* line 3, ../scss/recommendations.scss */
+/* line 5, ../scss/recommendations.scss */
 .og__recommendations {
   margin: 45px 0;
   background-color: #fff;
   position: relative;
   padding: 0 30px;
-  height: 206px;
 }
-/* line 10, ../scss/recommendations.scss */
+/* line 11, ../scss/recommendations.scss */
 .og__recommendations h3 {
   text-align: center;
 }
-/* line 14, ../scss/recommendations.scss */
+/* line 15, ../scss/recommendations.scss */
 .og__recommendations__wrapper {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
 }
-/* line 21, ../scss/recommendations.scss */
+/* line 23, ../scss/recommendations.scss */
 .og__recommendations__item {
   padding-right: 15px;
   width: 100%;
+  text-align: center;
 }
-/* line 26, ../scss/recommendations.scss */
+/* line 29, ../scss/recommendations.scss */
 .og__recommendations__item:hover .og__recommendations__hover {
   display: block;
 }
-/* line 30, ../scss/recommendations.scss */
+/* line 33, ../scss/recommendations.scss */
 .og__recommendations__item:hover .og__recommendations__intro {
   visibility: hidden;
   height: 0;
   opacity: 0;
   transition: visibility 0s 1s, opacity 1s linear, height 0s 1s;
 }
-/* line 39, ../scss/recommendations.scss */
+/* line 42, ../scss/recommendations.scss */
 .og__recommendations__author {
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 44, ../scss/recommendations.scss */
+/* line 47, ../scss/recommendations.scss */
 .og__recommendations__intro {
   margin: 0 auto;
   text-align: center;
   cursor: pointer;
 }
-/* line 49, ../scss/recommendations.scss */
+/* line 52, ../scss/recommendations.scss */
 .og__recommendations__intro .fa {
   font-size: 40px;
 }
-/* line 54, ../scss/recommendations.scss */
+/* line 57, ../scss/recommendations.scss */
 .og__recommendations__title {
   text-transform: uppercase;
   font-weight: bold;
+  text-align: center;
 }
-/* line 59, ../scss/recommendations.scss */
+/* line 63, ../scss/recommendations.scss */
 .og__recommendations__hover {
   display: none;
   background: #fff;
 }
-/* line 62, ../scss/recommendations.scss */
+/* line 66, ../scss/recommendations.scss */
 .og__recommendations__hover p {
   text-align: center;
   font-size: 13px;
+}
+@media screen and (min-width: 768px) {
+  /* line 5, ../scss/recommendations.scss */
+  .og__recommendations {
+    height: 206px;
+  }
+  /* line 74, ../scss/recommendations.scss */
+  .og__recommendations__wrapper {
+    flex-direction: row;
+  }
 }
