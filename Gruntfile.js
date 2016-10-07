@@ -190,7 +190,7 @@ module.exports = function (grunt) {
       dist: {
         files: {
           src: [
-            '<%= config.dist %>/scripts/{,*/}*.js',
+            '<%= config.dist %>/scripts/{,*/}vendor.js',
             '<%= config.dist %>/styles/{,*/}*.css',
             // '<%= config.dist %>/images/{,*/}*.*',
             // '<%= config.dist %>/styles/fonts/{,*/}*.*',
@@ -210,24 +210,6 @@ module.exports = function (grunt) {
       html: '<%= config.app %>/index.html'
     },
 
-    // useminPrepare: {
-    //    html: '<%= config.app %>/index.html',
-    //    options: {
-    //      dest: '<%= config.dist %>',
-    //      root: './',
-    //      flow: {
-    //        html: {
-    //          steps: {
-    //            js:
-    //              [ 'concat','uglifyjs'],
-    //            css:
-    //              [ 'cssmin']
-    //          },
-    //          post: {}
-    //        }
-    //      }
-    //    }
-    //  },
 
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
@@ -302,10 +284,7 @@ module.exports = function (grunt) {
     uglify: {
       dist: {
         files: {
-          '<%= config.dist %>/scripts/scripts.js': [
-            '.tmp/scripts/{,*/}*.js',
-            '<%= config.dist %>/scripts/scripts.js'
-          ]
+          '<%= config.dist %>/scripts/scripts.js': ['<%= config.app %>/scripts/main.js']
         }
       }
     },
@@ -343,7 +322,13 @@ module.exports = function (grunt) {
            cwd: 'bower_components/components-font-awesome/fonts',
            src: ['*.*'],
            dest: '<%= config.dist %>/fonts'
-       }]
+       },{
+          expand: true,
+          dot: true,
+          cwd: 'bower_components/gumby/fonts/icons',
+          src: ['*.*'],
+          dest: '<%= config.dist %>/fonts/icons'
+      }]
       },
       styles: {
         expand: true,
@@ -351,12 +336,6 @@ module.exports = function (grunt) {
         cwd: '<%= config.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
-      },
-      scripts: {
-        expand: true,
-        cwd: '<%= config.app %>/scripts',
-        dest: '.tmp/scripts/',
-        src: '{,*/}*.js'
       }
     },
 
@@ -364,14 +343,12 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'copy:styles',
-        'copy:scripts'
       ],
       test: [
         'copy:styles'
       ],
       dist: [
         'copy:styles',
-        'copy:scripts'
         // 'imagemin',
         // 'svgmin'
       ]
@@ -425,8 +402,8 @@ module.exports = function (grunt) {
     'autoprefixer',
     'concat',
     'cssmin',
-    'uglify',
     'copy:dist',
+    'uglify',
     'rev',
     'usemin',
     'htmlmin'
