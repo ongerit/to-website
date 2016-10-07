@@ -1,4 +1,5 @@
 @import "colors";
+@import "when-than";
 
 .og__header {
   margin: 0;
@@ -101,7 +102,7 @@
     position: absolute;
     left: 50%;
   }
-
+  
   @include when-wider-than(tablet) {
     &__links {
       display: inline-block;

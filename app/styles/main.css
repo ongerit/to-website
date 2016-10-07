@@ -235,7 +235,7 @@
   }
 }
 
-/* line 3, ../scss/profile.scss */
+/* line 4, ../scss/profile.scss */
 .og__profile {
   background-color: #f2f2f2;
   position: relative;
@@ -243,31 +243,31 @@
   display: inline-block;
   width: 100%;
 }
-/* line 11, ../scss/profile.scss */
+/* line 12, ../scss/profile.scss */
 .og__profile__container {
   margin: auto;
   text-align: center;
 }
-/* line 17, ../scss/profile.scss */
+/* line 18, ../scss/profile.scss */
 .og__profile__avatar img {
   height: 100px;
   border-radius: 100%;
 }
-/* line 23, ../scss/profile.scss */
+/* line 24, ../scss/profile.scss */
 .og__profile h3 {
   text-align: center;
   padding-bottom: 30px;
 }
-/* line 28, ../scss/profile.scss */
+/* line 29, ../scss/profile.scss */
 .og__profile p {
   text-align: center;
 }
-/* line 32, ../scss/profile.scss */
+/* line 33, ../scss/profile.scss */
 .og__profile--center {
   margin: auto;
 }
 @media screen and (min-width: 768px) {
-  /* line 37, ../scss/profile.scss */
+  /* line 38, ../scss/profile.scss */
   .og__profile__desc {
     padding: 0 80px;
   }

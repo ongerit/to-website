@@ -203,12 +203,31 @@ module.exports = function (grunt) {
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
+    // useminPrepare: {
+    //   options: {
+    //     dest: '<%= config.dist %>'
+    //   },
+    //   html: '<%= config.app %>/index.html'
+    // },
+
     useminPrepare: {
-      options: {
-        dest: '<%= config.dist %>'
-      },
-      html: '<%= config.app %>/index.html'
-    },
+       html: '<%= config.app %>/index.html',
+       options: {
+         dest: '<%= config.dist %>',
+         root: './',
+         flow: {
+           html: {
+             steps: {
+               js:
+                 [ 'concat','uglifyjs'],
+               css:
+                 [ 'cssmin']
+             },
+             post: {}
+           }
+         }
+       }
+     },
 
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
@@ -285,6 +304,7 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '<%= config.dist %>/scripts/scripts.js': [
+            '.tmp/scripts/{,*/}*.js',
             '<%= config.dist %>/scripts/scripts.js'
           ]
         }
@@ -326,19 +346,27 @@ module.exports = function (grunt) {
         cwd: '<%= config.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      scripts: {
+        expand: true,
+        cwd: '<%= config.app %>/scripts',
+        dest: '.tmp/scripts/',
+        src: '{,*/}*.js'
       }
     },
 
     // Run some tasks in parallel to speed up build process
     concurrent: {
       server: [
-        'copy:styles'
+        'copy:styles',
+        'copy:scripts'
       ],
       test: [
         'copy:styles'
       ],
       dist: [
         'copy:styles',
+        'copy:scripts'
         // 'imagemin',
         // 'svgmin'
       ]
