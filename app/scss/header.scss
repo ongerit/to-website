@@ -7,7 +7,7 @@
   position: relative;
   height: 100%;
   padding: 0 30px;
-  display: inline-block;
+  display: block;
   width: 100%;
 
   &__nav-container {
@@ -100,7 +100,12 @@
     display: block;
     bottom: 0;
     position: absolute;
-    left: 50%;
+    width: 100%;
+    left: 0;
+
+    a {
+      color: $white;
+    }
   }
 
   @include when-wider-than(tablet) {

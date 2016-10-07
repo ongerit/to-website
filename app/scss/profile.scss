@@ -2,10 +2,11 @@
 @import "when-than";
 
 .og__profile {
+  margin: 0;
   background-color: $off-white;
   position: relative;
   padding: 40px 30px;
-  display: inline-block;
+  display: block;
   width: 100%;
 
 

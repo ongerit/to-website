@@ -3,6 +3,124 @@
   display: none;
 }
 
+/* line 4, ../scss/header.scss */
+.og__header {
+  margin: 0;
+  background-color: #FB6964;
+  position: relative;
+  height: 100%;
+  padding: 0 30px;
+  display: block;
+  width: 100%;
+}
+/* line 13, ../scss/header.scss */
+.og__header__nav-container {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  z-index: 99;
+  background: #FB6964;
+  display: inline-block;
+  color: #fff;
+  position: fixed;
+  left: 0;
+}
+/* line 23, ../scss/header.scss */
+.og__header__nav-container nav {
+  position: relative;
+  margin: auto;
+  height: 100%;
+  display: inline-block;
+  width: 100%;
+  padding: 0 30px;
+}
+/* line 36, ../scss/header.scss */
+.og__header__logo h3 {
+  color: #fff;
+  z-index: 99999;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  text-align: center;
+}
+/* line 48, ../scss/header.scss */
+.og__header__links {
+  margin-left: auto;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  display: none;
+}
+/* line 55, ../scss/header.scss */
+.og__header__links a {
+  color: #fff;
+}
+/* line 59, ../scss/header.scss */
+.og__header__links li {
+  display: inline-block;
+  position: relative;
+  padding: 20px 15px 0;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: normal;
+  text-transform: uppercase;
+  opacity: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 73, ../scss/header.scss */
+.og__header__title {
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  display: block;
+  top: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 85, ../scss/header.scss */
+.og__header__title h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-top: 27px;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* line 96, ../scss/header.scss */
+.og__header__down {
+  margin: auto;
+  color: #fff;
+  text-align: center;
+  display: block;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+/* line 106, ../scss/header.scss */
+.og__header__down a {
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  /* line 113, ../scss/header.scss */
+  .og__header__links {
+    display: inline-block;
+  }
+  /* line 119, ../scss/header.scss */
+  .og__header__logo h3 {
+    margin-top: 20px;
+    text-align: left;
+    float: left;
+  }
+}
+
 /* line 1, ../scss/type.scss */
 .heading-1 {
   font-family: 'Montserrat', sans-serif;
@@ -129,37 +247,38 @@
 
 /* line 4, ../scss/profile.scss */
 .og__profile {
+  margin: 0;
   background-color: #f2f2f2;
   position: relative;
   padding: 40px 30px;
-  display: inline-block;
+  display: block;
   width: 100%;
 }
-/* line 12, ../scss/profile.scss */
+/* line 13, ../scss/profile.scss */
 .og__profile__container {
   margin: auto;
   text-align: center;
 }
-/* line 18, ../scss/profile.scss */
+/* line 19, ../scss/profile.scss */
 .og__profile__avatar img {
   height: 100px;
   border-radius: 100%;
 }
-/* line 24, ../scss/profile.scss */
+/* line 25, ../scss/profile.scss */
 .og__profile h3 {
   text-align: center;
   padding-bottom: 30px;
 }
-/* line 29, ../scss/profile.scss */
+/* line 30, ../scss/profile.scss */
 .og__profile p {
   text-align: center;
 }
-/* line 33, ../scss/profile.scss */
+/* line 34, ../scss/profile.scss */
 .og__profile--center {
   margin: auto;
 }
 @media screen and (min-width: 768px) {
-  /* line 38, ../scss/profile.scss */
+  /* line 39, ../scss/profile.scss */
   .og__profile__desc {
     padding: 0 80px;
   }
@@ -171,12 +290,14 @@
   background-color: #fff;
   position: relative;
   padding: 0 30px;
+  display: block;
 }
-/* line 11, ../scss/recommendations.scss */
+/* line 12, ../scss/recommendations.scss */
 .og__recommendations h3 {
   text-align: center;
+  padding-bottom: 30px;
 }
-/* line 15, ../scss/recommendations.scss */
+/* line 17, ../scss/recommendations.scss */
 .og__recommendations__wrapper {
   display: flex;
   flex-direction: row;
@@ -184,50 +305,50 @@
   text-align: center;
   margin: 0 auto;
 }
-/* line 23, ../scss/recommendations.scss */
+/* line 25, ../scss/recommendations.scss */
 .og__recommendations__item {
   padding-right: 15px;
   width: 100%;
   text-align: center;
 }
-/* line 29, ../scss/recommendations.scss */
+/* line 31, ../scss/recommendations.scss */
 .og__recommendations__item:hover .og__recommendations__hover {
   display: block;
 }
-/* line 33, ../scss/recommendations.scss */
+/* line 35, ../scss/recommendations.scss */
 .og__recommendations__item:hover .og__recommendations__intro {
   visibility: hidden;
   height: 0;
   opacity: 0;
   transition: visibility 0s 1s, opacity 1s linear, height 0s 1s;
 }
-/* line 42, ../scss/recommendations.scss */
+/* line 44, ../scss/recommendations.scss */
 .og__recommendations__author {
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 47, ../scss/recommendations.scss */
+/* line 49, ../scss/recommendations.scss */
 .og__recommendations__intro {
   margin: 0 auto;
   text-align: center;
   cursor: pointer;
 }
-/* line 52, ../scss/recommendations.scss */
+/* line 54, ../scss/recommendations.scss */
 .og__recommendations__intro .fa {
   font-size: 40px;
 }
-/* line 57, ../scss/recommendations.scss */
+/* line 59, ../scss/recommendations.scss */
 .og__recommendations__title {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
 }
-/* line 63, ../scss/recommendations.scss */
+/* line 65, ../scss/recommendations.scss */
 .og__recommendations__hover {
   display: none;
   background: #fff;
 }
-/* line 66, ../scss/recommendations.scss */
+/* line 68, ../scss/recommendations.scss */
 .og__recommendations__hover p {
   text-align: center;
   font-size: 13px;
@@ -237,7 +358,7 @@
   .og__recommendations {
     height: 206px;
   }
-  /* line 74, ../scss/recommendations.scss */
+  /* line 76, ../scss/recommendations.scss */
   .og__recommendations__wrapper {
     flex-direction: row;
   }
@@ -315,117 +436,4 @@
 /* line 81, ../scss/headhesive.scss */
 .banner--unstick {
   /* Not required to use, but could be useful to have */
-}
-
-/* line 4, ../scss/header.scss */
-.og__header {
-  margin: 0;
-  background-color: #FB6964;
-  position: relative;
-  height: 100%;
-  padding: 0 30px;
-  display: inline-block;
-  width: 100%;
-}
-/* line 13, ../scss/header.scss */
-.og__header__nav-container {
-  font-family: 'Montserrat', sans-serif;
-  width: 100%;
-  z-index: 99;
-  background: #FB6964;
-  display: inline-block;
-  color: #fff;
-  position: fixed;
-  left: 0;
-}
-/* line 23, ../scss/header.scss */
-.og__header__nav-container nav {
-  position: relative;
-  margin: auto;
-  height: 100%;
-  display: inline-block;
-  width: 100%;
-  padding: 0 30px;
-}
-/* line 36, ../scss/header.scss */
-.og__header__logo h3 {
-  color: #fff;
-  z-index: 99999;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 25px;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  margin-top: 10px;
-  text-align: center;
-}
-/* line 48, ../scss/header.scss */
-.og__header__links {
-  margin-left: auto;
-  position: absolute;
-  bottom: 10px;
-  right: 0;
-  display: none;
-}
-/* line 55, ../scss/header.scss */
-.og__header__links a {
-  color: #fff;
-}
-/* line 59, ../scss/header.scss */
-.og__header__links li {
-  display: inline-block;
-  position: relative;
-  padding: 20px 15px 0;
-  font-size: 11px;
-  letter-spacing: 1px;
-  font-weight: normal;
-  text-transform: uppercase;
-  opacity: 1;
-  text-decoration: none;
-  cursor: pointer;
-}
-/* line 73, ../scss/header.scss */
-.og__header__title {
-  text-align: center;
-  line-height: 40px;
-  color: #fff;
-  display: block;
-  top: 50%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* line 85, ../scss/header.scss */
-.og__header__title h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-  letter-spacing: 1px;
-  margin-top: 27px;
-  text-transform: uppercase;
-  color: #fff;
-}
-/* line 96, ../scss/header.scss */
-.og__header__down {
-  margin: auto;
-  color: #fff;
-  text-align: center;
-  display: block;
-  bottom: 0;
-  position: absolute;
-  left: 50%;
-}
-@media screen and (min-width: 768px) {
-  /* line 108, ../scss/header.scss */
-  .og__header__links {
-    display: inline-block;
-  }
-  /* line 114, ../scss/header.scss */
-  .og__header__logo h3 {
-    margin-top: 20px;
-    text-align: left;
-    float: left;
-  }
 }

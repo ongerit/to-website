@@ -192,7 +192,7 @@ module.exports = function (grunt) {
           src: [
             '<%= config.dist %>/scripts/{,*/}vendor.js',
             '<%= config.dist %>/styles/{,*/}*.css',
-            // '<%= config.dist %>/images/{,*/}*.*',
+            '<%= config.dist %>/images/{,*/}*.*',
             // '<%= config.dist %>/styles/fonts/{,*/}*.*',
             '<%= config.dist %>/*.{ico,png}'
           ]
@@ -235,7 +235,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-
     svgmin: {
       dist: {
         files: [{
@@ -284,7 +283,7 @@ module.exports = function (grunt) {
     uglify: {
       dist: {
         files: {
-          '<%= config.dist %>/scripts/scripts.js': ['<%= config.app %>/scripts/main.js']
+          '<%= config.dist %>/scripts/main.js' : ['<%= config.app %>/scripts/main.js'],
         }
       }
     },
@@ -336,6 +335,13 @@ module.exports = function (grunt) {
         cwd: '<%= config.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      scripts: {
+        expand: true,
+        dot: true,
+        cwd: '<%= config.app %>/scripts',
+        dest: '.tmp/scripts/',
+        src: '{,*/}*.js'
       }
     },
 
@@ -343,13 +349,15 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'copy:styles',
+        'copy:scripts'
       ],
       test: [
-        'copy:styles'
+        'copy:styles',
       ],
       dist: [
         'copy:styles',
-        // 'imagemin',
+        'copy:scripts',
+        'imagemin',
         // 'svgmin'
       ]
     }

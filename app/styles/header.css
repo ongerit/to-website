@@ -5,7 +5,7 @@
   position: relative;
   height: 100%;
   padding: 0 30px;
-  display: inline-block;
+  display: block;
   width: 100%;
 }
 /* line 13, ../scss/header.scss */
@@ -96,14 +96,19 @@
   display: block;
   bottom: 0;
   position: absolute;
-  left: 50%;
+  width: 100%;
+  left: 0;
+}
+/* line 106, ../scss/header.scss */
+.og__header__down a {
+  color: #fff;
 }
 @media screen and (min-width: 768px) {
-  /* line 108, ../scss/header.scss */
+  /* line 113, ../scss/header.scss */
   .og__header__links {
     display: inline-block;
   }
-  /* line 114, ../scss/header.scss */
+  /* line 119, ../scss/header.scss */
   .og__header__logo h3 {
     margin-top: 20px;
     text-align: left;
