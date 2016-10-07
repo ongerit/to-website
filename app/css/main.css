@@ -1,109 +1,369 @@
-.main-container {
-  height: 100%;
-  width: 100%;
-  background: #2a333b;
-  position: absolute;
-  display: block;
+.heading-1 {
+  font-family: 'Montserrat', sans-serif;
 }
-.main-container #splash-back {
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  display: block;
+
+.body-1 {
+  font-family: 'Montserrat', sans-serif;
 }
-.main-container .center-content {
+
+.og__header {
+  margin: 0;
+  background-color: #FB6964;
   position: relative;
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 10em 2em 1em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  z-index: 10;
-}
-.main-container .center-content header h1 {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 4.5em;
-  font-weight: 700;
-  margin: 10px 0;
-  text-align: center;
-  color: #ffffff;
-}
-.main-container .center-content header h2 {
-  font-size: 1.4em;
-  font-family: 'Quicksand', sans-serif;
-  text-align: center;
-  color: #ffffff;
-}
-.main-container .center-content header .social {
-  text-align: center;
-}
-
-/*
-
-
-  position: relative;
-  width: 100%;
   height: 100%;
-  background: rgba(58, 59, 54, 0.38);
+  padding: 0 30px;
+  display: inline-block;
+  width: 100%;
+}
+.og__header__nav-container {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  z-index: 99;
+  background: #FB6964;
+  display: inline-block;
   color: #fff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  .bg-image-loader {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0;
-    -webkit-transition: opacity 3s ease;
-    -moz-transition: opacity 3s ease;
-    -o-transition: opacity 3s ease;
-    transition: opacity 3s ease;
+  position: fixed;
+  left: 0;
+}
+.og__header__nav-container nav {
+  position: relative;
+  margin: auto;
+  height: 100%;
+  display: inline-block;
+  width: 100%;
+  padding: 0 30px;
+}
+.og__header__logo h3 {
+  color: #fff;
+  z-index: 99999;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  text-align: center;
+}
+.og__header__links {
+  margin-left: auto;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  display: none;
+}
+.og__header__links a {
+  color: #fff;
+}
+.og__header__links li {
+  display: inline-block;
+  position: relative;
+  padding: 20px 15px 0;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: normal;
+  text-transform: uppercase;
+  opacity: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+.og__header__title {
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  display: block;
+  top: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.og__header__title h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-top: 27px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.og__header__down {
+  margin: auto;
+  color: #fff;
+  text-align: center;
+  display: block;
+  bottom: 0;
+  position: absolute;
+  left: 50%;
+}
+@media screen and (min-width: 768px) {
+  .og__header__links {
+    display: inline-block;
   }
-
-  .center-content{
-    position: relative;
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 10em 2em 1em;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    header{
-      .title{
-        text-align: center;
-        font-family: 'Quicksand', sans-serif;
-
-        h1{
-          font-size: 2.5rem;
-          font-weight: 700;
-          margin: 10px 0;
-        }
-        h2{
-          font-size: 1.4rem;
-          font-weight: 200;
-          font-family: 'Quicksand', sans-serif;
-        }
-      }
-    }
-
+  .og__header__logo h3 {
+    margin-top: 20px;
+    text-align: left;
+    float: left;
   }
 }
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+.og__footer {
+  margin: 0;
+  background-color: #FB6964;
+  position: relative;
+  padding: 50px 30px;
 }
-*/
+.og__footer__copyright {
+  color: #fff;
+}
+
+.og__contact {
+  margin-top: 45px;
+  background-color: #fff;
+  position: relative;
+  padding: 0 30px;
+}
+.og__contact h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.og__contact p {
+  text-align: center;
+}
+.og__contact__social {
+  margin: 0 auto;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.og__contact__social a {
+  color: #555;
+  border: 1px solid #ddd;
+  line-height: 0;
+  border-radius: 100%;
+  margin: 0;
+  display: inline-block;
+  margin-right: 8px;
+  margin-left: 8px;
+  margin-top: 30px;
+  font-size: 16px;
+  padding: 10px;
+  width: 40px;
+}
+.og__contact__social a i {
+  margin: 0;
+}
+.og__contact__social a:hover {
+  color: #fff;
+  background: #FB6964;
+}
+
+.og__brand {
+  margin: 0;
+  background-color: #f2f2f2;
+  position: relative;
+  padding: 50px 30px;
+}
+.og__brand__container {
+  display: flex;
+  padding: 30px 0;
+  flex-direction: column;
+}
+.og__brand__item {
+  padding: 0 70px;
+  margin: 0 auto;
+}
+.og__brand__item img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.og__brand__item img:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+.og__brand h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.og__brand p {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .og__brand__container {
+    display: flex;
+    flex-direction: row;
+  }
+  .og__brand__item {
+    padding: 0 30px;
+  }
+}
+
+.og__profile {
+  background-color: #f2f2f2;
+  position: relative;
+  padding: 40px 30px;
+  display: inline-block;
+  width: 100%;
+}
+.og__profile__container {
+  margin: auto;
+  text-align: center;
+}
+.og__profile__avatar img {
+  height: 100px;
+  border-radius: 100%;
+}
+.og__profile h3 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.og__profile p {
+  text-align: center;
+}
+.og__profile--center {
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .og__profile__desc {
+    padding: 0 80px;
+  }
+}
+
+.og__recommendations {
+  margin: 45px 0;
+  background-color: #fff;
+  position: relative;
+  padding: 0 30px;
+}
+.og__recommendations h3 {
+  text-align: center;
+}
+.og__recommendations__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+}
+.og__recommendations__item {
+  padding-right: 15px;
+  width: 100%;
+  text-align: center;
+}
+.og__recommendations__item:hover .og__recommendations__hover {
+  display: block;
+}
+.og__recommendations__item:hover .og__recommendations__intro {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear, height 0s 1s;
+}
+.og__recommendations__author {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.og__recommendations__intro {
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+}
+.og__recommendations__intro .fa {
+  font-size: 40px;
+}
+.og__recommendations__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+.og__recommendations__hover {
+  display: none;
+  background: #fff;
+}
+.og__recommendations__hover p {
+  text-align: center;
+  font-size: 13px;
+}
+@media screen and (min-width: 768px) {
+  .og__recommendations {
+    height: 206px;
+  }
+  .og__recommendations__wrapper {
+    flex-direction: row;
+  }
+}
+
+/*----------------------------------------------------------------------------*\
+  Headhesive Specific Styles
+/*----------------------------------------------------------------------------*/
+/**
+ * Headhesive element clone
+ * > `clone` class for the cloned element:
+ *
+ * @example
+ * var options = {
+ *   classes {
+ *     clone: 'banner--clone';
+ *   }
+ * }
+ */
+.banner--clone {
+  /* Required styles */
+  position: fixed;
+  z-index: 1;
+  /* Additional styles */
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
+  /* Translate -100% to move off screen */
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  /* Animations */
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.banner--clone h3,
+.banner--clone .og__header__links,
+.banner--clone a {
+  color: #555;
+}
+
+/**
+ * Headhesive stick
+ * > `stick` class for the cloned element:
+ *
+ * @example
+ * var options = {
+ *   classes {
+ *     stick: 'banner--stick';
+ *   }
+ * }
+ */
+.banner--stick {
+  /* Translate back to 0%; */
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  z-index: 999;
+}
+
+/**
+ * Headhesive unstick
+ * > `unstick` class for the cloned element:
+ *
+ * @example
+ * var options = {
+ *   classes {
+ *     unstick: 'banner--unstick';
+ *   }
+ * }
+ */
+.banner--unstick {
+  /* Not required to use, but could be useful to have */
+}
