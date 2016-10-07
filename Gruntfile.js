@@ -203,31 +203,31 @@ module.exports = function (grunt) {
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
-    // useminPrepare: {
-    //   options: {
-    //     dest: '<%= config.dist %>'
-    //   },
-    //   html: '<%= config.app %>/index.html'
-    // },
-
     useminPrepare: {
-       html: '<%= config.app %>/index.html',
-       options: {
-         dest: '<%= config.dist %>',
-         root: './',
-         flow: {
-           html: {
-             steps: {
-               js:
-                 [ 'concat','uglifyjs'],
-               css:
-                 [ 'cssmin']
-             },
-             post: {}
-           }
-         }
-       }
-     },
+      options: {
+        dest: '<%= config.dist %>'
+      },
+      html: '<%= config.app %>/index.html'
+    },
+
+    // useminPrepare: {
+    //    html: '<%= config.app %>/index.html',
+    //    options: {
+    //      dest: '<%= config.dist %>',
+    //      root: './',
+    //      flow: {
+    //        html: {
+    //          steps: {
+    //            js:
+    //              [ 'concat','uglifyjs'],
+    //            css:
+    //              [ 'cssmin']
+    //          },
+    //          post: {}
+    //        }
+    //      }
+    //    }
+    //  },
 
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
@@ -294,8 +294,7 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '<%= config.dist %>/styles/main.css': [
-            '.tmp/styles/{,*/}*.css',
-            '<%= config.app %>/styles/{,*/}*.css'
+            '<%= config.app %>/styles/main.css'
           ]
         }
       }
@@ -327,8 +326,8 @@ module.exports = function (grunt) {
             'images/{,*/}*.webp',
 						'images/{,*/}*',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
-          ]
+            'styles/fonts/{,*/}*.*',
+          ],
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
           dest: '<%= config.dist %>/.htaccess'
@@ -338,7 +337,13 @@ module.exports = function (grunt) {
           cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
           dest: '<%= config.dist %>'
-        }]
+        },{
+           expand: true,
+           dot: true,
+           cwd: 'bower_components/components-font-awesome/fonts',
+           src: ['*.*'],
+           dest: '<%= config.dist %>/fonts'
+       }]
       },
       styles: {
         expand: true,
