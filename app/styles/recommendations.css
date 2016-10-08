@@ -12,6 +12,11 @@
   padding-bottom: 30px;
 }
 /* line 17, ../scss/recommendations.scss */
+.og__recommendations__image {
+  height: 100px;
+  border-radius: 100%;
+}
+/* line 22, ../scss/recommendations.scss */
 .og__recommendations__wrapper {
   display: flex;
   flex-direction: row;
@@ -19,50 +24,50 @@
   text-align: center;
   margin: 0 auto;
 }
-/* line 25, ../scss/recommendations.scss */
+/* line 30, ../scss/recommendations.scss */
 .og__recommendations__item {
   padding-right: 15px;
   width: 100%;
   text-align: center;
 }
-/* line 31, ../scss/recommendations.scss */
+/* line 36, ../scss/recommendations.scss */
 .og__recommendations__item:hover .og__recommendations__hover {
   display: block;
 }
-/* line 35, ../scss/recommendations.scss */
+/* line 40, ../scss/recommendations.scss */
 .og__recommendations__item:hover .og__recommendations__intro {
   visibility: hidden;
   height: 0;
   opacity: 0;
   transition: visibility 0s 1s, opacity 1s linear, height 0s 1s;
 }
-/* line 44, ../scss/recommendations.scss */
+/* line 49, ../scss/recommendations.scss */
 .og__recommendations__author {
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 49, ../scss/recommendations.scss */
+/* line 54, ../scss/recommendations.scss */
 .og__recommendations__intro {
   margin: 0 auto;
   text-align: center;
   cursor: pointer;
 }
-/* line 54, ../scss/recommendations.scss */
+/* line 59, ../scss/recommendations.scss */
 .og__recommendations__intro .fa {
   font-size: 40px;
 }
-/* line 59, ../scss/recommendations.scss */
+/* line 64, ../scss/recommendations.scss */
 .og__recommendations__title {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
 }
-/* line 65, ../scss/recommendations.scss */
+/* line 70, ../scss/recommendations.scss */
 .og__recommendations__hover {
   display: none;
   background: #fff;
 }
-/* line 68, ../scss/recommendations.scss */
+/* line 73, ../scss/recommendations.scss */
 .og__recommendations__hover p {
   text-align: center;
   font-size: 13px;
@@ -72,7 +77,7 @@
   .og__recommendations {
     height: 206px;
   }
-  /* line 76, ../scss/recommendations.scss */
+  /* line 81, ../scss/recommendations.scss */
   .og__recommendations__wrapper {
     flex-direction: row;
   }

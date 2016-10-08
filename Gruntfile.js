@@ -283,7 +283,7 @@ module.exports = function (grunt) {
     uglify: {
       dist: {
         files: {
-          '<%= config.dist %>/scripts/main.js' : ['<%= config.app %>/scripts/main.js'],
+          '<%= config.dist %>/scripts/main.js' : ['<%= config.app %>/scripts/main.js']
         }
       }
     },
@@ -342,7 +342,7 @@ module.exports = function (grunt) {
         cwd: '<%= config.app %>/scripts',
         dest: '.tmp/scripts/',
         src: '{,*/}*.js'
-      }
+      },
     },
 
     // Run some tasks in parallel to speed up build process
@@ -357,7 +357,7 @@ module.exports = function (grunt) {
       dist: [
         'copy:styles',
         'copy:scripts',
-        'imagemin',
+        //'imagemin',
         // 'svgmin'
       ]
     }
