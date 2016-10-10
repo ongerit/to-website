@@ -84,7 +84,8 @@ $(window).load(function() {
                 code: 'fa-heart',
                 git: 'fa-github',
                 snapchat: 'fa-snapchat-ghost',
-                android: 'fa-android'
+                drupal: 'fa-drupal',
+                wordpress: 'fa-wordpress'
             },
             favorites: ''
         },
@@ -130,4 +131,3 @@ $(window).load(function() {
 
 
 });
-
