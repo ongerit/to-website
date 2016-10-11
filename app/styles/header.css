@@ -19,8 +19,8 @@
   position: fixed;
   left: 0;
 }
-/* line 23, ../scss/header.scss */
-.og__header__nav-container nav {
+/* line 24, ../scss/header.scss */
+.og__header__nav {
   position: relative;
   margin: auto;
   height: 100%;
@@ -28,7 +28,7 @@
   width: 100%;
   padding: 0 30px;
 }
-/* line 36, ../scss/header.scss */
+/* line 35, ../scss/header.scss */
 .og__header__logo h3 {
   color: #fff;
   z-index: 99999;
@@ -40,7 +40,7 @@
   margin-top: 10px;
   text-align: center;
 }
-/* line 48, ../scss/header.scss */
+/* line 47, ../scss/header.scss */
 .og__header__links {
   margin-left: auto;
   position: absolute;
@@ -48,11 +48,11 @@
   right: 0;
   display: none;
 }
-/* line 55, ../scss/header.scss */
+/* line 54, ../scss/header.scss */
 .og__header__links a {
   color: #fff;
 }
-/* line 59, ../scss/header.scss */
+/* line 58, ../scss/header.scss */
 .og__header__links li {
   display: inline-block;
   position: relative;
@@ -65,7 +65,7 @@
   text-decoration: none;
   cursor: pointer;
 }
-/* line 73, ../scss/header.scss */
+/* line 72, ../scss/header.scss */
 .og__header__title {
   text-align: center;
   line-height: 40px;
@@ -78,7 +78,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-/* line 85, ../scss/header.scss */
+/* line 84, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -88,7 +88,7 @@
   text-transform: uppercase;
   color: #fff;
 }
-/* line 96, ../scss/header.scss */
+/* line 95, ../scss/header.scss */
 .og__header__down {
   margin: auto;
   color: #fff;
@@ -99,16 +99,16 @@
   width: 100%;
   left: 0;
 }
-/* line 106, ../scss/header.scss */
+/* line 105, ../scss/header.scss */
 .og__header__down a {
   color: #fff;
 }
 @media screen and (min-width: 768px) {
-  /* line 113, ../scss/header.scss */
+  /* line 112, ../scss/header.scss */
   .og__header__links {
     display: inline-block;
   }
-  /* line 119, ../scss/header.scss */
+  /* line 118, ../scss/header.scss */
   .og__header__logo h3 {
     margin-top: 20px;
     text-align: left;

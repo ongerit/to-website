@@ -1,6 +1,58 @@
 // jquery
 $(window).load(function() {
     'use strict';
+
+    // Material menu button
+    var circle = document.querySelector('.material-btn');
+    var link = document.querySelector('.material-content').querySelectorAll('li');
+    var ham = document.querySelector('.material-hamburger');
+    // var main = document.querySelector('main');
+    var win = window;
+
+    function openMenu(event) {
+      circle.classList.toggle('active');
+      ham.classList.toggle('material-close');
+      // main.classList.toggle('active');
+      for (var i = 0; i < link.length; i++) {
+        link[i].classList.toggle('active');
+      }
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+
+    function closeMenu() {
+      if (circle.classList.contains('active')) {
+        circle.classList.remove('active');
+        for (var i = 0; i < link.length; i++) {
+          link[i].classList.toggle('active');
+        }
+        ham.classList.remove('material-close');
+        // main.classList.remove('active');
+      }
+    }
+
+    circle.addEventListener('click', openMenu, false);
+
+    win.addEventListener('click', closeMenu, false);
+
+    // Sendgrid code
+    $('form').bind('submit',function(event) {
+    	//stop the form from submitting normally
+    	event.preventDefault();
+
+    	//send the data using post with element values
+    	var posting = $.post('p.php', {email: $("input[value='email']").val(), name: $("input[value='name']").val(), message: $("textarea[value='message']").val()});
+
+    	// Results
+    	posting.done(function(data) {
+    	console.log('data');
+    	console.log('success');
+    	$('.og__contact__success').text("success");
+    	});
+
+      return false;
+    });
+
     // Scroll to hash
 
     // In View
@@ -84,9 +136,9 @@ $(window).load(function() {
 
 
     var url = Math.floor((Math.random() * 33) + 1);
-    var link = 'images/' + url + '.jpg';
+    var links = 'images/' + url + '.jpg';
 
-    $('#splash-background').append('<div id="splash-back" style="background-image:url('+link+')"></div>')
+    $('#splash-background').append('<div id="splash-back" style="background-image:url('+links+')"></div>')
     .hide()
     .fadeIn(5000);
 

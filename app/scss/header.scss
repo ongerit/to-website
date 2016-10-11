@@ -19,16 +19,15 @@
     color: $white;
     position: fixed;
     left: 0;
+  }
 
-    nav {
-      position: relative;
-      margin: auto;
-      height: 100%;
-      display: inline-block;
-      width: 100%;
-      padding: 0 30px;
-
-    }
+  &__nav {
+    position: relative;
+    margin: auto;
+    height: 100%;
+    display: inline-block;
+    width: 100%;
+    padding: 0 30px;
 
   }
 
