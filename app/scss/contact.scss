@@ -15,6 +15,52 @@
     text-align: center;
   }
 
+  &__form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    align-content: center;
+  }
+
+  &__email,
+  &__name,
+  &__message {
+    padding-left: 15px;
+    width: 100%;
+    max-width: 300px;
+    line-height: 27px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid $grey2;
+  }
+
+  &__submit {
+    color: $white;
+    background: $primary;
+    font-size: 14px;
+    border: none;
+    width: 100%;
+    line-height: 32px;
+    max-width: 300px;
+    border: 1px solid $primary;
+
+    &:hover {
+      color: $primary;
+      background: $white;
+      border: 1px solid $primary;
+      cursor: pointer;
+    }
+  }
+
+  &__error {
+    color:$primary;
+  }
+
+  &__success {
+    color:$grey;
+  }
+
   &__social {
     margin: 0 auto;
     padding-bottom: 30px;

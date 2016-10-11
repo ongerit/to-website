@@ -109,12 +109,14 @@
 
 <section id="contact" class="og__contact">
     <h3>Contact</h3>
-        <!-- <form action="https://fwdform.herokuapp.com/user/de882207-b489-4318-9cd2-6f099daf9f89">
-        Email: <input type="text" name="name"><br>
-        Name: <input type="text" name="email"><br>
-        Message: <textarea name="message" cols="40" rows="5"></textarea>
-        <input type="submit" value="Send Message">
-      </form> -->
+      <form class="og__contact__form" action="https://fwdform.herokuapp.com/user/de882207-b489-4318-9cd2-6f099daf9f89%">
+        <input class="og__contact__email" type="text" name="email" placeholder="Email"/><br>
+        <input class="og__contact__name" type="text" name="name" placeholder="Name"><br>
+        <textarea class="og__contact__message" name="message" cols="40" rows="5" placeholder="Message"></textarea>
+        <p class="og__contact__error"><p>
+        <input class="og__contact__submit" type="submit" value="Send Message">
+        <p class="og__contact__success"><p>
+      </form>
     <div class="og__contact__social">
         <a href="http://www.bit.ly/thomas_ongeri" target="_blank"><i class="fa icon-linkedin" alt="Linkedin" ></i></a>
         <a href="http://www.bitly.com/GITOngeri" target="_blank"><i class="fa icon-github" alt="Github" ></i></a>
@@ -133,9 +135,9 @@
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/lodash/lodash.js"></script>
 <script src="bower_components/vue/dist/vue.js"></script>
-<script src="bower_components/waypoints/lib/noframework.waypoints.js"></script>
 <script src="bower_components/Headhesive.js/dist/headhesive.js"></script>
 <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
+<script src="bower_components/waypoints/lib/noframework.waypoints.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 <script src="scripts/main.js"></script>

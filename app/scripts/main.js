@@ -1,11 +1,11 @@
 // jquery
 $(window).load(function() {
     'use strict';
-    //Scroll to hash
+    // Scroll to hash
 
+    // In View
     // Add smooth scrolling to all links
     $('a.anchor').on('click', function(event) {
-
         //set hash
         var hash = window.location.hash;
 
@@ -31,6 +31,32 @@ $(window).load(function() {
 
         } // End if
     });
+
+    // Validate email
+    function validateEmail(email) {
+      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+
+    function validate() {
+      var EMAIL= $('input[name*="email"]').val();
+      var NAME= $('input[name*="name"]').val();
+      var MESSAGE= $('textarea[name*="message"]').val();
+      $('.og__contact__error').text('');
+      $('.og__contact__success').text('');
+
+      console.log(EMAIL);
+
+      if(validateEmail(EMAIL) && NAME && MESSAGE) {
+        $('.og__contact__success').text('Email sent, thank you!');
+        return false;
+      } else {
+        $('.og__contact__error').text(EMAIL + ' is not valid');
+        return false;
+      }
+    }
+
+    $('form').bind('submit', validate);
 
     //Headhesive
 

@@ -13,6 +13,14 @@
     flex-direction: column;
   }
 
+  &__increase {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
+
   &__item {
     padding: 0 70px;
     margin: 0 auto;
