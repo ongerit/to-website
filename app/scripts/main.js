@@ -78,18 +78,30 @@ $(window).load(function() {
       var EMAIL= $('input[name*="email"]').val();
       var NAME= $('input[name*="name"]').val();
       var MESSAGE= $('textarea[name*="message"]').val();
+      var VARS = 'email='+EMAIL+'&message='+MESSAGE+'&name='+NAME;
+
       //stop the form from submitting normally
       event.preventDefault();
 
       //send the data using post with element values
-      var posting = $.post('sendgrid/p.php', {email: EMAIL, name: NAME, message: MESSAGE});
+      // var posting = $.post('sendgrid/p.php', VARS);
+      // console.log(posting);
+      //
+      // // Results
+      // posting.done(function(data) {
+      // $('.og__contact__success').text('success');
+      // });
 
-      // Results
-      posting.done(function(data) {
-      console.log(data);
-      console.log('success');
-      $('.og__contact__success').text('success');
+      $.ajax({
+        type: "POST",
+        url: "sendgrid/p.php",
+        data: VARS,
+        cache: false,
+        success: function(data) {
+                  console.log(data);
+          }
       });
+
     }
 
     function validate() {
@@ -98,8 +110,6 @@ $(window).load(function() {
       var MESSAGE= $('textarea[name*="message"]').val();
       $('.og__contact__error').text('');
       $('.og__contact__success').text('');
-
-      console.log(EMAIL);
 
       if(validateEmail(EMAIL) && NAME && MESSAGE) {
         sendFormData();

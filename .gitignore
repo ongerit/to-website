@@ -12,3 +12,4 @@ npm-debug.log
 .rocketeer/
 .idea/workspace.xml
 .idea/
+app/sendgrid/cred.php

@@ -308,6 +308,7 @@ module.exports = function (grunt) {
 						'images/{,*/}*',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*',
+            'sendgrid/**'
           ],
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
