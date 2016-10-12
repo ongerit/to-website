@@ -76,7 +76,8 @@ module.exports = function (grunt) {
           '<%= config.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
           '<%= config.app %>/images/{,*/}*',
-          '<%= config.app %>/scripts/{,*/}*'
+          '<%= config.app %>/scripts/{,*/}*',
+          '<%= config.app %>/sendgrid'
         ]
       }
     },
@@ -344,7 +345,7 @@ module.exports = function (grunt) {
         cwd: '<%= config.app %>/scripts',
         dest: '.tmp/scripts/',
         src: '{,*/}*.js'
-      },
+      }
     },
 
     // Run some tasks in parallel to speed up build process

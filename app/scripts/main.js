@@ -35,24 +35,6 @@ $(window).load(function() {
 
     win.addEventListener('click', closeMenu, false);
 
-    // Sendgrid code
-    $('form').bind('submit',function(event) {
-    	//stop the form from submitting normally
-    	event.preventDefault();
-
-    	//send the data using post with element values
-    	var posting = $.post('p.php', {email: $("input[value='email']").val(), name: $("input[value='name']").val(), message: $("textarea[value='message']").val()});
-
-    	// Results
-    	posting.done(function(data) {
-    	console.log('data');
-    	console.log('success');
-    	$('.og__contact__success').text("success");
-    	});
-
-      return false;
-    });
-
     // Scroll to hash
 
     // In View
@@ -90,6 +72,26 @@ $(window).load(function() {
       return re.test(email);
     }
 
+    // SendGrid Code
+    function sendFormData() {
+
+      var EMAIL= $('input[name*="email"]').val();
+      var NAME= $('input[name*="name"]').val();
+      var MESSAGE= $('textarea[name*="message"]').val();
+      //stop the form from submitting normally
+      event.preventDefault();
+
+      //send the data using post with element values
+      var posting = $.post('sendgrid/p.php', {email: EMAIL, name: NAME, message: MESSAGE});
+
+      // Results
+      posting.done(function(data) {
+      console.log(data);
+      console.log('success');
+      $('.og__contact__success').text('success');
+      });
+    }
+
     function validate() {
       var EMAIL= $('input[name*="email"]').val();
       var NAME= $('input[name*="name"]').val();
@@ -100,6 +102,7 @@ $(window).load(function() {
       console.log(EMAIL);
 
       if(validateEmail(EMAIL) && NAME && MESSAGE) {
+        sendFormData();
         $('.og__contact__success').text('Email sent, thank you!');
         return false;
       } else {
