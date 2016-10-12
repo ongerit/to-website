@@ -20,8 +20,9 @@ require("cred.php");
 	$apiKey = SG_API_KEY;
 	$sg = new \SendGrid($apiKey);
 
+	$response = $sg->client->mail()->send()->post($mail);
+
 	// TESTING
-	// $response = $sg->client->mail()->send()->post($mail);
 	// echo $response->statusCode().'<br/>';
 	// print_r($response->headers()).'<br/>';
 	// print $response->body();
