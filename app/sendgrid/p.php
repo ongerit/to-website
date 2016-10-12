@@ -1,7 +1,7 @@
 <?php
 // Not using composer
-require("sendgrid-php/sendgrid-php.php");
-require("cred.php");
+require("../sendgrid-php/sendgrid-php.php");
+require("../cred.php");
 
   // if(isset($_POST[send])) {
 	// User information
