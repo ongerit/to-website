@@ -113,10 +113,11 @@ $(window).load(function() {
 
       if(validateEmail(EMAIL) && NAME && MESSAGE) {
         sendFormData();
-        $('.og__contact__success').text('Email sent, thank you!');
+        $('form').text('');
+        $('.og__contact__success').text('Email sent, thank you!').fadeIn();
         return false;
       } else {
-        $('.og__contact__error').text(EMAIL + ' is not valid');
+        $('.og__contact__error').text(EMAIL + ' is not a valid email.').fadeIn();
         return false;
       }
     }
