@@ -8,7 +8,6 @@ $(window).load(function() {
     var ham = document.querySelector('.material-hamburger');
     // var main = document.querySelector('main');
     var win = window;
-
     function openMenu(event) {
       circle.classList.toggle('active');
       ham.classList.toggle('material-close');
@@ -42,7 +41,6 @@ $(window).load(function() {
     $('a.anchor').on('click', function(event) {
         //set hash
         var hash = window.location.hash;
-
         // Make sure this.hash has a value before overriding default behavior
         if (hash !== '') {
             // Prevent default anchor click behavior
@@ -62,7 +60,6 @@ $(window).load(function() {
                 // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
             });
-
         } // End if
     });
 
@@ -101,10 +98,12 @@ $(window).load(function() {
         success: function(data) {
                   console.log(data);
           }
+      })
+      .done(function(data){
+        console.log(data);
       });
-
     }
-
+    
     function validate() {
       var EMAIL= $('input[name*="email"]').val();
       var NAME= $('input[name*="name"]').val();
@@ -134,13 +133,10 @@ $(window).load(function() {
 
         // Custom classes
         classes: {
-
             // Cloned elem class
             clone: 'banner--clone',
-
             // Stick class
             stick: 'banner--stick',
-
             // Unstick class
             unstick: 'banner--unstick'
         }
@@ -148,8 +144,6 @@ $(window).load(function() {
 
 // Create a new instance of Headhesive.js and pass in some options
     var header = new Headhesive('.banner', options );  // jshint ignore:line
-
-
     var url = Math.floor((Math.random() * 33) + 1);
     var links = 'images/' + url + '.jpg';
 
@@ -197,7 +191,6 @@ $(window).load(function() {
                 var getYear = new Date();
                 this.$set('year',getYear.getFullYear());
             },
-
             getIcon: function () {
 
                 var arr = [];
@@ -206,9 +199,7 @@ $(window).load(function() {
                     arr.push(i);
                 }
                 this.$set('favorites',_.sample(arr));  // jshint ignore:line
-
             },
-
             setTheInterval: function () {
 
                 this.$nextTick(function () {
@@ -219,10 +210,6 @@ $(window).load(function() {
             }
         }
     });
-
     //Scroll reaveal
-
     window.sr = ScrollReveal().reveal('section, .og__recommendations__item, .og__profile , .og__contact ');  // jshint ignore:line
-
-
 });
