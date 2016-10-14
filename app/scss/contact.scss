@@ -17,7 +17,7 @@
 
   &__form {
     width: 100%;
-    max-width: 500px;
+    max-width: 300px;
     margin: 0 auto;
     text-align: center;
     align-content: center;
@@ -28,11 +28,14 @@
   &__message {
     padding-left: 15px;
     width: 100%;
-    max-width: 300px;
     line-height: 27px;
     font-size: 14px;
     margin-bottom: 15px;
     border: 1px solid $grey2;
+  }
+
+  &__name {
+    width: 50%;
   }
 
   &__submit {
@@ -42,7 +45,6 @@
     border: none;
     width: 100%;
     line-height: 32px;
-    max-width: 300px;
     border: 1px solid $primary;
 
     &:hover {

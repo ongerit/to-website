@@ -76,9 +76,10 @@ $(window).load(function() {
     function sendFormData() {
 
       var EMAIL= $('input[name*="email"]').val();
-      var NAME= $('input[name*="name"]').val();
+      var FNAME= $('input[name*="first_name"]').val();
+      var LNAME= $('input[name*="last_name"]').val();
       var MESSAGE= $('textarea[name*="message"]').val();
-      var VARS = 'email='+EMAIL+'&message='+MESSAGE+'&name='+NAME;
+      var VARS = 'email='+EMAIL+'&message='+MESSAGE+'&fname='+FNAME+'&lname='+LNAME;
 
       //stop the form from submitting normally
       event.preventDefault();
