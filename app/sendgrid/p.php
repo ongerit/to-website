@@ -21,15 +21,15 @@ require("cred.php");
     $sg = new \SendGrid($apiKey);
 
     $response = $sg->client->mail()->send()->post($mail);
-    print_r($response);
   }
 
   // Add user's contant information to sendgrid
 
   function add_users_contact_to_sendgrid($apiKey, $user_email, $user_last_name, $user_first_name) {
-    $data  = array("email" => $user_email, "last_name" => $user_last_name, "first_name" => $user_first_name);
-    $data_string = json_encode($data);
-    $data_string_obj = "[".$data_string."]";
+    //$data  = array("email" => $user_email, "last_name" => $user_last_name, "first_name" => $user_first_name);
+
+		$data  = '[{"email":'.$user_email.',"last_name":'.$user_last_name.',"first_name":'.$user_first_name.'}]';
+		$data_string = json_encode($data);
 
     $ch = curl_init('https://api.sendgrid.com/v3/contactdb/recipients');
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -37,12 +37,14 @@ require("cred.php");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'Content-Type: application/json',
-        'authorization: Bearer'.$apiKey
+        'Authorization: Bearer'.$apiKey
       )
     );
     $result = curl_exec($ch);
-		print('add_users_contact_to_sendgrid_print: '.$user_email.$user_last_name.$user_first_name);
-    print('add_users_contact_to_sendgrid: '.$result);
+	//	print('add_users_contact_to_sendgrid_print: '.$user_email.$user_last_name.$user_first_name);
+  //  print('sendgrid: '.$ch);
+		print('raw: '.$data);
+		print('sendgrid: '.$data_string);
   }
 
 	// Add user to sendgrid contacts
@@ -72,8 +74,75 @@ require("cred.php");
       // http://lornajane.net/posts/2011/posting-json-data-with-php-curl
 
       //curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string_obj);
-    // Run Functions here
-    send_grid_information($apiKey, $sgEmail,$user_email, $user_last_name, $user_first_name, $user_message);
-    add_users_contact_to_sendgrid($apiKey, $user_email, $user_last_name, $user_first_name);
+
+		//https://api.sendgrid.com/v3/mail/send
+
+		// Send mail
+				//
+				// 		{
+				//   "personalizations": [
+				//     {
+				//       "to": [
+				//         {
+				//           "email": "john@example.com"
+				//         }
+				//       ],
+				//       "subject": "Hello, World!"
+				//     }
+				//   ],
+				//   "from": {
+				//     "email": "from_address@example.com"
+				//   },
+				//   "content": [
+				//     {
+				//       "type": "text/plain",
+				//       "value": "Hello, World!"
+				//     }
+				//   ]
+				// }
+
+				// Send mail with the template
+
+				function send_email_with_template($apiKey, $user_email, $user_last_name, $user_first_name, $sgEmail){
+					$data  = '{"personalizations": [
+									    {
+									      "to": [
+									        {
+									          "email": "'.$user_email.'"
+									        }
+									      ],
+									      "subject": "Hello, World!"
+									    }
+									  ],
+									  "from": {
+									    "email": "ongerit@gmail.com"
+									  },
+									  "content": [
+									    {
+									      "type": "text/plain",
+									      "value": "Hello, World!"
+									    }
+									  ]
+									}';
+					$data_string = json_encode($data);
+
+					$ch = curl_init('https://api.sendgrid.com/v3/mail/send');
+					curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+					curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+					curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+					curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+							'Content-Type: application/json',
+							'Authorization: Bearer'.$apiKey
+						)
+					);
+					$result = curl_exec($ch);
+				}
+
+
+		// Run Functions here
+		send_grid_information($apiKey, $sgEmail,$user_email, $user_last_name, $user_first_name, $user_message);
+		add_users_contact_to_sendgrid($apiKey, $user_email, $user_last_name, $user_first_name);
+		send_email_with_template($apiKey, $user_email, $user_last_name, $user_first_name, $sgEmail);
+
 
 ?>
