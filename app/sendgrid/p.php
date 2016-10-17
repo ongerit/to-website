@@ -28,23 +28,41 @@ require("cred.php");
   function add_users_contact_to_sendgrid($apiKey, $user_email, $user_last_name, $user_first_name) {
     //$data  = array("email" => $user_email, "last_name" => $user_last_name, "first_name" => $user_first_name);
 
-		$data  = '[{"email":'.$user_email.',"last_name":'.$user_last_name.',"first_name":'.$user_first_name.'}]';
+		$data  = '[{"email":"'.$user_email.'","last_name":"'.$user_last_name.'","first_name":"'.$user_first_name.'"}]';
 		$data_string = json_encode($data);
+		// From postman
+		$curl = curl_init();
+		$newApiKey = " Bearer ".$apiKey;
+		print($data_string);
+		print($data);
+		var_dump($data);
+		curl_setopt_array($curl, array(
+		  CURLOPT_URL => "https://api.sendgrid.com/v3/contactdb/recipients",
+		  CURLOPT_RETURNTRANSFER => true,
+		  CURLOPT_ENCODING => "",
+		  CURLOPT_MAXREDIRS => 10,
+		  CURLOPT_TIMEOUT => 30,
+		  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+		  CURLOPT_CUSTOMREQUEST => "POST",
+		  CURLOPT_POSTFIELDS => "[{\"email\":\"ongerit+jm@gmailmk.com\",\"last_name\":null,\"first_name\":null}]",
+			CURLOPT_POSTFIELDS => $data,
+		  CURLOPT_HTTPHEADER => array(
+		    "authorization:".$newApiKey,
+		    "cache-control: no-cache",
+		    "content-type: application/json"
+		  ),
+		));
 
-    $ch = curl_init('https://api.sendgrid.com/v3/contactdb/recipients');
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string_obj);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Content-Type: application/json',
-        'Authorization: Bearer'.$apiKey
-      )
-    );
-    $result = curl_exec($ch);
-	//	print('add_users_contact_to_sendgrid_print: '.$user_email.$user_last_name.$user_first_name);
-  //  print('sendgrid: '.$ch);
-		print('raw: '.$data);
-		print('sendgrid: '.$data_string);
+		$response = curl_exec($curl);
+		$err = curl_error($curl);
+
+		curl_close($curl);
+
+		if ($err) {
+		  echo "cURL Error #:" . $err;
+		} else {
+		  echo $response;
+		}
   }
 
 	// Add user to sendgrid contacts
@@ -124,6 +142,7 @@ require("cred.php");
 									    }
 									  ]
 									}';
+
 					$data_string = json_encode($data);
 
 					$ch = curl_init('https://api.sendgrid.com/v3/mail/send');
@@ -135,7 +154,9 @@ require("cred.php");
 							'Authorization: Bearer'.$apiKey
 						)
 					);
-					$result = curl_exec($ch);
+					$resp = curl_exec($ch);
+					// Close curl
+					curl_close($ch);
 				}
 
 
