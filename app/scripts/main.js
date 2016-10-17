@@ -15,7 +15,7 @@ $(window).load(function() {
       for (var i = 0; i < link.length; i++) {
         link[i].classList.toggle('active');
       }
-      event.preventDefault();
+
       event.stopImmediatePropagation();
     }
 
@@ -81,7 +81,10 @@ $(window).load(function() {
         type: "POST",
         url: "sendgrid/p.php",
         data: VARS,
-        cache: false
+        cache: false,
+        success: function() {
+          return;
+        }
       })
       .done(function(data){
         console.log(data);

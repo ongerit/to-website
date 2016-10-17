@@ -361,7 +361,7 @@ module.exports = function (grunt) {
       dist: [
         'copy:styles',
         'copy:scripts',
-        //'imagemin',
+        'imagemin',
         // 'svgmin'
       ]
     }
