@@ -35,8 +35,6 @@ $(window).load(function() {
     win.addEventListener('click', closeMenu, false);
 
     // Scroll to hash
-
-    // In View
     // Add smooth scrolling to all links
     $('a.anchor').on('click', function(event) {
         //set hash
@@ -45,18 +43,15 @@ $(window).load(function() {
         if (hash !== '') {
             // Prevent default anchor click behavior
             event.preventDefault();
-
             // Store hash
              hash = this.hash;
             // Offset the the title
              var titleOffset = 60;
-
             // Using jQuery's animate() method to add smooth page scroll
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html,body').animate({
                 scrollTop: $(hash).offset().top + titleOffset //offset top by 60px
             }, 800, function(){
-
                 // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
             });
@@ -68,7 +63,6 @@ $(window).load(function() {
       var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     }
-
     // SendGrid Code
     function sendFormData() {
 
@@ -82,34 +76,39 @@ $(window).load(function() {
       event.preventDefault();
 
       //send the data using post with element values
-      // var posting = $.post('sendgrid/p.php', VARS);
-      // console.log(posting);
-      //
-      // // Results
-      // posting.done(function(data) {
-      // $('.og__contact__success').text('success');
-      // });
 
       $.ajax({
         type: "POST",
         url: "sendgrid/p.php",
         data: VARS,
-        cache: false,
-        success: function(data) {
-                  console.log(data);
-          }
+        cache: false
       })
       .done(function(data){
         console.log(data);
       });
     }
-    
+
     function validate() {
       var EMAIL= $('input[name*="email"]').val();
-      var NAME= $('input[name*="name"]').val();
+      var FNAME= $('input[name*="first_name"]').val();
+      var LNAME= $('input[name*="last_name"]').val();
       var MESSAGE= $('textarea[name*="message"]').val();
       $('.og__contact__error').text('');
       $('.og__contact__success').text('');
+
+      if( FNAME === null && LNAME === null && EMAIL === null  && MESSAGE === null) {
+        return;
+      }
+
+      if( FNAME === null) {
+        $('.og__contact__error').text('Please enter your first name').fadeIn();
+        return;
+      }
+
+      if( FNAME === null) {
+        $('.og__contact__error').text('Please enter your last name').fadeIn();
+        return;
+      }
 
       if(validateEmail(EMAIL) && NAME && MESSAGE) {
         sendFormData();
@@ -117,7 +116,7 @@ $(window).load(function() {
         $('.og__contact__success').text('Email sent, thank you!').fadeIn();
         return false;
       } else {
-        $('.og__contact__error').text(EMAIL + ' is not a valid email.').fadeIn();
+        $('.og__contact__error').text('Please enter a valid email.').fadeIn();
         return false;
       }
     }
@@ -125,7 +124,6 @@ $(window).load(function() {
     $('form').bind('submit', validate);
 
     //Headhesive
-
     // Options
     var options = {
 
@@ -142,7 +140,7 @@ $(window).load(function() {
         }
     };
 
-// Create a new instance of Headhesive.js and pass in some options
+    // Create a new instance of Headhesive.js and pass in some options
     var header = new Headhesive('.banner', options );  // jshint ignore:line
     var url = Math.floor((Math.random() * 33) + 1);
     var links = 'images/' + url + '.jpg';
