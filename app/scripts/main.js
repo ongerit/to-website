@@ -78,8 +78,8 @@ $(window).load(function() {
       //send the data using post with element values
 
       $.ajax({
-        type: "POST",
-        url: "sendgrid/p.php",
+        type: 'POST',
+        url: 'sendgrid/p.php',
         data: VARS,
         cache: false,
         success: function() {
@@ -98,22 +98,23 @@ $(window).load(function() {
       var MESSAGE= $('textarea[name*="message"]').val();
       $('.og__contact__error').text('');
       $('.og__contact__success').text('');
+      event.preventDefault();
 
       if( FNAME === null && LNAME === null && EMAIL === null  && MESSAGE === null) {
-        return;
+        return false;
       }
 
       if( FNAME === null) {
         $('.og__contact__error').text('Please enter your first name').fadeIn();
-        return;
+        return false;
       }
 
       if( FNAME === null) {
         $('.og__contact__error').text('Please enter your last name').fadeIn();
-        return;
+        return false;
       }
 
-      if(validateEmail(EMAIL) && NAME && MESSAGE) {
+      if(validateEmail(EMAIL) && FNAME && LNAME && MESSAGE) {
         sendFormData();
         $('form').text('');
         $('.og__contact__success').text('Email sent, thank you!').fadeIn();
