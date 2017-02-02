@@ -2,6 +2,7 @@
 $(window).load(function() {
     'use strict';
 
+
     // Material menu button
     var circle = document.querySelector('.material-btn');
     var link = document.querySelector('.material-content').querySelectorAll('li');
@@ -163,7 +164,9 @@ $(window).load(function() {
     				.addClass('animated bounceIn');
     		});
     }
+
     animateCss();
+
 
     // Vue.js
     var vm = new Vue({  // jshint ignore:line
@@ -185,7 +188,7 @@ $(window).load(function() {
             this.getYear();
             this.getIcon();
             this.setTheInterval();
-
+            this.typeInit();
         },
 
         methods: {
@@ -209,6 +212,18 @@ $(window).load(function() {
                         vm.getIcon();
                     }, 2000);
                 });
+            },
+            typeInit: function() {
+              window.setTimeout(function(){
+                console.log('wt');
+                $('#typed').typed({
+                  stringsElement: $('#typed-strings'),
+                   loop: true,
+                   cursorChar: '_',
+                   backDelay: 800,
+                   startDelay: 200,
+                });
+              },1000);
             }
         }
     });

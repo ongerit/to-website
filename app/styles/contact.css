@@ -17,7 +17,7 @@
 /* line 18, ../scss/contact.scss */
 .og__contact__form {
   width: 100%;
-  max-width: 500px;
+  max-width: 300px;
   margin: 0 auto;
   text-align: center;
   align-content: center;
@@ -26,13 +26,16 @@
 .og__contact__email, .og__contact__name, .og__contact__message {
   padding-left: 15px;
   width: 100%;
-  max-width: 300px;
   line-height: 27px;
   font-size: 14px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
 }
-/* line 38, ../scss/contact.scss */
+/* line 37, ../scss/contact.scss */
+.og__contact__name {
+  width: 50%;
+}
+/* line 41, ../scss/contact.scss */
 .og__contact__submit {
   color: #fff;
   background: #FB6964;
@@ -40,31 +43,30 @@
   border: none;
   width: 100%;
   line-height: 32px;
-  max-width: 300px;
   border: 1px solid #FB6964;
 }
-/* line 48, ../scss/contact.scss */
+/* line 50, ../scss/contact.scss */
 .og__contact__submit:hover {
   color: #FB6964;
   background: #fff;
   border: 1px solid #FB6964;
   cursor: pointer;
 }
-/* line 56, ../scss/contact.scss */
+/* line 58, ../scss/contact.scss */
 .og__contact__error {
   color: #FB6964;
 }
-/* line 60, ../scss/contact.scss */
+/* line 62, ../scss/contact.scss */
 .og__contact__success {
   color: #555;
 }
-/* line 64, ../scss/contact.scss */
+/* line 66, ../scss/contact.scss */
 .og__contact__social {
   margin: 0 auto;
   padding-bottom: 30px;
   text-align: center;
 }
-/* line 68, ../scss/contact.scss */
+/* line 70, ../scss/contact.scss */
 .og__contact__social a {
   color: #555;
   border: 1px solid #ddd;
@@ -79,11 +81,11 @@
   padding: 10px;
   width: 40px;
 }
-/* line 82, ../scss/contact.scss */
+/* line 84, ../scss/contact.scss */
 .og__contact__social a i {
   margin: 0;
 }
-/* line 86, ../scss/contact.scss */
+/* line 88, ../scss/contact.scss */
 .og__contact__social a:hover {
   color: #fff;
   background: #FB6964;

@@ -255,7 +255,21 @@ main p .highlight {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 72, ../scss/header.scss */
+/* line 73, ../scss/header.scss */
+.og__header .type-wrap #typed {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-top: 27px;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* line 83, ../scss/header.scss */
+.og__header .type-wrap .typed-cursor {
+  font-size: 40px;
+}
+/* line 88, ../scss/header.scss */
 .og__header__title {
   text-align: center;
   line-height: 40px;
@@ -268,7 +282,7 @@ main p .highlight {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 84, ../scss/header.scss */
+/* line 100, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -277,8 +291,9 @@ main p .highlight {
   margin-top: 27px;
   text-transform: uppercase;
   color: #fff;
+  display: none;
 }
-/* line 95, ../scss/header.scss */
+/* line 112, ../scss/header.scss */
 .og__header__down {
   margin: auto;
   color: #fff;
@@ -289,16 +304,16 @@ main p .highlight {
   width: 100%;
   left: 0;
 }
-/* line 105, ../scss/header.scss */
+/* line 122, ../scss/header.scss */
 .og__header__down a {
   color: #fff;
 }
 @media screen and (min-width: 768px) {
-  /* line 112, ../scss/header.scss */
+  /* line 129, ../scss/header.scss */
   .og__header__links {
     display: inline-block;
   }
-  /* line 118, ../scss/header.scss */
+  /* line 135, ../scss/header.scss */
   .og__header__logo h3 {
     margin-top: 20px;
     text-align: left;
@@ -347,7 +362,7 @@ main p .highlight {
 /* line 18, ../scss/contact.scss */
 .og__contact__form {
   width: 100%;
-  max-width: 500px;
+  max-width: 300px;
   margin: 0 auto;
   text-align: center;
   align-content: center;
@@ -356,13 +371,16 @@ main p .highlight {
 .og__contact__email, .og__contact__name, .og__contact__message {
   padding-left: 15px;
   width: 100%;
-  max-width: 300px;
   line-height: 27px;
   font-size: 14px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
 }
-/* line 38, ../scss/contact.scss */
+/* line 37, ../scss/contact.scss */
+.og__contact__name {
+  width: 50%;
+}
+/* line 41, ../scss/contact.scss */
 .og__contact__submit {
   color: #fff;
   background: #FB6964;
@@ -370,31 +388,30 @@ main p .highlight {
   border: none;
   width: 100%;
   line-height: 32px;
-  max-width: 300px;
   border: 1px solid #FB6964;
 }
-/* line 48, ../scss/contact.scss */
+/* line 50, ../scss/contact.scss */
 .og__contact__submit:hover {
   color: #FB6964;
   background: #fff;
   border: 1px solid #FB6964;
   cursor: pointer;
 }
-/* line 56, ../scss/contact.scss */
+/* line 58, ../scss/contact.scss */
 .og__contact__error {
   color: #FB6964;
 }
-/* line 60, ../scss/contact.scss */
+/* line 62, ../scss/contact.scss */
 .og__contact__success {
   color: #555;
 }
-/* line 64, ../scss/contact.scss */
+/* line 66, ../scss/contact.scss */
 .og__contact__social {
   margin: 0 auto;
   padding-bottom: 30px;
   text-align: center;
 }
-/* line 68, ../scss/contact.scss */
+/* line 70, ../scss/contact.scss */
 .og__contact__social a {
   color: #555;
   border: 1px solid #ddd;
@@ -409,11 +426,11 @@ main p .highlight {
   padding: 10px;
   width: 40px;
 }
-/* line 82, ../scss/contact.scss */
+/* line 84, ../scss/contact.scss */
 .og__contact__social a i {
   margin: 0;
 }
-/* line 86, ../scss/contact.scss */
+/* line 88, ../scss/contact.scss */
 .og__contact__social a:hover {
   color: #fff;
   background: #FB6964;

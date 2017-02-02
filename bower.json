@@ -12,12 +12,18 @@
     "animate.css": "~3.5.2",
     "Headhesive.js": "headhesive#~1.2.4",
     "scrollreveal": "~3.3.1",
-    "waypoints": "~4.0.1"
+    "waypoints": "~4.0.1",
+    "typed.js": "~1.1.4"
   },
   "overrides": {
     "fontawesome": {
       "main": [
         "css/font-awesome.css"
+      ]
+    },
+    "type.js": {
+      "main": [
+        "js/type.js"
       ]
     }
   }

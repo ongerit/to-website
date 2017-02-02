@@ -39,7 +39,19 @@
         </div>
     </div>
     <div class="og__header__title">
-    <h1>I <span class="fa" v-bind:class="icons[favorites]"></span><span class="fb"> {{favorites}}</span></h1>
+    <!-- <h1>I <span class="fa" v-bind:class="icons[favorites]"></span><span class="fb"> {{favorites}}</span></h1> -->
+    <div class="wrap">
+       <div class="type-wrap">
+         <div id="typed-strings">
+           <h1>I <span class="fa fa-heart"></span><span class="fb"> Code</span></h1>
+           <h1>I <span class="fa fa-drupal"></span><span class="fb"> Drupal</span></h1>
+           <h1>I <span class="fa fa-github"></span><span class="fb"> Git</span></h1>
+           <h1>I <span class="fa fa-snapchat-ghost"></span><span class="fb"> Snapchat</span></h1>
+           <h1>I <span class="fa fa-wordpress"></span><span class="fb"> Wordpress</span></h1>
+         </div>
+         <span id="typed" style="white-space:pre;"></span>
+       </div>
+     </div>
     </div>
     <div class="og__header__down">
         <a href="#profile"><i class="fa icon-down-open-big infinite animated fadeInDown"></i></a>
@@ -161,6 +173,7 @@
 <script src="bower_components/Headhesive.js/dist/headhesive.js"></script>
 <script src="bower_components/scrollreveal/dist/scrollreveal.js"></script>
 <script src="bower_components/waypoints/lib/noframework.waypoints.js"></script>
+<script src="bower_components/typed.js/dist/typed.min.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 <script src="scripts/main.js"></script>
