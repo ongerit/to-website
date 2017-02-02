@@ -20,11 +20,6 @@
       "main": [
         "css/font-awesome.css"
       ]
-    },
-    "type.js": {
-      "main": [
-        "js/type.js"
-      ]
     }
   }
 }
