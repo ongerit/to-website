@@ -20,6 +20,11 @@
       "main": [
         "css/font-awesome.css"
       ]
+    },
+    "typed.js": {
+      "main": [
+        "js/typed.js"
+      ]
     }
   }
 }
