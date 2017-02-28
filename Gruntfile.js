@@ -27,15 +27,15 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
 
-      pkg: grunt.file.readJSON('package.json'),
-      compass: {
-          dist: {
-              options: {
-                  sassDir: '<%= config.app %>/scss',
-                  cssDir: '<%= config.app %>/styles'
-              }
-          }
-      },
+    pkg: grunt.file.readJSON('package.json'),
+    compass: {
+        dist: {
+            options: {
+                sassDir: '<%= config.app %>/scss',
+                cssDir: '<%= config.app %>/styles'
+            }
+        }
+    },
 
     // Project settings
     config: config,

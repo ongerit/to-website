@@ -1,10 +1,10 @@
 @import "colors";
+
 .og__contact {
   margin-top: 45px;
   background-color: $white;
   position: relative;
   padding: 0 30px;
-
 
   h3 {
     text-align: center;
@@ -24,8 +24,8 @@
   }
 
   &__email,
-  &__name,
-  &__message {
+  &__message,
+  &__name {
     padding-left: 15px;
     width: 100%;
     line-height: 27px;
@@ -56,17 +56,18 @@
   }
 
   &__error {
-    color:$primary;
+    color: $primary;
   }
 
   &__success {
-    color:$grey;
+    color: $grey;
   }
 
   &__social {
     margin: 0 auto;
     padding-bottom: 30px;
     text-align: center;
+
     a {
       color: $grey;
       border: 1px solid $grey2;
@@ -88,7 +89,6 @@
       &:hover {
         color: $white;
         background: $primary;
-
       }
     }
   }

@@ -1,4 +1,4 @@
-/* line 2, ../scss/contact.scss */
+/* line 3, ../scss/contact.scss */
 .og__contact {
   margin-top: 45px;
   background-color: #fff;
@@ -23,7 +23,7 @@
   align-content: center;
 }
 /* line 26, ../scss/contact.scss */
-.og__contact__email, .og__contact__name, .og__contact__message {
+.og__contact__email, .og__contact__message, .og__contact__name {
   padding-left: 15px;
   width: 100%;
   line-height: 27px;
@@ -66,7 +66,7 @@
   padding-bottom: 30px;
   text-align: center;
 }
-/* line 70, ../scss/contact.scss */
+/* line 71, ../scss/contact.scss */
 .og__contact__social a {
   color: #555;
   border: 1px solid #ddd;
@@ -81,11 +81,11 @@
   padding: 10px;
   width: 40px;
 }
-/* line 84, ../scss/contact.scss */
+/* line 85, ../scss/contact.scss */
 .og__contact__social a i {
   margin: 0;
 }
-/* line 88, ../scss/contact.scss */
+/* line 89, ../scss/contact.scss */
 .og__contact__social a:hover {
   color: #fff;
   background: #FB6964;
