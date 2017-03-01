@@ -107,6 +107,4 @@ require("cred.php");
 		send_grid_information($apiKey, $sgEmail,$user_email, $user_last_name, $user_first_name, $user_message);
 		add_users_contact_to_sendgrid($apiKey, $user_email, $user_last_name, $user_first_name);
 		send_email_with_template($apiKey, $user_email, $user_last_name, $user_first_name, $sgEmail);
-
-
 ?>
