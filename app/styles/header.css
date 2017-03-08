@@ -123,8 +123,8 @@
   .og__header__links {
     display: inline-block;
   }
-  /* line 135, ../scss/header.scss */
-  .og__header__logo h3 {
+  /* line 134, ../scss/header.scss */
+  .og__header__logo h2 {
     margin-top: 20px;
     text-align: left;
     float: left;
