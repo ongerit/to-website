@@ -77,7 +77,9 @@ module.exports = function (grunt) {
           '.tmp/styles/{,*/}*.css',
           '<%= config.app %>/images/{,*/}*',
           '<%= config.app %>/scripts/{,*/}*',
-          '<%= config.app %>/sendgrid'
+          '<%= config.app %>/sendgrid',
+          '<%= config.app %>{,*/}*.ico',
+          '<%= config.app %>{,*/}*.png'
         ]
       }
     },

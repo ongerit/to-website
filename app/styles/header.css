@@ -29,7 +29,7 @@
   padding: 0 30px;
 }
 /* line 35, ../scss/header.scss */
-.og__header__logo h3 {
+.og__header__logo h2 {
   color: #fff;
   z-index: 99999;
   font-family: 'Montserrat', sans-serif;
