@@ -3,6 +3,47 @@
   display: none;
 }
 
+/* line 5, ../scss/grid.scss */
+.grid-wrapper {
+  margin: 0 30px;
+}
+/* line 8, ../scss/grid.scss */
+.grid-wrapper .grid-full {
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 15, ../scss/grid.scss */
+  .grid-wrapper {
+    margin: 0 40px;
+  }
+  /* line 18, ../scss/grid.scss */
+  .grid-wrapper .grid-full {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 26, ../scss/grid.scss */
+  .grid-wrapper {
+    max-width: none;
+    margin: 0 60px;
+  }
+  /* line 30, ../scss/grid.scss */
+  .grid-wrapper .grid-full {
+    margin-left: -60px;
+    margin-right: -60px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  /* line 38, ../scss/grid.scss */
+  .grid-wrapper {
+    max-width: 1600px;
+    padding: 0 60px;
+    margin: 0 auto;
+  }
+}
 /* line 3, ../scss/menu.scss */
 .material-menu-wrapper {
   position: fixed;
@@ -193,12 +234,11 @@ main p .highlight {
   margin: 0;
   background-color: #FB6964;
   position: relative;
-  height: 100%;
-  padding: 0 30px;
   display: block;
   width: 100%;
+  height: 80vh;
 }
-/* line 13, ../scss/header.scss */
+/* line 12, ../scss/header.scss */
 .og__header__nav-container {
   font-family: 'Montserrat', sans-serif;
   width: 100%;
@@ -206,10 +246,10 @@ main p .highlight {
   background: #FB6964;
   display: inline-block;
   color: #fff;
-  position: fixed;
+  position: relative;
   left: 0;
 }
-/* line 24, ../scss/header.scss */
+/* line 23, ../scss/header.scss */
 .og__header__nav {
   position: relative;
   margin: auto;
@@ -219,7 +259,7 @@ main p .highlight {
   padding: 0 30px;
   background: #FB6964;
 }
-/* line 36, ../scss/header.scss */
+/* line 35, ../scss/header.scss */
 .og__header__logo h2 {
   color: #fff;
   z-index: 99999;
@@ -231,7 +271,7 @@ main p .highlight {
   margin-top: 10px;
   text-align: center;
 }
-/* line 48, ../scss/header.scss */
+/* line 47, ../scss/header.scss */
 .og__header__links {
   margin-left: auto;
   position: absolute;
@@ -239,11 +279,11 @@ main p .highlight {
   right: 0;
   display: none;
 }
-/* line 55, ../scss/header.scss */
+/* line 54, ../scss/header.scss */
 .og__header__links a {
   color: #fff;
 }
-/* line 59, ../scss/header.scss */
+/* line 58, ../scss/header.scss */
 .og__header__links li {
   display: inline-block;
   position: relative;
@@ -256,7 +296,7 @@ main p .highlight {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 74, ../scss/header.scss */
+/* line 73, ../scss/header.scss */
 .og__header .type-wrap #typed {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -266,24 +306,24 @@ main p .highlight {
   text-transform: uppercase;
   color: #fff;
 }
-/* line 84, ../scss/header.scss */
+/* line 83, ../scss/header.scss */
 .og__header .type-wrap .typed-cursor {
   font-size: 40px;
 }
-/* line 89, ../scss/header.scss */
+/* line 88, ../scss/header.scss */
 .og__header__title {
   text-align: center;
   line-height: 40px;
   color: #fff;
   display: block;
   top: 50%;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  height: 90px;
 }
-/* line 101, ../scss/header.scss */
+/* line 100, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -294,7 +334,7 @@ main p .highlight {
   color: #fff;
   display: none;
 }
-/* line 113, ../scss/header.scss */
+/* line 112, ../scss/header.scss */
 .og__header__down {
   margin: auto;
   color: #fff;
@@ -305,16 +345,16 @@ main p .highlight {
   width: 100%;
   left: 0;
 }
-/* line 123, ../scss/header.scss */
+/* line 122, ../scss/header.scss */
 .og__header__down a {
   color: #fff;
 }
 @media screen and (min-width: 768px) {
-  /* line 130, ../scss/header.scss */
+  /* line 129, ../scss/header.scss */
   .og__header__links {
     display: inline-block;
   }
-  /* line 135, ../scss/header.scss */
+  /* line 134, ../scss/header.scss */
   .og__header__logo h2 {
     margin-top: 20px;
     text-align: left;
@@ -337,24 +377,25 @@ main p .highlight {
   margin: 0;
   background-color: #FB6964;
   position: relative;
-  padding: 50px 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-/* line 9, ../scss/footer.scss */
+/* line 11, ../scss/footer.scss */
 .og__footer__copyright {
   color: #fff;
 }
 
 /* line 3, ../scss/contact.scss */
 .og__contact {
-  margin-top: 45px;
-  background-color: #fff;
+  padding-top: 50px;
+  background-color: #f2f2f2;
   position: relative;
-  padding: 0 30px;
 }
-/* line 9, ../scss/contact.scss */
+/* line 8, ../scss/contact.scss */
 .og__contact h3 {
   text-align: center;
   margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
 }
 /* line 14, ../scss/contact.scss */
 .og__contact p {
@@ -442,9 +483,10 @@ main p .highlight {
   margin: 0;
   background-color: #f2f2f2;
   position: relative;
-  padding: 50px 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-/* line 10, ../scss/brand.scss */
+/* line 11, ../scss/brand.scss */
 .og__brand__container {
   display: flex;
   padding: 30px 0;
@@ -452,7 +494,7 @@ main p .highlight {
   flex: 1 0 25%;
   flex-wrap: wrap;
 }
-/* line 18, ../scss/brand.scss */
+/* line 19, ../scss/brand.scss */
 .og__brand__increase {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -460,13 +502,13 @@ main p .highlight {
   -ms-filter: grayscale(0%);
   filter: grayscale(0%);
 }
-/* line 26, ../scss/brand.scss */
+/* line 27, ../scss/brand.scss */
 .og__brand__item {
   padding-right: 10px;
   margin: 0 auto;
   width: 41%;
 }
-/* line 31, ../scss/brand.scss */
+/* line 32, ../scss/brand.scss */
 .og__brand__item img {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -474,7 +516,7 @@ main p .highlight {
   -ms-filter: grayscale(100%);
   filter: grayscale(100%);
 }
-/* line 38, ../scss/brand.scss */
+/* line 39, ../scss/brand.scss */
 .og__brand__item img:hover {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -482,23 +524,24 @@ main p .highlight {
   -ms-filter: grayscale(0%);
   filter: grayscale(0%);
 }
-/* line 48, ../scss/brand.scss */
+/* line 49, ../scss/brand.scss */
 .og__brand h3 {
   text-align: center;
   margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
 }
-/* line 53, ../scss/brand.scss */
+/* line 55, ../scss/brand.scss */
 .og__brand p {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 59, ../scss/brand.scss */
+  /* line 61, ../scss/brand.scss */
   .og__brand__container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  /* line 65, ../scss/brand.scss */
+  /* line 67, ../scss/brand.scss */
   .og__brand__item {
     padding: 0 30px;
   }
@@ -507,9 +550,10 @@ main p .highlight {
 /* line 4, ../scss/profile.scss */
 .og__profile {
   margin: 0;
-  background-color: #f2f2f2;
+  background-color: #fff;
   position: relative;
-  padding: 40px 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: block;
   width: 100%;
 }
@@ -527,17 +571,18 @@ main p .highlight {
 .og__profile h3 {
   text-align: center;
   padding-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
 }
-/* line 30, ../scss/profile.scss */
+/* line 31, ../scss/profile.scss */
 .og__profile p {
   text-align: center;
 }
-/* line 34, ../scss/profile.scss */
+/* line 35, ../scss/profile.scss */
 .og__profile--center {
   margin: auto;
 }
 @media screen and (min-width: 768px) {
-  /* line 39, ../scss/profile.scss */
+  /* line 40, ../scss/profile.scss */
   .og__profile__desc {
     padding: 0 80px;
   }
@@ -548,13 +593,13 @@ main p .highlight {
   margin: 45px 0;
   background-color: #fff;
   position: relative;
-  padding: 0 30px;
   display: block;
 }
-/* line 12, ../scss/recommendations.scss */
+/* line 11, ../scss/recommendations.scss */
 .og__recommendations h3 {
   text-align: center;
   padding-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
 }
 /* line 17, ../scss/recommendations.scss */
 .og__recommendations__image {
@@ -577,44 +622,58 @@ main p .highlight {
 }
 /* line 36, ../scss/recommendations.scss */
 .og__recommendations__item:hover .og__recommendations__hover {
+  opacity: 1;
+  z-index: 4;
   display: block;
+  transform: translate(0em, -10em) scale(1);
+  transition: display 0s, transform .2s 1s ease, opacity 1s ease;
+  transition-delay: .3s;
 }
-/* line 40, ../scss/recommendations.scss */
+/* line 46, ../scss/recommendations.scss */
 .og__recommendations__item:hover .og__recommendations__intro {
-  visibility: hidden;
-  height: 0;
-  opacity: 0;
-  transition: visibility 0s 1s, opacity 1s linear, height 0s 1s;
+  transform: scale(0.6) translate(-12em, 4.5em);
+  transition: transform .4s linear;
 }
-/* line 49, ../scss/recommendations.scss */
+/* line 56, ../scss/recommendations.scss */
+.og__recommendations__item:hover .og__recommendations__title {
+  opacity: 0;
+  transition: opacity .2s linear;
+}
+/* line 64, ../scss/recommendations.scss */
 .og__recommendations__author {
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 54, ../scss/recommendations.scss */
+/* line 69, ../scss/recommendations.scss */
 .og__recommendations__intro {
+  z-index: 3;
   margin: 0 auto;
   text-align: center;
   cursor: pointer;
+  transform: inherit;
+  transition: transform .5s linear;
 }
-/* line 59, ../scss/recommendations.scss */
+/* line 77, ../scss/recommendations.scss */
 .og__recommendations__intro .fa {
   font-size: 40px;
 }
-/* line 64, ../scss/recommendations.scss */
+/* line 82, ../scss/recommendations.scss */
 .og__recommendations__title {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
+  opacity: 1;
+  transition: opacity .2s linear;
 }
-/* line 70, ../scss/recommendations.scss */
+/* line 90, ../scss/recommendations.scss */
 .og__recommendations__hover {
   display: none;
-  background: #fff;
+  opacity: 0;
+  transform: scale(3);
 }
-/* line 73, ../scss/recommendations.scss */
+/* line 95, ../scss/recommendations.scss */
 .og__recommendations__hover p {
-  text-align: center;
+  text-align: right;
   font-size: 13px;
 }
 @media screen and (min-width: 768px) {
@@ -622,7 +681,7 @@ main p .highlight {
   .og__recommendations {
     height: 206px;
   }
-  /* line 81, ../scss/recommendations.scss */
+  /* line 103, ../scss/recommendations.scss */
   .og__recommendations__wrapper {
     flex-direction: row;
   }
@@ -648,7 +707,6 @@ main p .highlight {
   position: fixed;
   z-index: 1;
   /* Additional styles */
-  background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
   /* Translate -100% to move off screen */
   -webkit-transform: translateY(-100%);
@@ -663,7 +721,7 @@ main p .highlight {
 .banner--clone h3,
 .banner--clone .og__header__links,
 .banner--clone a {
-  color: #555;
+  color: #fff;
 }
 
 /**

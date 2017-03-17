@@ -199,6 +199,7 @@ $(window).load(function() {
             this.getIcon();
             this.setTheInterval();
             this.typeInit();
+            this.validateForm();
         },
 
         methods: {
@@ -219,7 +220,7 @@ $(window).load(function() {
 
                 this.$nextTick(function () {
                     setInterval(function() {
-                        vm.getIcon();
+                        //vm.getIcon();
                     }, 2000);
                 });
             },
@@ -234,6 +235,13 @@ $(window).load(function() {
                    startDelay: 200,
                 });
               },1000);
+            },
+            validateForm: function() {
+                var $form = $('form');
+                console.log($form)
+                $form.on('change',function(e){
+                  console.log(e);
+                });
             }
         }
     });

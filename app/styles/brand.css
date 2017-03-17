@@ -3,9 +3,10 @@
   margin: 0;
   background-color: #f2f2f2;
   position: relative;
-  padding: 50px 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-/* line 10, ../scss/brand.scss */
+/* line 11, ../scss/brand.scss */
 .og__brand__container {
   display: flex;
   padding: 30px 0;
@@ -13,7 +14,7 @@
   flex: 1 0 25%;
   flex-wrap: wrap;
 }
-/* line 18, ../scss/brand.scss */
+/* line 19, ../scss/brand.scss */
 .og__brand__increase {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -21,13 +22,13 @@
   -ms-filter: grayscale(0%);
   filter: grayscale(0%);
 }
-/* line 26, ../scss/brand.scss */
+/* line 27, ../scss/brand.scss */
 .og__brand__item {
   padding-right: 10px;
   margin: 0 auto;
   width: 41%;
 }
-/* line 31, ../scss/brand.scss */
+/* line 32, ../scss/brand.scss */
 .og__brand__item img {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -35,7 +36,7 @@
   -ms-filter: grayscale(100%);
   filter: grayscale(100%);
 }
-/* line 38, ../scss/brand.scss */
+/* line 39, ../scss/brand.scss */
 .og__brand__item img:hover {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -43,23 +44,24 @@
   -ms-filter: grayscale(0%);
   filter: grayscale(0%);
 }
-/* line 48, ../scss/brand.scss */
+/* line 49, ../scss/brand.scss */
 .og__brand h3 {
   text-align: center;
   margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
 }
-/* line 53, ../scss/brand.scss */
+/* line 55, ../scss/brand.scss */
 .og__brand p {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 59, ../scss/brand.scss */
+  /* line 61, ../scss/brand.scss */
   .og__brand__container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  /* line 65, ../scss/brand.scss */
+  /* line 67, ../scss/brand.scss */
   .og__brand__item {
     padding: 0 30px;
   }

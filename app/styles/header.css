@@ -3,12 +3,11 @@
   margin: 0;
   background-color: #FB6964;
   position: relative;
-  height: 100%;
-  padding: 0 30px;
   display: block;
   width: 100%;
+  height: 80vh;
 }
-/* line 13, ../scss/header.scss */
+/* line 12, ../scss/header.scss */
 .og__header__nav-container {
   font-family: 'Montserrat', sans-serif;
   width: 100%;
@@ -16,10 +15,10 @@
   background: #FB6964;
   display: inline-block;
   color: #fff;
-  position: fixed;
+  position: relative;
   left: 0;
 }
-/* line 24, ../scss/header.scss */
+/* line 23, ../scss/header.scss */
 .og__header__nav {
   position: relative;
   margin: auto;
@@ -29,7 +28,7 @@
   padding: 0 30px;
   background: #FB6964;
 }
-/* line 36, ../scss/header.scss */
+/* line 35, ../scss/header.scss */
 .og__header__logo h2 {
   color: #fff;
   z-index: 99999;
@@ -41,7 +40,7 @@
   margin-top: 10px;
   text-align: center;
 }
-/* line 48, ../scss/header.scss */
+/* line 47, ../scss/header.scss */
 .og__header__links {
   margin-left: auto;
   position: absolute;
@@ -49,11 +48,11 @@
   right: 0;
   display: none;
 }
-/* line 55, ../scss/header.scss */
+/* line 54, ../scss/header.scss */
 .og__header__links a {
   color: #fff;
 }
-/* line 59, ../scss/header.scss */
+/* line 58, ../scss/header.scss */
 .og__header__links li {
   display: inline-block;
   position: relative;
@@ -66,7 +65,7 @@
   text-decoration: none;
   cursor: pointer;
 }
-/* line 74, ../scss/header.scss */
+/* line 73, ../scss/header.scss */
 .og__header .type-wrap #typed {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -76,24 +75,24 @@
   text-transform: uppercase;
   color: #fff;
 }
-/* line 84, ../scss/header.scss */
+/* line 83, ../scss/header.scss */
 .og__header .type-wrap .typed-cursor {
   font-size: 40px;
 }
-/* line 89, ../scss/header.scss */
+/* line 88, ../scss/header.scss */
 .og__header__title {
   text-align: center;
   line-height: 40px;
   color: #fff;
   display: block;
   top: 50%;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  height: 90px;
 }
-/* line 101, ../scss/header.scss */
+/* line 100, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -104,7 +103,7 @@
   color: #fff;
   display: none;
 }
-/* line 113, ../scss/header.scss */
+/* line 112, ../scss/header.scss */
 .og__header__down {
   margin: auto;
   color: #fff;
@@ -115,16 +114,16 @@
   width: 100%;
   left: 0;
 }
-/* line 123, ../scss/header.scss */
+/* line 122, ../scss/header.scss */
 .og__header__down a {
   color: #fff;
 }
 @media screen and (min-width: 768px) {
-  /* line 130, ../scss/header.scss */
+  /* line 129, ../scss/header.scss */
   .og__header__links {
     display: inline-block;
   }
-  /* line 135, ../scss/header.scss */
+  /* line 134, ../scss/header.scss */
   .og__header__logo h2 {
     margin-top: 20px;
     text-align: left;

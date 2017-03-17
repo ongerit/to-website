@@ -6,12 +6,12 @@
   margin: 45px 0;
   background-color: $white;
   position: relative;
-  padding: 0 30px;
   display: block;
 
   h3 {
     text-align: center;
     padding-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
   }
 
   &__image {
@@ -34,14 +34,29 @@
 
     &:hover {
       .og__recommendations__hover {
+        opacity: 1;
+        z-index: 4;
         display: block;
+        transform: translate(0em, -10em) scale(1);
+        // background: transparent;
+        transition: display 0s, transform .2s 1s ease, opacity 1s ease;
+        transition-delay: .3s;
       }
 
       .og__recommendations__intro {
-        visibility: hidden;
-        height: 0;
+        transform: scale(0.6) translate(-12em, 4.5em);
+        // visibility: hidden;
+        // height: 0;
+        // opacity: 0;
+        // transition: visibility 0s 1s, opacity 1s linear, height 0s 1s;
+
+        transition: transform .4s linear;
+      }
+
+      .og__recommendations__title {
         opacity: 0;
-        transition: visibility 0s 1s, opacity 1s linear, height 0s 1s;
+        transition: opacity .2s linear;
+
       }
     }
   }
@@ -52,9 +67,12 @@
   }
 
   &__intro {
+    z-index: 3;
     margin: 0 auto;
     text-align: center;
     cursor: pointer;
+    transform: inherit;
+    transition: transform .5s linear;
 
     .fa {
       font-size: 40px;
@@ -65,13 +83,17 @@
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
+    opacity: 1;
+    transition: opacity .2s linear;
   }
 
   &__hover {
     display: none;
-    background: $white;
+    opacity: 0;
+    transform: scale(3);
+
     p {
-      text-align: center;
+      text-align: right;
       font-size: 13px ;
     }
   }

@@ -3,9 +3,10 @@
   margin: 0;
   background-color: #FB6964;
   position: relative;
-  padding: 50px 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-/* line 9, ../scss/footer.scss */
+/* line 11, ../scss/footer.scss */
 .og__footer__copyright {
   color: #fff;
 }

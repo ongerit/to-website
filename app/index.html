@@ -20,7 +20,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <!-- endbuild -->
     <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Poppins:700" rel="stylesheet">
     <style amp-boilerplate>
 
     body {
@@ -87,7 +87,7 @@
     </noscript>
 </head>
 <body id="app" v-cloak>
-<section class="og__header">
+<section class="og__header grid-wrapper">
     <div class="og__header__nav-container banner">
         <div class="og__header__nav">
             <div class="og__header__logo">
@@ -123,18 +123,7 @@
     </div>
 </section>
 
-<section id="profile" class="og__profile">
-    <h3>Profile</h3>
-    <div class="og__profile__container">
-        <div class="og__profile__avatar"><img alt="Profile picture" src="images/avatar.jpg" /></div>
-        <p class="og__profile__title">Thomas Ongeri</p>
-        <p class="og__profile__title">Developer | Brooklyn, NY</p>
-        <p class="og__profile__desc">Thomas Ongeri is a Frontend developer who works for a creative agency in Manhattan called <a href="http://codeandtheory.com" target="blank">Code and Theory</a> and is lives in Brooklyn, NY. He enjoys problem solving in all thing web and tech. He designs, he codes, and is available for work.</p>
-    <div>
-</section>
-
-
-<section id="recommendations" class="og__recommendations">
+<section id="recommendations" class="og__recommendations grid-wrapper">
     <h3>Affirmations</h3>
     <div class="og__recommendations__wrapper">
         <div class="og__recommendations__item">
@@ -142,7 +131,7 @@
                 <img alt="Kelly" class="og__recommendations__image" src="images/recommendations/kelly.jpg" />
                 <p class="og__recommendations__title">Collaborative</p>
             </div>
-            <div class="og__recommendations__hover slideInUp animated">
+            <div class="og__recommendations__hover">
                 <p> I told Thomas what I was having trouble with and within a few days (!) I had a beautiful website that worked just as I had pictured it. One year later, I have not changed what he set up for me.</p>
                 <p class="og__recommendations__author">Kelly P.</p>
             </div>
@@ -152,8 +141,8 @@
               <img alt="Jason" class="og__recommendations__image" src="images/recommendations/jason.jpg" />
                 <p class="og__recommendations__title">Responsive</p>
             </div>
-            <div class="og__recommendations__hover slideInUp animated ">
-                <p>Thomas was highly responsive (even at all hours of the night), worked extremely well with me (as opposed to just for me), and was able to meet my ever-changing demands with ease. The final product turned out well beyond my expectations, due to his in-depth knowledge, timely process, and strong work ethic.<p>
+            <div class="og__recommendations__hover">
+                <p>Thomas was highly responsive (even at all hours of the night), worked extremely well with me (as opposed to just for me), and was able to meet my ever-changing demands with ease.<p>
                 <p class="og__recommendations__author animated fadeIn">Jason M.</p>
             </div>
         </div>
@@ -162,7 +151,7 @@
               <img alt="Gabby" class="og__recommendations__image" src="images/recommendations/gabby.jpg" />
                 <p class="og__recommendations__title">Creative</p>
             </div>
-            <div class="og__recommendations__hover slideInUp animated ">
+            <div class="og__recommendations__hover">
                 <p>Thomas' ultimate goal was for me to be entirely satisfied with his work, and I am. His work is clean and easy for me to update and I have been getting nothing but positive reviews from everyone using the site.</p>
                 <p class="og__recommendations__author">Gabriella T.</p>
             </div>
@@ -171,7 +160,7 @@
 </section>
 
 
-<section id="brands" class="og__brand">
+<section id="brands" class="og__brand grid-wrapper">
     <h3>Brands</h3>
     <p>Some cool brands I've worked for...</p>
     <div  class="og__brand__container">
@@ -184,7 +173,17 @@
     </div>
 </section>
 
-<section id="contact" class="og__contact">
+<section id="profile" class="og__profile grid-wrapper">
+    <h3>Profile</h3>
+    <div class="og__profile__container">
+        <div class="og__profile__avatar"><img alt="Profile picture" src="images/avatar.jpg" /></div>
+        <p class="og__profile__title">Thomas Ongeri</p>
+        <p class="og__profile__title">Developer | Brooklyn, NY</p>
+        <p class="og__profile__desc">Thomas Ongeri is a Frontend developer who works for a creative agency in Manhattan called <a href="http://codeandtheory.com" target="blank">Code and Theory</a> and is lives in Brooklyn, NY. He enjoys problem solving in all thing web and tech. He designs, he codes, and is available for work.</p>
+    <div>
+</section>
+
+<section id="contact" class="og__contact grid-wrapper">
     <h3>Hire Me</h3>
       <form class="og__contact__form" action="">
         <input class="og__contact__name" type="text" name="first_name" placeholder="First Name"><br>
@@ -203,7 +202,7 @@
     </div>
 </section>
 
-<section class="og__footer">
+<section class="og__footer grid-wrapper">
     <div class="og__footer__copyright">
      <p> {{year}} &copy; Thomas Ongeri</p>
     </div>

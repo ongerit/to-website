@@ -5,10 +5,9 @@
   margin: 0;
   background-color: $background-color;
   position: relative;
-  height: 100%;
-  padding: 0 30px;
   display: block;
   width: 100%;
+  height: 80vh;
 
   &__nav-container {
     font-family: 'Montserrat', sans-serif;
@@ -17,7 +16,7 @@
     background: $primary;
     display: inline-block;
     color: $white;
-    position: fixed;
+    position: relative;
     left: 0;
   }
 
@@ -89,14 +88,14 @@
   &__title {
     text-align: center;
     line-height: 40px;
-    color: #fff;
+    color: $white;
     display: block;
     top: 50%;
-    position: absolute;
+    position: relative;;
     left:0;
     right:0;
-    margin-left:auto;
-    margin-right:auto;
+    margin: 0 auto;
+    height: 90px;
 
     h1 {
       font-family: 'Montserrat', sans-serif;

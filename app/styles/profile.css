@@ -1,9 +1,10 @@
 /* line 4, ../scss/profile.scss */
 .og__profile {
   margin: 0;
-  background-color: #f2f2f2;
+  background-color: #fff;
   position: relative;
-  padding: 40px 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: block;
   width: 100%;
 }
@@ -21,17 +22,18 @@
 .og__profile h3 {
   text-align: center;
   padding-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
 }
-/* line 30, ../scss/profile.scss */
+/* line 31, ../scss/profile.scss */
 .og__profile p {
   text-align: center;
 }
-/* line 34, ../scss/profile.scss */
+/* line 35, ../scss/profile.scss */
 .og__profile--center {
   margin: auto;
 }
 @media screen and (min-width: 768px) {
-  /* line 39, ../scss/profile.scss */
+  /* line 40, ../scss/profile.scss */
   .og__profile__desc {
     padding: 0 80px;
   }

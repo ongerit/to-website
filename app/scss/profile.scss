@@ -3,12 +3,12 @@
 
 .og__profile {
   margin: 0;
-  background-color: $off-white;
+  background-color: $white;
   position: relative;
-  padding: 40px 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: block;
   width: 100%;
-
 
   &__container {
     margin: auto;
@@ -25,6 +25,7 @@
   h3 {
     text-align: center;
     padding-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
   }
 
   p {

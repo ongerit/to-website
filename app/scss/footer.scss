@@ -4,7 +4,9 @@
   margin: 0;
   background-color: $background-color;
   position: relative;
-  padding: 50px 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
 
   &__copyright {
     color: $white;
