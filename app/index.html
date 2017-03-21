@@ -87,7 +87,8 @@
     </noscript>
 </head>
 <body id="app" v-cloak>
-<section class="og__header grid-wrapper">
+<section class="og__header">
+  <div class="grid-wrapper">
     <div class="og__header__nav-container banner">
         <div class="og__header__nav">
             <div class="og__header__logo">
@@ -121,9 +122,11 @@
     <div class="og__header__down">
         <a href="#profile"><i class="fa icon-down-open-big infinite animated fadeInDown"></i></a>
     </div>
+
 </section>
 
-<section id="recommendations" class="og__recommendations grid-wrapper">
+<section id="recommendations" class="og__recommendations">
+  <div class="grid-wrapper">
     <h3>Affirmations</h3>
     <div class="og__recommendations__wrapper">
         <div class="og__recommendations__item">
@@ -157,10 +160,12 @@
             </div>
         </div>
     </div>
+  </div>
 </section>
 
 
-<section id="brands" class="og__brand grid-wrapper">
+<section id="brands" class="og__brand">
+  <div class="grid-wrapper">
     <h3>Brands</h3>
     <p>Some cool brands I've worked for...</p>
     <div  class="og__brand__container">
@@ -171,19 +176,23 @@
       <div class="og__brand__item"><img alt="Comcast" src="images/brands/comcast.png" title="Comcast" alt="Comcast"></div>
       <div class="og__brand__item"><img alt="National Geographic" src="images/brands/natgeo.png" title="National Geographic" alt="National Geographic"></div>
     </div>
+  </div>
 </section>
 
-<section id="profile" class="og__profile grid-wrapper">
+<section id="profile" class="og__profile">
+  <div class="grid-wrapper">
     <h3>Profile</h3>
     <div class="og__profile__container">
         <div class="og__profile__avatar"><img alt="Profile picture" src="images/avatar.jpg" /></div>
         <p class="og__profile__title">Thomas Ongeri</p>
         <p class="og__profile__title">Developer | Brooklyn, NY</p>
-        <p class="og__profile__desc">Thomas Ongeri is a Frontend developer who works for a creative agency in Manhattan called <a href="http://codeandtheory.com" target="blank">Code and Theory</a> and is lives in Brooklyn, NY. He enjoys problem solving in all thing web and tech. He designs, he codes, and is available for work.</p>
+        <p class="og__profile__desc">Thomas Ongeri is a Frontend developer who works for a creative agency in Manhattan called <a href="http://codeandtheory.com" target="blank">Code and Theory</a> and lives in Brooklyn, NY. He enjoys problem solving in all thing web and tech. He designs, he codes, and is available for work.</p>
     <div>
+  </div>
 </section>
 
-<section id="contact" class="og__contact grid-wrapper">
+<section id="contact" class="og__contact">
+  <div class="grid-wrapper">
     <h3>Hire Me</h3>
       <form class="og__contact__form" action="">
         <input class="og__contact__name" type="text" name="first_name" placeholder="First Name"><br>
@@ -200,12 +209,15 @@
         <a href="http://www.bitly.com/TwitOngeri" target="_blank"><i class="fa icon-twitter" alt="Twitter" ></i></a>
         <a href="http://www.bit.ly/PortT2" target="_blank"><i class="fa icon-behance" alt="Portfolio" ></i></a>
     </div>
+  </div>
 </section>
 
-<section class="og__footer grid-wrapper">
+<section class="og__footer">
+  <div class="grid-wrapper">
     <div class="og__footer__copyright">
      <p> {{year}} &copy; Thomas Ongeri</p>
     </div>
+  </div>
 </section>
 
 <div class="material-menu-wrapper">

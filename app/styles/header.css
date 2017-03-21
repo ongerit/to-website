@@ -65,7 +65,11 @@
   text-decoration: none;
   cursor: pointer;
 }
-/* line 73, ../scss/header.scss */
+/* line 72, ../scss/header.scss */
+.og__header .type-wrap {
+  display: inline;
+}
+/* line 74, ../scss/header.scss */
 .og__header .type-wrap #typed {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -74,25 +78,28 @@
   margin-top: 27px;
   text-transform: uppercase;
   color: #fff;
+  display: inline;
 }
-/* line 83, ../scss/header.scss */
+/* line 85, ../scss/header.scss */
 .og__header .type-wrap .typed-cursor {
   font-size: 40px;
 }
-/* line 88, ../scss/header.scss */
+/* line 90, ../scss/header.scss */
 .og__header__title {
   text-align: center;
   line-height: 40px;
   color: #fff;
   display: block;
   top: 50%;
-  position: relative;
-  left: 0;
-  right: 0;
+  position: absolute;
+  left: 50%;
+  right: -50%;
   margin: 0 auto;
   height: 90px;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
 }
-/* line 100, ../scss/header.scss */
+/* line 104, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -103,7 +110,7 @@
   color: #fff;
   display: none;
 }
-/* line 112, ../scss/header.scss */
+/* line 116, ../scss/header.scss */
 .og__header__down {
   margin: auto;
   color: #fff;
@@ -114,16 +121,16 @@
   width: 100%;
   left: 0;
 }
-/* line 122, ../scss/header.scss */
+/* line 126, ../scss/header.scss */
 .og__header__down a {
   color: #fff;
 }
 @media screen and (min-width: 768px) {
-  /* line 129, ../scss/header.scss */
+  /* line 133, ../scss/header.scss */
   .og__header__links {
     display: inline-block;
   }
-  /* line 134, ../scss/header.scss */
+  /* line 138, ../scss/header.scss */
   .og__header__logo h2 {
     margin-top: 20px;
     text-align: left;

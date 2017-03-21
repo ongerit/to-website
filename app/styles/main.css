@@ -3,41 +3,41 @@
   display: none;
 }
 
-/* line 5, ../scss/grid.scss */
+/* line 3, ../scss/grid.scss */
 .grid-wrapper {
   margin: 0 30px;
 }
-/* line 8, ../scss/grid.scss */
+/* line 6, ../scss/grid.scss */
 .grid-wrapper .grid-full {
   margin-left: -30px;
   margin-right: -30px;
 }
 
 @media screen and (min-width: 768px) {
-  /* line 15, ../scss/grid.scss */
+  /* line 13, ../scss/grid.scss */
   .grid-wrapper {
     margin: 0 40px;
   }
-  /* line 18, ../scss/grid.scss */
+  /* line 16, ../scss/grid.scss */
   .grid-wrapper .grid-full {
     margin-left: -40px;
     margin-right: -40px;
   }
 }
 @media screen and (min-width: 1024px) {
-  /* line 26, ../scss/grid.scss */
+  /* line 24, ../scss/grid.scss */
   .grid-wrapper {
     max-width: none;
     margin: 0 60px;
   }
-  /* line 30, ../scss/grid.scss */
+  /* line 28, ../scss/grid.scss */
   .grid-wrapper .grid-full {
     margin-left: -60px;
     margin-right: -60px;
   }
 }
 @media screen and (min-width: 1280px) {
-  /* line 38, ../scss/grid.scss */
+  /* line 36, ../scss/grid.scss */
   .grid-wrapper {
     max-width: 1600px;
     padding: 0 60px;
@@ -296,7 +296,11 @@ main p .highlight {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 73, ../scss/header.scss */
+/* line 72, ../scss/header.scss */
+.og__header .type-wrap {
+  display: inline;
+}
+/* line 74, ../scss/header.scss */
 .og__header .type-wrap #typed {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -305,25 +309,28 @@ main p .highlight {
   margin-top: 27px;
   text-transform: uppercase;
   color: #fff;
+  display: inline;
 }
-/* line 83, ../scss/header.scss */
+/* line 85, ../scss/header.scss */
 .og__header .type-wrap .typed-cursor {
   font-size: 40px;
 }
-/* line 88, ../scss/header.scss */
+/* line 90, ../scss/header.scss */
 .og__header__title {
   text-align: center;
   line-height: 40px;
   color: #fff;
   display: block;
   top: 50%;
-  position: relative;
-  left: 0;
-  right: 0;
+  position: absolute;
+  left: 50%;
+  right: -50%;
   margin: 0 auto;
   height: 90px;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
 }
-/* line 100, ../scss/header.scss */
+/* line 104, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -334,7 +341,7 @@ main p .highlight {
   color: #fff;
   display: none;
 }
-/* line 112, ../scss/header.scss */
+/* line 116, ../scss/header.scss */
 .og__header__down {
   margin: auto;
   color: #fff;
@@ -345,16 +352,16 @@ main p .highlight {
   width: 100%;
   left: 0;
 }
-/* line 122, ../scss/header.scss */
+/* line 126, ../scss/header.scss */
 .og__header__down a {
   color: #fff;
 }
 @media screen and (min-width: 768px) {
-  /* line 129, ../scss/header.scss */
+  /* line 133, ../scss/header.scss */
   .og__header__links {
     display: inline-block;
   }
-  /* line 134, ../scss/header.scss */
+  /* line 138, ../scss/header.scss */
   .og__header__logo h2 {
     margin-top: 20px;
     text-align: left;
