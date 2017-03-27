@@ -32,6 +32,7 @@
     font-size: 14px;
     margin-bottom: 15px;
     border: 1px solid $grey2;
+    line-height: 40px;
   }
 
   &__name {
@@ -46,6 +47,9 @@
     width: 100%;
     line-height: 32px;
     border: 1px solid $primary;
+    line-height: 42px;
+    text-transform: uppercase;
+    font-weight: bold;
 
     &:hover {
       color: $primary;

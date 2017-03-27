@@ -11,8 +11,6 @@ $(window).load(function() {
     ga('create', 'UA-11614378-4', 'auto');
     ga('send', 'pageview');
 
-
-
     // Material menu button
     var circle = document.querySelector('.material-btn');
     var link = document.querySelector('.material-content').querySelectorAll('li');
@@ -42,7 +40,6 @@ $(window).load(function() {
     }
 
     circle.addEventListener('click', openMenu, false);
-
     win.addEventListener('click', closeMenu, false);
 
     // Scroll to hash
@@ -98,7 +95,7 @@ $(window).load(function() {
         }
       })
       .done(function(data){
-        console.log(data);
+        // console.log(data);
       });
     }
 
@@ -141,9 +138,7 @@ $(window).load(function() {
     //Headhesive
     // Options
     var options = {
-
         offset: '.og__recommendations', // OR — offset: '.classToActivateAt',
-
         // Custom classes
         classes: {
             // Cloned elem class
@@ -160,23 +155,18 @@ $(window).load(function() {
     var url = Math.floor((Math.random() * 33) + 1);
     var links = 'images/' + url + '.jpg';
 
-    $('#splash-background').append('<div id="splash-back" style="background-image:url('+links+')"></div>')
-    .hide()
-    .fadeIn(5000);
-
-    $('.social img, .avatar img, .title').hide();
-
-    function animateCss() {
-    	$('.header').addClass('animated flipInX')
-    		.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    			$('.social img, .avatar img, .title')
-    				.show()
-    				.addClass('animated bounceIn');
-    		});
-    }
-
-    animateCss();
-
+    // $('.social img, .avatar img, .title').hide();
+    //
+    // function animateCss() {
+    // 	$('.header').addClass('animated flipInX')
+    // 		.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    // 			$('.social img, .avatar img, .title')
+    // 				.show()
+    // 				.addClass('animated bounceIn');
+    // 		});
+    // }
+    //
+    // animateCss();
 
     // Vue.js
     var vm = new Vue({  // jshint ignore:line
@@ -200,6 +190,7 @@ $(window).load(function() {
             this.setTheInterval();
             this.typeInit();
             this.validateForm();
+            this.initScrollReaveal();
         },
 
         methods: {
@@ -210,7 +201,6 @@ $(window).load(function() {
             getIcon: function () {
 
                 var arr = [];
-
                 for (var i in this.icons) {
                     arr.push(i);
                 }
@@ -226,7 +216,6 @@ $(window).load(function() {
             },
             typeInit: function() {
               window.setTimeout(function(){
-                console.log('wt');
                 $('#typed').typed({
                   stringsElement: $('#typed-strings'),
                    loop: true,
@@ -238,13 +227,15 @@ $(window).load(function() {
             },
             validateForm: function() {
                 var $form = $('form');
-                console.log($form)
+                // console.log($form)
                 $form.on('change',function(e){
-                  console.log(e);
+                  // console.log(e);
                 });
+            },
+            initScrollReaveal: function() {
+              //Scroll reaveal
+              window.sr = ScrollReveal().reveal('section');  // jshint ignore:line
             }
         }
     });
-    //Scroll reaveal
-    window.sr = ScrollReveal().reveal('section, .og__recommendations__item, .og__profile , .og__contact ');  // jshint ignore:line
 });
