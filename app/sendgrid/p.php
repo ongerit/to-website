@@ -10,6 +10,35 @@ require("cred.php");
 	$user_message = $_POST[message];
 	$apiKey = SG_API_KEY;
 	$sgEmail = SG_EMAIL;
+
+
+  //[TO] Send transactional Email
+
+  function send_transactional_email($apiKey, $sgEmail,$user_email, $user_last_name, $user_first_name, $user_message) {
+    $from = new SendGrid\Email(null, $sgEmail);
+    $subject = "Than You";
+    $to = new SendGrid\Email(null, $user_email);
+    $content = new SendGrid\Content("text/html", "I will contact you<strong>very soon!</strong>");
+    $mail = new SendGrid\Mail($from, $subject, $to, $content);
+    $mail->personalization[0]->addSubstitution("-name-", "Thomas Ongeri");
+    $mail->personalization[0]->addSubstitution("-city-", "Denver");
+    $mail->setTemplateId("b341737b-582f-4ade-906f-df0da51a13c3");
+
+    $sg = new \SendGrid($apiKey);
+
+    try {
+    $response = $sg->client->mail()->send()->post($mail);
+    } catch (Exception $e) {
+    echo 'Caught exception: ',  $e->getMessage(), "\n";
+    }
+
+    echo $response->statusCode();
+    echo $response->headers();
+    echo $response->body();
+  }
+
+
+
 	// SendGrid Information
   function send_grid_information($apiKey, $sgEmail,$user_email, $user_last_name, $user_first_name, $user_message) {
     $to = new SendGrid\Email(null, $sgEmail);
@@ -107,4 +136,5 @@ require("cred.php");
 		send_grid_information($apiKey, $sgEmail,$user_email, $user_last_name, $user_first_name, $user_message);
 		add_users_contact_to_sendgrid($apiKey, $user_email, $user_last_name, $user_first_name);
 		send_email_with_template($apiKey, $user_email, $user_last_name, $user_first_name, $sgEmail);
+    send_transactional_email($apiKey, $sgEmail,$user_email, $user_last_name, $user_first_name, $user_message);
 ?>
