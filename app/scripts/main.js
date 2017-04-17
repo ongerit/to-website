@@ -79,10 +79,9 @@ $(window).load(function() {
       var MESSAGE= $('textarea[name*="message"]').val();
       var VARS = 'email='+EMAIL+'&message='+MESSAGE+'&fname='+FNAME+'&lname='+LNAME;
 
-      //stop the form from submitting normally
+      // stop the form from submitting normally
       event.preventDefault();
-
-      //send the data using post with element values
+      // send the data using post with element values
 
       $.ajax({
         type: 'POST',
@@ -94,7 +93,6 @@ $(window).load(function() {
         }
       })
       .done(function(data){
-        // console.log(data);
       });
     }
 
@@ -131,9 +129,7 @@ $(window).load(function() {
         return false;
       }
     }
-
     $('form').bind('submit', validate);
-
     // Headhesive
     // Options
     var options = {
@@ -156,7 +152,6 @@ $(window).load(function() {
 
     // Vue.js
     var vm = new Vue({  // jshint ignore:line
-
         el: '#app',
         data: {
             year: '',
@@ -185,7 +180,6 @@ $(window).load(function() {
                 this.$set('year',getYear.getFullYear());
             },
             getIcon: function () {
-
                 var arr = [];
                 for (var i in this.icons) {
                     arr.push(i);
@@ -213,9 +207,7 @@ $(window).load(function() {
             },
             validateForm: function() {
                 var $form = $('form');
-                // console.log($form)
                 $form.on('change',function(e){
-                  // console.log(e);
                 });
             },
             initScrollReaveal: function() {

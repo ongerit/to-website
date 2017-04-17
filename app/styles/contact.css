@@ -1,20 +1,19 @@
 /* line 3, ../scss/contact.scss */
 .og__contact {
   padding-top: 50px;
-  background-color: #f2f2f2;
   position: relative;
 }
-/* line 8, ../scss/contact.scss */
+/* line 7, ../scss/contact.scss */
 .og__contact h3 {
   text-align: center;
   margin-bottom: 30px;
   font-family: 'Poppins', sans-serif;
 }
-/* line 14, ../scss/contact.scss */
+/* line 13, ../scss/contact.scss */
 .og__contact p {
   text-align: center;
 }
-/* line 18, ../scss/contact.scss */
+/* line 17, ../scss/contact.scss */
 .og__contact__form {
   width: 100%;
   max-width: 300px;
@@ -22,7 +21,7 @@
   text-align: center;
   align-content: center;
 }
-/* line 26, ../scss/contact.scss */
+/* line 25, ../scss/contact.scss */
 .og__contact__email, .og__contact__message, .og__contact__name {
   padding-left: 15px;
   width: 100%;
@@ -32,11 +31,11 @@
   border: 1px solid #ddd;
   line-height: 40px;
 }
-/* line 38, ../scss/contact.scss */
+/* line 37, ../scss/contact.scss */
 .og__contact__name {
   width: 100%;
 }
-/* line 42, ../scss/contact.scss */
+/* line 41, ../scss/contact.scss */
 .og__contact__submit {
   color: #fff;
   background: #FB6964;
@@ -49,47 +48,45 @@
   text-transform: uppercase;
   font-weight: bold;
 }
-/* line 54, ../scss/contact.scss */
+/* line 53, ../scss/contact.scss */
 .og__contact__submit:hover {
   color: #FB6964;
   background: #fff;
   border: 1px solid #FB6964;
   cursor: pointer;
 }
-/* line 62, ../scss/contact.scss */
+/* line 61, ../scss/contact.scss */
 .og__contact__error {
   color: #FB6964;
 }
-/* line 66, ../scss/contact.scss */
+/* line 65, ../scss/contact.scss */
 .og__contact__success {
   color: #555;
 }
-/* line 70, ../scss/contact.scss */
+/* line 69, ../scss/contact.scss */
 .og__contact__social {
   margin: 0 auto;
   padding-bottom: 30px;
   text-align: center;
 }
-/* line 75, ../scss/contact.scss */
+/* line 74, ../scss/contact.scss */
 .og__contact__social a {
   color: #555;
   border: 1px solid #ddd;
   line-height: 0;
   border-radius: 100%;
-  margin: 0;
+  margin: 30px auto 0;
   display: inline-block;
-  margin-right: 8px;
-  margin-left: 8px;
-  margin-top: 30px;
   font-size: 16px;
-  padding: 10px;
   width: 40px;
+  height: 40px;
+  line-height: 40px;
 }
-/* line 89, ../scss/contact.scss */
+/* line 86, ../scss/contact.scss */
 .og__contact__social a i {
   margin: 0;
 }
-/* line 93, ../scss/contact.scss */
+/* line 90, ../scss/contact.scss */
 .og__contact__social a:hover {
   color: #fff;
   background: #FB6964;
