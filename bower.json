@@ -13,7 +13,7 @@
     "Headhesive.js": "headhesive#~1.2.4",
     "scrollreveal": "~3.3.1",
     "waypoints": "~4.0.1",
-    "typed.js": "~1.1.4"
+    "typed.js": "^1.1.7"
   },
   "overrides": {
     "fontawesome": {

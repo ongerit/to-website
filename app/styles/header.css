@@ -25,21 +25,22 @@
   height: 100%;
   display: inline-block;
   width: 100%;
+  padding: 0 15px;
   background: #FB6964;
 }
-/* line 33, ../scss/header.scss */
+/* line 35, ../scss/header.scss */
 .og__header__logo h2 {
   color: #fff;
   z-index: 99999;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   letter-spacing: 5px;
   text-transform: uppercase;
   margin-top: 10px;
   text-align: center;
 }
-/* line 45, ../scss/header.scss */
+/* line 47, ../scss/header.scss */
 .og__header__links {
   margin-left: auto;
   position: absolute;
@@ -47,11 +48,11 @@
   right: 0;
   display: none;
 }
-/* line 52, ../scss/header.scss */
+/* line 54, ../scss/header.scss */
 .og__header__links a {
   color: #fff;
 }
-/* line 56, ../scss/header.scss */
+/* line 58, ../scss/header.scss */
 .og__header__links li {
   display: inline-block;
   position: relative;
@@ -64,11 +65,11 @@
   text-decoration: none;
   cursor: pointer;
 }
-/* line 70, ../scss/header.scss */
+/* line 72, ../scss/header.scss */
 .og__header .type-wrap {
   display: inline;
 }
-/* line 72, ../scss/header.scss */
+/* line 74, ../scss/header.scss */
 .og__header .type-wrap #typed {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -79,11 +80,11 @@
   color: #fff;
   display: inline;
 }
-/* line 83, ../scss/header.scss */
+/* line 85, ../scss/header.scss */
 .og__header .type-wrap .typed-cursor {
   font-size: 40px;
 }
-/* line 88, ../scss/header.scss */
+/* line 90, ../scss/header.scss */
 .og__header__title {
   text-align: center;
   line-height: 40px;
@@ -98,7 +99,7 @@
   bottom: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 102, ../scss/header.scss */
+/* line 104, ../scss/header.scss */
 .og__header__title h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -109,7 +110,7 @@
   color: #fff;
   display: none;
 }
-/* line 114, ../scss/header.scss */
+/* line 116, ../scss/header.scss */
 .og__header__down {
   margin: auto;
   color: #fff;
@@ -120,16 +121,16 @@
   width: 100%;
   left: 0;
 }
-/* line 124, ../scss/header.scss */
+/* line 126, ../scss/header.scss */
 .og__header__down a {
   color: #fff;
 }
 @media screen and (min-width: 768px) {
-  /* line 131, ../scss/header.scss */
+  /* line 133, ../scss/header.scss */
   .og__header__links {
     display: inline-block;
   }
-  /* line 136, ../scss/header.scss */
+  /* line 138, ../scss/header.scss */
   .og__header__logo h2 {
     margin-top: 20px;
     text-align: left;

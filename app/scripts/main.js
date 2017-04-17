@@ -1,7 +1,6 @@
+'use strict';
 // jquery
 $(window).load(function() {
-    'use strict';
-
     // Google analytics code
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -135,7 +134,7 @@ $(window).load(function() {
 
     $('form').bind('submit', validate);
 
-    //Headhesive
+    // Headhesive
     // Options
     var options = {
         offset: '.og__recommendations', // OR — offset: '.classToActivateAt',
@@ -154,19 +153,6 @@ $(window).load(function() {
     var header = new Headhesive('.banner', options );  // jshint ignore:line
     var url = Math.floor((Math.random() * 33) + 1);
     var links = 'images/' + url + '.jpg';
-
-    // $('.social img, .avatar img, .title').hide();
-    //
-    // function animateCss() {
-    // 	$('.header').addClass('animated flipInX')
-    // 		.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    // 			$('.social img, .avatar img, .title')
-    // 				.show()
-    // 				.addClass('animated bounceIn');
-    // 		});
-    // }
-    //
-    // animateCss();
 
     // Vue.js
     var vm = new Vue({  // jshint ignore:line
