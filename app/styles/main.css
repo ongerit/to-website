@@ -501,8 +501,10 @@ main p .highlight {
   flex-direction: row;
   flex: 1 0 25%;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
-/* line 19, ../scss/brand.scss */
+/* line 21, ../scss/brand.scss */
 .og__brand__increase {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -510,13 +512,13 @@ main p .highlight {
   -ms-filter: grayscale(0%);
   filter: grayscale(0%);
 }
-/* line 27, ../scss/brand.scss */
+/* line 29, ../scss/brand.scss */
 .og__brand__item {
   padding-right: 10px;
   margin: 0 auto;
   width: 41%;
 }
-/* line 32, ../scss/brand.scss */
+/* line 34, ../scss/brand.scss */
 .og__brand__item img {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
@@ -524,7 +526,7 @@ main p .highlight {
   -ms-filter: grayscale(100%);
   filter: grayscale(100%);
 }
-/* line 39, ../scss/brand.scss */
+/* line 41, ../scss/brand.scss */
 .og__brand__item img:hover {
   -webkit-filter: grayscale(0%);
   -moz-filter: grayscale(0%);
@@ -532,26 +534,28 @@ main p .highlight {
   -ms-filter: grayscale(0%);
   filter: grayscale(0%);
 }
-/* line 49, ../scss/brand.scss */
+/* line 51, ../scss/brand.scss */
 .og__brand h3 {
   text-align: center;
   margin-bottom: 30px;
   font-family: 'Poppins', sans-serif;
 }
-/* line 55, ../scss/brand.scss */
+/* line 57, ../scss/brand.scss */
 .og__brand p {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  /* line 61, ../scss/brand.scss */
+  /* line 63, ../scss/brand.scss */
   .og__brand__container {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex: 1 0 25%;
   }
-  /* line 67, ../scss/brand.scss */
+  /* line 69, ../scss/brand.scss */
   .og__brand__item {
-    padding: 0 30px;
+    max-width: 295px;
+    width: 100%;
+    padding: 20px;
   }
 }
 
