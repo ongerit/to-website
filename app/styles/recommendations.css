@@ -1,0 +1,98 @@
+/* line 5, ../scss/recommendations.scss */
+.og__recommendations {
+  margin: 45px 0;
+  background-color: #fff;
+  position: relative;
+  display: block;
+}
+/* line 11, ../scss/recommendations.scss */
+.og__recommendations h3 {
+  text-align: center;
+  padding-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+/* line 17, ../scss/recommendations.scss */
+.og__recommendations__image {
+  height: 100px;
+  border-radius: 100%;
+}
+/* line 22, ../scss/recommendations.scss */
+.og__recommendations__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+}
+/* line 30, ../scss/recommendations.scss */
+.og__recommendations__item {
+  padding-right: 15px;
+  width: 100%;
+  text-align: center;
+}
+/* line 36, ../scss/recommendations.scss */
+.og__recommendations__item:hover .og__recommendations__hover {
+  opacity: 1;
+  z-index: 4;
+  display: block;
+  transform: translate(0em, -10em) scale(1);
+  transition: display 0s, transform .2s 1s ease, opacity 1s ease;
+  transition-delay: .3s;
+}
+/* line 46, ../scss/recommendations.scss */
+.og__recommendations__item:hover .og__recommendations__intro {
+  transform: scale(0.6) translate(-12em, 4.5em);
+  transition: transform .4s linear;
+}
+/* line 56, ../scss/recommendations.scss */
+.og__recommendations__item:hover .og__recommendations__title {
+  opacity: 0;
+  transition: opacity .2s linear;
+}
+/* line 64, ../scss/recommendations.scss */
+.og__recommendations__author {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 69, ../scss/recommendations.scss */
+.og__recommendations__intro {
+  z-index: 3;
+  margin: 0 auto;
+  text-align: center;
+  cursor: pointer;
+  transform: inherit;
+  transition: transform .5s linear;
+}
+/* line 77, ../scss/recommendations.scss */
+.og__recommendations__intro .fa {
+  font-size: 40px;
+}
+/* line 82, ../scss/recommendations.scss */
+.og__recommendations__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  opacity: 1;
+  transition: opacity .2s linear;
+}
+/* line 90, ../scss/recommendations.scss */
+.og__recommendations__hover {
+  display: none;
+  opacity: 0;
+  transform: scale(3);
+}
+/* line 95, ../scss/recommendations.scss */
+.og__recommendations__hover p {
+  text-align: right;
+  font-size: 13px;
+}
+@media screen and (min-width: 768px) {
+  /* line 5, ../scss/recommendations.scss */
+  .og__recommendations {
+    height: 206px;
+  }
+  /* line 103, ../scss/recommendations.scss */
+  .og__recommendations__wrapper {
+    flex-direction: row;
+  }
+}

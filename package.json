@@ -25,9 +25,11 @@
     "load-grunt-tasks": "^0.4.0",
     "time-grunt": "^0.4.0",
     "grunt-contrib-compass": "^0.8.0"
-
   },
   "engines": {
     "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "in-view": "^0.6.0"
   }
 }

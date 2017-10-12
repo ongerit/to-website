@@ -1,0 +1,75 @@
+@import "colors";
+@import "when-than";
+
+.og__brand {
+  margin: 0;
+  background-color: $off-white;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__container {
+    display: flex;
+    padding: 30px 0;
+    flex-direction: row;
+    flex: 1 0 25%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__increase {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    filter: grayscale(0%);
+  }
+
+  &__item {
+    padding-right: 10px;
+    margin: 0 auto;
+    width: 41%;
+
+    img {
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        filter: grayscale(100%);
+
+        &:hover {
+          -webkit-filter: grayscale(0%);
+          -moz-filter: grayscale(0%);
+          -o-filter: grayscale(0%);
+          -ms-filter: grayscale(0%);
+          filter: grayscale(0%);
+        }
+    }
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  @include when-wider-than(tablet) {
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      flex: 1 0 25%;
+    }
+
+    &__item {
+      max-width: 295px;
+      width: 100%;
+      padding: 30px 20px;
+    }
+  }
+}

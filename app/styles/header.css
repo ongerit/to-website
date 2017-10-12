@@ -1,0 +1,139 @@
+/* line 4, ../scss/header.scss */
+.og__header {
+  margin: 0;
+  background-color: #FB6964;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 80vh;
+}
+/* line 12, ../scss/header.scss */
+.og__header__nav-container {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  z-index: 99;
+  background: #FB6964;
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  left: 0;
+}
+/* line 23, ../scss/header.scss */
+.og__header__nav {
+  position: relative;
+  margin: auto;
+  height: 100%;
+  display: inline-block;
+  width: 100%;
+  padding: 0 15px;
+  background: #FB6964;
+}
+/* line 35, ../scss/header.scss */
+.og__header__logo h2 {
+  color: #fff;
+  z-index: 99999;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  text-align: center;
+}
+/* line 47, ../scss/header.scss */
+.og__header__links {
+  margin-left: auto;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  display: none;
+}
+/* line 54, ../scss/header.scss */
+.og__header__links a {
+  color: #fff;
+}
+/* line 58, ../scss/header.scss */
+.og__header__links li {
+  display: inline-block;
+  position: relative;
+  padding: 20px 15px 0;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: normal;
+  text-transform: uppercase;
+  opacity: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 72, ../scss/header.scss */
+.og__header .type-wrap {
+  display: inline;
+}
+/* line 74, ../scss/header.scss */
+.og__header .type-wrap #typed {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-top: 27px;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline;
+}
+/* line 85, ../scss/header.scss */
+.og__header .type-wrap .typed-cursor {
+  font-size: 40px;
+}
+/* line 90, ../scss/header.scss */
+.og__header__title {
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  display: block;
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  right: -50%;
+  margin: 0 auto;
+  height: 90px;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 104, ../scss/header.scss */
+.og__header__title h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-top: 27px;
+  text-transform: uppercase;
+  color: #fff;
+  display: none;
+}
+/* line 116, ../scss/header.scss */
+.og__header__down {
+  margin: auto;
+  color: #fff;
+  text-align: center;
+  display: block;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+/* line 126, ../scss/header.scss */
+.og__header__down a {
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  /* line 133, ../scss/header.scss */
+  .og__header__links {
+    display: inline-block;
+  }
+  /* line 138, ../scss/header.scss */
+  .og__header__logo h2 {
+    margin-top: 20px;
+    text-align: left;
+    float: left;
+  }
+}

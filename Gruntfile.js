@@ -8,6 +8,7 @@
 // If you want to recursively match all subfolders, use:
 // 'test/spec/**/*.js'
 
+
 module.exports = function (grunt) {
 
 
@@ -26,15 +27,15 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
 
-      pkg: grunt.file.readJSON('package.json'),
-      compass: {
-          dist: {
-              options: {
-                  sassDir: '<%= config.app %>/scss',
-                  cssDir: '<%= config.app %>/styles'
-              }
-          }
-      },
+    pkg: grunt.file.readJSON('package.json'),
+    compass: {
+        dist: {
+            options: {
+                sassDir: '<%= config.app %>/scss',
+                cssDir: '<%= config.app %>/styles'
+            }
+        }
+    },
 
     // Project settings
     config: config,
@@ -51,7 +52,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
-        tasks: ['jshint'],
+        tasks: ['jshint','newer:copy:scripts'],
         options: {
           livereload: true
         }
@@ -74,7 +75,11 @@ module.exports = function (grunt) {
         files: [
           '<%= config.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
-          '<%= config.app %>/images/{,*/}*'
+          '<%= config.app %>/images/{,*/}*',
+          '<%= config.app %>/scripts/{,*/}*',
+          '<%= config.app %>/sendgrid',
+          '<%= config.app %>{,*/}*.ico',
+          '<%= config.app %>{,*/}*.png'
         ]
       }
     },
@@ -180,7 +185,7 @@ module.exports = function (grunt) {
       app: {
         ignorePath: /^\/|\.\.\//,
         src: ['<%= config.app %>/index.html'],
-        exclude: ['bower_components/bootstrap/dist/js/bootstrap.js']
+        exclude: ['bower_components/bootstrap/dist/js/bootstrap.js','/bower_components/gumby/js']
       }
     },
 
@@ -189,9 +194,10 @@ module.exports = function (grunt) {
       dist: {
         files: {
           src: [
-            '<%= config.dist %>/scripts/{,*/}*.js',
+            '<%= config.dist %>/scripts/{,*/}vendor.js',
+            '<%= config.dist %>/scripts/{,*/}main.js',
             '<%= config.dist %>/styles/{,*/}*.css',
-            // '<%= config.dist %>/images/{,*/}*.*',
+            '<%= config.dist %>/images/{,*/}*.*',
             // '<%= config.dist %>/styles/fonts/{,*/}*.*',
             '<%= config.dist %>/*.{ico,png}'
           ]
@@ -208,6 +214,7 @@ module.exports = function (grunt) {
       },
       html: '<%= config.app %>/index.html'
     },
+
 
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
@@ -233,7 +240,6 @@ module.exports = function (grunt) {
         }]
       }
     },
-
     svgmin: {
       dist: {
         files: [{
@@ -270,28 +276,25 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care
     // of minification. These next options are pre-configured if you do not
     // wish to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= config.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css',
-    //         '<%= config.app %>/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
-    // uglify: {
-    //   dist: {
-    //     files: {
-    //       '<%= config.dist %>/scripts/scripts.js': [
-    //         '<%= config.dist %>/scripts/scripts.js'
-    //       ]
-    //     }
-    //   }
-    // },
-    // concat: {
-    //   dist: {}
-    // },
+    cssmin: {
+      dist: {
+        files: {
+          '<%= config.dist %>/styles/main.css': [
+            '<%= config.app %>/styles/main.css'
+          ]
+        }
+      }
+    },
+    uglify: {
+      dist: {
+        files: {
+          '<%= config.dist %>/scripts/main.js' : ['<%= config.app %>/scripts/main.js']
+        }
+      }
+    },
+    concat: {
+      dist: {}
+    },
 
     // Copies remaining files to places other tasks can use
     copy: {
@@ -306,8 +309,9 @@ module.exports = function (grunt) {
             'images/{,*/}*.webp',
 						'images/{,*/}*',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
-          ]
+            'styles/fonts/{,*/}*.*',
+            'sendgrid/**'
+          ],
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
           dest: '<%= config.dist %>/.htaccess'
@@ -317,7 +321,19 @@ module.exports = function (grunt) {
           cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
           dest: '<%= config.dist %>'
-        }]
+        },{
+           expand: true,
+           dot: true,
+           cwd: 'bower_components/components-font-awesome/fonts',
+           src: ['*.*'],
+           dest: '<%= config.dist %>/fonts'
+       },{
+          expand: true,
+          dot: true,
+          cwd: 'bower_components/gumby/fonts/icons',
+          src: ['*.*'],
+          dest: '<%= config.dist %>/fonts/icons'
+      }]
       },
       styles: {
         expand: true,
@@ -325,20 +341,29 @@ module.exports = function (grunt) {
         cwd: '<%= config.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
+      },
+      scripts: {
+        expand: true,
+        dot: true,
+        cwd: '<%= config.app %>/scripts',
+        dest: '.tmp/scripts/',
+        src: '{,*/}*.js'
       }
     },
 
     // Run some tasks in parallel to speed up build process
     concurrent: {
       server: [
-        'copy:styles'
+        'copy:styles',
+        'copy:scripts'
       ],
       test: [
-        'copy:styles'
+        'copy:styles',
       ],
       dist: [
         'copy:styles',
-        // 'imagemin',
+        'copy:scripts',
+        'imagemin',
         // 'svgmin'
       ]
     }
@@ -391,8 +416,8 @@ module.exports = function (grunt) {
     'autoprefixer',
     'concat',
     'cssmin',
-    'uglify',
     'copy:dist',
+    'uglify',
     'rev',
     'usemin',
     'htmlmin'
