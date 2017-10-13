@@ -1,0 +1,30 @@
+@import "../assets/styles/utils/colors";
+@import "../assets/styles/utils/when-than";
+
+.navigation {
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 20px;
+
+  &__links {
+    display: flex;
+
+    li {
+      list-style: none;
+      margin-right: 10px;
+    }
+  }
+
+
+
+  @include when-wider-than(tablet) {
+    margin: 40px 46px;
+
+      &__links {
+        li {
+          margin-right: 40px;
+        }
+      }
+  }
+}

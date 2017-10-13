@@ -1,0 +1,14 @@
+@import "../assets/styles/utils/colors";
+
+.marquee {
+  color: $white;
+
+  h2 {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: $off-white;
+    font-weight: bold;
+    font-size: 240px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+}
