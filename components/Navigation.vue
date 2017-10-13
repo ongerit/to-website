@@ -1,14 +1,28 @@
 <template>
   <div class="navigation">
-    <div class="navigation__title">Devlinks</div>
+    <div class="navigation__title">{{title}}</div>
     <ul class="navigation__links">
-      <li>news.</li>
-      <li>meetings.</li>
-      <li>links.</li>
-      <li>THOMAS ONGERI</li>
+      <li v-for='items in nav'>{{items}}</li>
+      <!-- <li>THOMAS ONGERI</li> -->
     </ul>
   </div>
 </template>
+
+<script>
+export default {
+
+  data () {
+    return {
+      nav: [
+        'news.',
+        'meetings.',
+        'links.'
+      ],
+      title: 'Devlinks'
+    }
+  }
+}
+</script>
 
 <style lang='scss'>
   @import "../assets/styles/components/navigation";

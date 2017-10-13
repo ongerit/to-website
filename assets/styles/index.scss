@@ -1,6 +1,16 @@
 @import "/utils/colors";
 @import "/globals/typography";
+@import "../assets/styles/utils/animations";
+
 
 body {
   background: $bg;
+}
+
+.marquee {
+  &:nth-child(odd) {
+    span {
+      animation: marquee-left 15s linear infinite;
+    }
+  }
 }
