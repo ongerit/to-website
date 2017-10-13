@@ -3,7 +3,7 @@
     <div class="navigation__title">Devlinks</div>
     <ul class="navigation__links">
       <li>news.</li>
-      <li>meeting.</li>
+      <li>meetings.</li>
       <li>links.</li>
       <li>THOMAS ONGERI</li>
     </ul>

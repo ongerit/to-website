@@ -2,7 +2,10 @@
   <section class="container">
     <div>
       <navigation />
-      <marquee />
+      <marquee title="news"/>
+      <marquee title="meetings"/>
+      <marquee title="links"/>
+
     </div>
   </section>
 </template>
