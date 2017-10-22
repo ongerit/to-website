@@ -3,9 +3,9 @@
     <div>
       <navigation />
       <marquee title="news"/>
+      <link-single />
       <marquee title="meetings"/>
       <marquee title="links"/>
-
     </div>
   </section>
 </template>
@@ -13,11 +13,13 @@
 <script>
 import Navigation from '~/components/Navigation'
 import Marquee from '~/components/Marquee'
+import LinkSingle from '~/components/LinkSingle'
 
 export default {
   components: {
     Navigation,
-    Marquee
+    Marquee,
+    LinkSingle
   }
 }
 </script>

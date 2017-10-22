@@ -11,5 +11,5 @@ export default {
 </script>
 
 <style lang='scss'>
-@import "../assets/styles/components/marquee";
+  @import "../assets/styles/components/marquee";
 </style>
