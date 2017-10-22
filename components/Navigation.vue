@@ -18,7 +18,7 @@ export default {
         'meetings.',
         'links.'
       ],
-      title: 'Devlinks'
+      title: 'Thomas Ongeri'
     }
   }
 }
