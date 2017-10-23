@@ -2,6 +2,7 @@
 @import "../assets/styles/utils/animations";
 @import "../assets/styles/globals/typography";
 @import "../assets/styles/globals/grid";
+@import "../assets/styles/globals/zindex";
 
 .marquee {
   @extend %grid;
@@ -11,6 +12,33 @@
   .loaded & {
     opacity: 1;
     transition: 2s opacity;
+  }
+
+  a {
+    color: $white;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      bottom: 0;
+      left: 0;
+      height: 0;
+      width: 100%;
+      position: absolute;
+      background-color: $pink;
+      transition: .8s bottom;
+    }
+
+    &:hover {
+
+      &:after {
+        bottom: 5px;
+        height: 15px;
+        bottom: 10px;
+        transition: .5s bottom;
+      }
+    }
   }
 
   h2 {
@@ -26,6 +54,7 @@
     white-space: nowrap;
     overflow: hidden;
     box-sizing: border-box;
+    z-index: $z-marquee;
 
     span {
       display: inline-block;
@@ -44,7 +73,7 @@
 
   &--animated h2 span {
     &:before {
-      animation: marquee-right .5s cubic-bezier(0.22, 1.21, 0.65, 0.47) forwards;
+      animation: marquee-right .5s forwards;
     }
   }
 }

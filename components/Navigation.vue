@@ -1,8 +1,8 @@
 <template>
   <div class="navigation">
-    <div class="navigation__title">{{title}}</div>
+    <div class="navigation__title">{{title}} <span><a :href='version.link'>v.{{version.current}}</a></span></div>
     <ul class="navigation__links">
-      <li v-for='items in nav'>{{items}}</li>
+      <li v-for='item in nav'><a :title='item.name' :href='item.link'>{{item.name}}</a></li>
       <!-- <li>THOMAS ONGERI</li> -->
     </ul>
   </div>
@@ -12,12 +12,32 @@
 export default {
   data () {
     return {
-      nav: [
-        'news.',
-        'meetings.',
-        'links.'
+      nav: [{
+        'name': 'news.',
+        'link': '/'
+      },
+      {
+        'name': 'clients.',
+        'link': '/clients'
+      },
+      {
+        'name': 'work.',
+        'link': '/work'
+      },
+      {
+        'name': 'links.',
+        'link': '/links'
+      },
+      {
+        'name': 'contact.',
+        'link': '/contact'
+      }
       ],
-      title: 'Thomas Ongeri'
+      title: 'Thomas Ongeri',
+      version: {
+        link: 'versions',
+        current: 3
+      }
     }
   }
 }

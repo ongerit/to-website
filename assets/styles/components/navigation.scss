@@ -8,8 +8,11 @@
   color: $white;
   display: flex;
   justify-content: space-between;
-
   opacity: 0;
+
+  a {
+    color: $white;
+  }
 
   .loaded & {
     opacity: 1;

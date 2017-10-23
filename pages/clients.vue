@@ -2,25 +2,22 @@
   <section class="container">
     <div>
       <navigation />
-      <marquee title='News' link='news'/>
-      <marquee title='Links' link='links'/>
-      <link-single />
-      <marquee title='Clients' link='clients'/>
+      <marquee title="Clients"/>
       <brand/>
-      <marquee title='Work' link='work'/>
-      <marquee title='Contact' link='contact'/>
     </div>
   </section>
 </template>
 
 <script>
+import Brand from '~/components/Brand'
 import Navigation from '~/components/Navigation'
 import Marquee from '~/components/Marquee'
 
 export default {
   components: {
     Navigation,
-    Marquee
+    Marquee,
+    Brand
   },
   methods: {
     animateElement () {
@@ -40,6 +37,6 @@ export default {
 </script>
 
 <style lang="scss">
-  // @import '~/assets/styles/index';
-  @import '../assets/styles/index';
+  // @import "~/assets/styles/index";
+  @import "../assets/styles/index";
 </style>

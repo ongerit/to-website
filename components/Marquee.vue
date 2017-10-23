@@ -1,12 +1,12 @@
 <template>
   <div class="marquee">
-    <h2><span>{{title}}</span></h2>
+    <h2><a :title='title' :href='link'><span>{{title}}</span></a></h2>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['title'],
+  props: ['title', 'link'],
   methods: {
     animateElement () {
       this.$nextTick(() => {
