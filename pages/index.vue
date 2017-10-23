@@ -4,15 +4,16 @@
       <navigation />
       <marquee title="news"/>
       <link-single />
-      <marquee title="meetings"/>
+      <marquee title="brands"/>
+      <brand/>
       <marquee title="work"/>
       <marquee title="contact"/>
-      <marquee title="brands"/>
     </div>
   </section>
 </template>
 
 <script>
+import Brand from '~/components/Brand'
 import Navigation from '~/components/Navigation'
 import Marquee from '~/components/Marquee'
 import LinkSingle from '~/components/LinkSingle'
@@ -21,7 +22,8 @@ export default {
   components: {
     Navigation,
     Marquee,
-    LinkSingle
+    LinkSingle,
+    Brand
   },
   methods: {
     animateElement () {

@@ -6,10 +6,10 @@
       </ul>
     </div>
       <div class="link-single__content">
-        <p class="link-single__date">04.16.2017</p>
+        <p class="link-single__date">10.31.2017</p>
         <div class="link-single__copy">
           <p>NEW SITE LAUNCH</p>
-          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</h3>
+          <h3>Launching the 3rd version of my personal portfolio. Stay tuned for more...</h3>
           <p>THOMAS ONGERI</p>
         </div>
         <div class="link-single__cta">
