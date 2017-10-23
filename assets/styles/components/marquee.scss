@@ -1,15 +1,18 @@
 @import "../assets/styles/utils/colors";
 @import "../assets/styles/utils/animations";
-
+@import "../assets/styles/globals/typography";
+@import "../assets/styles/globals/grid";
 
 .marquee {
+  @extend %grid;
   color: $white;
 
   h2 {
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: $heading-font-family;
     color: $off-white;
     font-weight: bold;
-    font-size: 240px;
+    font-size: 50px;
+    line-height: 40px;
     letter-spacing: 0;
     text-transform: uppercase;
     width: 100%;
@@ -20,9 +23,19 @@
 
     span {
       display: inline-block;
-      padding-left: 100%;
-      /* show the marquee just outside the paragraph */
-      animation: marquee-right 15s linear infinite;
+      overflow: hidden;
+      position: relative;
+
+
+      &:before {
+        content: '';
+        height: 100%;
+        background-color: $pink;
+        position: absolute;
+        height: 60px;
+        width: 100%;
+        animation: marquee-right 1s cubic-bezier(0.22, 1.21, 0.65, 0.47) infinite;
+      }
     }
   }
 }

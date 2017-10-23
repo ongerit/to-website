@@ -1,11 +1,12 @@
 @import "../assets/styles/utils/colors";
 @import "../assets/styles/utils/when-than";
+@import "../assets/styles/globals/grid";
 
 .navigation {
+  @extend %grid;
   color: $white;
   display: flex;
   justify-content: space-between;
-  margin: 15px 20px;
 
   &__links {
     display: flex;
@@ -17,7 +18,8 @@
   }
 
   @include when-wider-than(tablet) {
-    margin: 40px 46px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 
       &__links {
         li {
