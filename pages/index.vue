@@ -5,7 +5,9 @@
       <marquee title="news"/>
       <link-single />
       <marquee title="meetings"/>
-      <marquee title="links"/>
+      <marquee title="work"/>
+      <marquee title="contact"/>
+      <marquee title="brands"/>
     </div>
   </section>
 </template>
@@ -23,11 +25,8 @@ export default {
   },
   methods: {
     animateElement () {
+      this.$el.classList.add('animated')
       this.$nextTick(() => {
-        this.$el.classList.add('animated')
-        setTimeout(() => {
-          this.$el.classList.add('animated')
-        }, 800)
         setTimeout(() => {
           const $body = document.querySelector('body')
           $body.classList.add('loaded')
