@@ -1,25 +1,23 @@
+@import "colors";
+
 @keyframes marquee-right {
   0% {
-    width: 90%;
     transform: translate(0%);
   }
 
   100% {
-    width: 100%;
     transform: translate(100%);
-
   }
 }
 
 // Page cover
-
 @keyframes cover-down {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(100%);
   }
 
   100% {
-    transform: translateY(100%);
+    transform: translateY(-100%);
   }
 }
 //

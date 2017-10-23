@@ -6,6 +6,12 @@
 .marquee {
   @extend %grid;
   color: $white;
+  opacity: 0;
+
+  .loaded & {
+    opacity: 1;
+    transition: 2s opacity;
+  }
 
   h2 {
     font-family: $heading-font-family;
@@ -26,16 +32,19 @@
       overflow: hidden;
       position: relative;
 
-
       &:before {
         content: '';
-        height: 100%;
+        width: 100%;
         background-color: $pink;
         position: absolute;
         height: 60px;
-        width: 100%;
-        animation: marquee-right 1s cubic-bezier(0.22, 1.21, 0.65, 0.47) infinite;
       }
+    }
+  }
+
+  &--animated h2 span {
+    &:before {
+      animation: marquee-right .5s cubic-bezier(0.22, 1.21, 0.65, 0.47) forwards;
     }
   }
 }

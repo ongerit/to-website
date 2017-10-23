@@ -4,9 +4,17 @@
 
 .navigation {
   @extend %grid;
+  margin-top: 20px;
   color: $white;
   display: flex;
   justify-content: space-between;
+
+  opacity: 0;
+
+  .loaded & {
+    opacity: 1;
+    transition: 2s opacity;
+  }
 
   &__links {
     display: flex;
@@ -14,6 +22,10 @@
     li {
       list-style: none;
       margin-right: 10px;
+
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
     }
   }
 

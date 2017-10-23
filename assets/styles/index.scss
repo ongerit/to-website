@@ -5,13 +5,20 @@
 body {
   background: $bg;
 
-  &::before {
-    content: '';
-    top: 0;
-    height: 1000px;
-    background-color: $pink;
-    position: absolute;
-    width: 100%;
-    animation: cover-down 1.5s cubic-bezier(0.22, 1.21, 0.65, 0.47) ;
+  .container {
+    &::before {
+      content: '';
+      height: 100%;
+      top: 0;
+      background-color: $pink;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  .animated {
+    &:before {
+      animation: cover-down 1s forwards;
+    }
   }
 }

@@ -20,6 +20,23 @@ export default {
     Navigation,
     Marquee,
     LinkSingle
+  },
+  methods: {
+    animateElement () {
+      this.$nextTick(() => {
+        this.$el.classList.add('animated')
+        setTimeout(() => {
+          this.$el.classList.add('animated')
+        }, 800)
+        setTimeout(() => {
+          const $body = document.querySelector('body')
+          $body.classList.add('loaded')
+        }, 1000)
+      })
+    }
+  },
+  mounted () {
+    this.animateElement()
   }
 }
 </script>
