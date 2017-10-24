@@ -43,7 +43,6 @@ export default {
   @import "../assets/styles/globals/grid";
   .version {
     @extend %grid;
-    display: flex;
     opacity: 0;
     .loaded & {
       opacity: 1;
@@ -53,6 +52,10 @@ export default {
     &-item {
       display: flex;
       justify-content: space-between;
+    }
+
+    @include when-wider-than(tablet) {
+      display: flex;
     }
   }
 </style>
