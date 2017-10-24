@@ -3,7 +3,9 @@
       <navigation />
       <marquee title="Versions"/>
     <div class="version">
-      <version-item title="Versions" version="1"/>
+      <!-- <version-item title="Current" version="3" />
+      <version-item title="Basquiat" version="2"/>
+      <version-item title="Alston" version="1"/> -->
     </div>
   </section>
 </template>
@@ -39,8 +41,17 @@ export default {
 <style lang="scss">
   @import "../assets/styles/index";
   @import "../assets/styles/globals/grid";
-
   .version {
     @extend %grid;
+    opacity: 0;
+    .loaded & {
+      opacity: 1;
+      transition: 2s opacity;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 </style>
