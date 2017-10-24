@@ -32,11 +32,15 @@ export default {
 
   @include when-wider-than(tablet) {
     width: 20%;
-    padding: 20px;
+    padding-right: 20px;
   }
 
   @include when-wider-than(small_desktop) {
-    padding: 25px;
+    padding-right: 30px;
+  }
+
+  @include when-wider-than(large_desktop) {
+    padding-right: 50px;
   }
 }
 </style>

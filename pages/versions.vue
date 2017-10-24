@@ -1,8 +1,9 @@
 <template>
   <section class="container">
-    <div>
       <navigation />
       <marquee title="Versions"/>
+    <div class="version">
+      <version-item title="Versions" version="1"/>
     </div>
   </section>
 </template>
@@ -10,11 +11,13 @@
 <script>
 import Navigation from '~/components/Navigation'
 import Marquee from '~/components/Marquee'
+import VersionItem from '~/components/VersionItem'
 
 export default {
   components: {
     Navigation,
-    Marquee
+    Marquee,
+    VersionItem
   },
   methods: {
     animateElement () {
@@ -35,4 +38,9 @@ export default {
 
 <style lang="scss">
   @import "../assets/styles/index";
+  @import "../assets/styles/globals/grid";
+
+  .version {
+    @extend %grid;
+  }
 </style>
