@@ -1,6 +1,6 @@
 <template>
   <div class="version-item">
-    <a :href='`v${version}.thomasongeri.com`' :alt='title' target="_blank">
+    <a :href='`//v${version}.thomasongeri.com`' :alt='title' target="_blank">
       <img :src='`/ver/v${version}.png`' :title='title'/>
     </a>
     <div class="version-item__wrapper">
@@ -8,17 +8,22 @@
         <h3>{{title}} | v {{version}}.0</h3>
       </a>
       <ul>
-        <li>CSS</li>
-        <li>HTML</li>
-        <li>AMP</li>
-      </ul>
+        <li v-for="item in tech">{{item}}</li>
+        <li v-if="techSize > 5">+</li>
+     </ul>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['title', 'version']
+  props: ['title', 'version', 'tech', 'whatever'],
+  data () {
+    return {
+      'techSize': this.tech.length,
+      'addTechSize': false
+    }
+  }
 }
 </script>
 
@@ -40,16 +45,6 @@ export default {
 
   a {
     color: $white;
-  }
-
-  img {
-    filter: invert(60%) grayscale(100%);
-    transition: .5s filter;
-
-    &:hover {
-      filter: invert(0) grayscale(0);
-      transition: .5s filter;
-    }
   }
 
   ul {
@@ -83,6 +78,16 @@ export default {
   }
 
   @include when-wider-than(small_desktop) {
+    img {
+      filter: invert(60%) grayscale(100%);
+      transition: .5s filter;
+
+      &:hover {
+        filter: invert(0) grayscale(0);
+        transition: .5s filter;
+      }
+    }
+
     margin-bottom: 40px;
     &:not(:last-child) {
       margin-right: 30px;

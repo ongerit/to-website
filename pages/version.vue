@@ -3,9 +3,9 @@
       <navigation />
       <marquee title="Versions"/>
     <div class="version">
-      <version-item title="Current" version="1" />
-      <version-item title="Basquiat" version="2"/>
-      <version-item title="Alston" version="1"/>
+      <version-item title="Current" version="1" :tech="['scss', 'vue', 'es6', 'grunt', 'node', 'webpack']"/>
+      <version-item title="Basquiat" version="2"  :tech="['scss', 'vue',  'jquery', 'grunt', 'node', 'bower']"/>
+      <version-item title="Alston" version="1"  :tech="['scss', 'jquery', 'grunt', 'node', 'bower']"/>
     </div>
   </section>
 </template>
@@ -43,6 +43,7 @@ export default {
   @import "../assets/styles/globals/grid";
   .version {
     @extend %grid;
+    display: flex;
     opacity: 0;
     .loaded & {
       opacity: 1;

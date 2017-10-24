@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import BrandItem from './WorkItem'
+import WorkItem from './WorkItem'
 
 export default {
   components: {
