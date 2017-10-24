@@ -1,11 +1,11 @@
 <template>
   <div class="version-item">
-    <a :href='link' :alt='title' target="_blank">
+    <a :href='`v${version}.thomasongeri.com`' :alt='title' target="_blank">
       <img :src='`/ver/v${version}.png`' :title='title'/>
     </a>
     <div class="version-item__wrapper">
       <a :href='`//thomasongeri.com/v${version}`' :alt='title' target="_blank">
-        <h3>v {{version}}.0 | {{title}}</h3>
+        <h3>{{title}} | v {{version}}.0</h3>
       </a>
       <ul>
         <li>CSS</li>
@@ -64,22 +64,36 @@ export default {
     margin: 0 5px 5px 0;
     min-width: 20px;
     display: inline-block;
+    cursor: pointer;
+    transition: 1s background;
+
+    &:hover {
+      background: $pink;
+      font-weight: bold;
+      transition: .5s background;
+    }
   }
 
   @include when-wider-than(tablet) {
-    width: 31%;
-    margin-right: 20px;
+    width: 30%;
     margin-bottom: 30px;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 
   @include when-wider-than(small_desktop) {
-    margin-right: 30px;
     margin-bottom: 40px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   @include when-wider-than(large_desktop) {
-    margin-right: 50px;
     margin-bottom: 55px;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 </style>

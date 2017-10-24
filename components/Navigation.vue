@@ -35,7 +35,7 @@ export default {
       ],
       title: 'Thomas Ongeri',
       version: {
-        link: 'versions',
+        link: 'version',
         current: 3
       }
     }

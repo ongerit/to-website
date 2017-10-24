@@ -3,9 +3,9 @@
       <navigation />
       <marquee title="Versions"/>
     <div class="version">
-      <!-- <version-item title="Current" version="3" />
+      <version-item title="Current" version="1" />
       <version-item title="Basquiat" version="2"/>
-      <version-item title="Alston" version="1"/> -->
+      <version-item title="Alston" version="1"/>
     </div>
   </section>
 </template>
