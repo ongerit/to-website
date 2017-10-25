@@ -6,7 +6,7 @@
         <p>good</p><marquee title='News' link='news'/>
         <p>I surf the web looking interesting</p><marquee title='Links' link='links'/>
         <p>then i build cool things for my</p><marquee title='Clients' link='clients'/>
-        <p>I try to build this for them that jus</p><marquee title='Work' link='work'/></p>
+        <p>I try to build this for them that just</p><marquee title='Work' link='work'/></p>
         <p>remote work? here is my </p><marquee title='Contact' link='contact'/>
     </div>
   </section>
