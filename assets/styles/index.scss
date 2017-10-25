@@ -1,12 +1,16 @@
 @import "../assets/styles/utils/animations";
 @import "/utils/colors";
 @import "/globals/typography";
+@import "/globals/grid";
 @import "/globals/zindex";
 
 body {
   background: $bg;
 
   .container {
+    display: flex;
+    flex-direction: column;
+
     &::before {
       content: '';
       top: 0;
@@ -19,9 +23,46 @@ body {
     }
   }
 
+  .home {
+    @extend %grid;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      color: $white;
+      font-size: 30px;
+      display: none;
+    }
+
+    .marquee {
+      margin-bottom: 30px;
+    }
+  }
+
   .animated {
     &:before {
       animation: cover-down 2s forwards;
+    }
+  }
+
+  @include when-wider-than(tablet) {
+    .home {
+      text-align: center;
+      vertical-align: middle;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      p {
+        display: inline-block;
+        padding: 0 20px;
+      }
+
+      .marquee {
+        h2 {
+          padding-right: 20px;
+        }
+      }
     }
   }
 }

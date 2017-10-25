@@ -5,6 +5,24 @@
     transform: translate(0%);
   }
 
+  50% {
+    transform: translate(100%);
+  }
+
+  100% {
+    transform: translate(100%);
+  }
+}
+
+@keyframes dot-appears {
+  0% {
+    transform: translate(0%);
+  }
+
+  50% {
+    transform: translate(100%);
+  }
+
   100% {
     transform: translate(100%);
   }

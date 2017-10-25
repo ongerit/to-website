@@ -1,11 +1,12 @@
 @import "../assets/styles/utils/colors";
 @import "../assets/styles/utils/animations";
+@import "../assets/styles/utils/when-than";
 @import "../assets/styles/globals/typography";
 @import "../assets/styles/globals/grid";
 @import "../assets/styles/globals/zindex";
 
 .marquee {
-  @extend %grid;
+  // @extend %grid;
   color: $white;
   opacity: 0;
 
@@ -19,6 +20,20 @@
     position: relative;
     overflow: hidden;
 
+    &:before {
+      content: '';
+      background-color: $pink;
+      position: absolute;
+      z-index: $z9;
+      bottom: 16px;
+      right: -10px;
+      height: 10px;
+      width: 10px;
+      border-radius: 100%;
+      opacity: 1;
+      transition: 0.3s bottom .2s, 0.3s border-radius .5s, 0.3s height .8s;
+    }
+
     &:after {
       content: '';
       bottom: 0;
@@ -27,16 +42,21 @@
       width: 100%;
       position: absolute;
       background-color: $pink;
-      transition: .8s bottom;
+      transition: 0.5s border-radius, 0.3s bottom;
     }
 
     &:hover {
-
-      &:after {
-        bottom: 5px;
+      &:before {
+        border-radius: 0;
         height: 15px;
         bottom: 10px;
-        transition: .5s bottom;
+        transition: 0.5s bottom .2s, 0.3s border-radius .5s, 0.3s height .8s;
+      }
+
+      &:after {
+        height: 15px;
+        bottom: 10px;
+        transition: 0.8s bottom;
       }
     }
   }
@@ -70,10 +90,37 @@
       }
     }
   }
-
   &--animated h2 span {
     &:before {
-      animation: marquee-right .5s forwards;
+      animation: marquee-right 0.5s forwards;
+    }
+  }
+
+  @include when-wider-than(tablet) {
+    h2 {
+      font-size: 85px;
+      line-height: 75px;
+    }
+
+    a {
+      &:before {
+        bottom: 24px;
+        right: -20px;
+        height: 20px;
+        width: 20px;
+      }
+
+      &:hover {
+        &:before {
+          height: 20px;
+          bottom: 20px;
+        }
+
+        &:after {
+          height: 20px;
+          bottom: 20px;
+        }
+      }
     }
   }
 }

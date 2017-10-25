@@ -35,7 +35,6 @@ export default {
     addMoreTech () {
       this.limit = !this.limit
       this.techlimit = this.techSize
-      console.log(this.techSize)
     }
   }
 }

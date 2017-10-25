@@ -1,14 +1,13 @@
 <template>
   <section class="container">
-    <div>
-      <navigation />
-      <marquee title='News' link='news'/>
-      <marquee title='Links' link='links'/>
-      <link-single />
-      <marquee title='Clients' link='clients'/>
-      <brand/>
-      <marquee title='Work' link='work'/>
-      <marquee title='Contact' link='contact'/>
+    <navigation />
+
+    <div class="home">
+        <p>good</p><marquee title='News' link='news'/>
+        <p>I surf the web looking interesting</p><marquee title='Links' link='links'/>
+        <p>then i build cool things for my</p><marquee title='Clients' link='clients'/>
+        <p>I try to build this for them that jus</p><marquee title='Work' link='work'/></p>
+        <p>remote work? here is my </p><marquee title='Contact' link='contact'/>
     </div>
   </section>
 </template>
