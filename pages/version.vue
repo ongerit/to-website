@@ -3,7 +3,7 @@
       <navigation />
       <marquee title="Versions"/>
     <div class="version">
-      <version-item title="Current" version="1" :tech="['scss', 'vue', 'es6', 'grunt', 'node', 'webpack']"/>
+      <version-item title="Catlett" version="1" :tech="['scss', 'vue', 'es6', 'grunt', 'node', 'webpack']"/>
       <version-item title="Basquiat" version="2"  :tech="['scss', 'vue',  'jquery', 'grunt', 'node', 'bower']"/>
       <version-item title="Alston" version="1"  :tech="['scss', 'jquery', 'grunt', 'node', 'bower']"/>
     </div>
@@ -49,13 +49,9 @@ export default {
       transition: 2s opacity;
     }
 
-    &-item {
-      display: flex;
-      justify-content: space-between;
-    }
-
     @include when-wider-than(tablet) {
       display: flex;
+      justify-content: space-between;
     }
   }
 </style>

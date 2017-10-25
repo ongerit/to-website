@@ -1,6 +1,6 @@
 <template>
   <div class="navigation">
-    <div class="navigation__title"><a href="/">{{title}}</a><span><a :href='version.link'> v.{{version.current}}</a></span></div>
+    <div class="navigation__title"><a href="/">{{title}}</a><span><a :href='`/${version.link}`'> v.{{version.current}}</a></span></div>
     <ul class="navigation__links">
       <li v-for='item in nav'><a :title='item.name' :href='item.link'>{{item.name}}</a></li>
       <!-- <li>THOMAS ONGERI</li> -->

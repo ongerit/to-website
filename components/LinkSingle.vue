@@ -1,10 +1,10 @@
 <template>
   <div class="link-single">
-    <div class="link-single__nav">
+    <!-- <div class="link-single__nav">
       <ul>
         <li v-for="items in nav">{{items.name}}.</li>
       </ul>
-    </div>
+    </div> -->
       <div class="link-single__content">
         <p class="link-single__date">10.31.2017</p>
         <div class="link-single__copy">

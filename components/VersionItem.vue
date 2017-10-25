@@ -9,7 +9,7 @@
       </a>
       <ul>
         <li v-for="item in tech">{{item}}</li>
-        <li v-if="techSize > 5">+</li>
+        <li v-if="techSize > 5 || limit" @click="limit = 'fun'">+</li>
      </ul>
     </div>
   </div>
@@ -17,11 +17,11 @@
 
 <script>
 export default {
-  props: ['title', 'version', 'tech', 'whatever'],
+  props: ['title', 'version', 'tech'],
   data () {
     return {
       'techSize': this.tech.length,
-      'addTechSize': false
+      limit: false
     }
   }
 }

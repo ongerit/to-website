@@ -5,11 +5,17 @@
     </a>
     <div class="version-item__wrapper">
       <a :href='`//thomasongeri.com/v${version}`' :alt='title' target="_blank">
-        <h3>{{title}} | v {{version}}.0</h3>
+        <h3>{{title}}</h3>
       </a>
       <ul>
-        <li v-for="item in tech">{{item}}</li>
-        <li v-if="techSize > 5">+</li>
+        <li v-if="techSize > 5" v-for="(n,index) in techlimit">
+            {{tech[index]}}
+        </li>
+
+        <li v-if="techSize <= 5" v-for="item in tech">
+            {{item}}
+        </li>
+        <li v-if="techSize > 5 && limit" v-on:click='addMoreTech'>+</li>
      </ul>
     </div>
   </div>
@@ -20,8 +26,16 @@ export default {
   props: ['title', 'version', 'tech', 'whatever'],
   data () {
     return {
-      'techSize': this.tech.length,
-      'addTechSize': false
+      techSize: this.tech.length,
+      techlimit: 4,
+      limit: true
+    }
+  },
+  methods: {
+    addMoreTech () {
+      this.limit = !this.limit
+      this.techlimit = this.techSize
+      console.log(this.techSize)
     }
   }
 }
@@ -70,14 +84,20 @@ export default {
   }
 
   @include when-wider-than(tablet) {
-    width: 30%;
+    width: calc(33% - 20px);
+    margin-right: 20px;
     margin-bottom: 30px;
-    &:not(:last-child) {
-      margin-right: 20px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
     }
   }
 
   @include when-wider-than(small_desktop) {
+    width: calc(33% - 30px);
+    margin-right: 30px;
+    margin-bottom: 40px;
+
     img {
       filter: invert(60%) grayscale(100%);
       transition: .5s filter;
@@ -87,14 +107,10 @@ export default {
         transition: .5s filter;
       }
     }
-
-    margin-bottom: 40px;
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
   }
 
   @include when-wider-than(large_desktop) {
+    width: calc(33% - 50px);
     margin-bottom: 55px;
     &:not(:last-child) {
       margin-right: 50px;
