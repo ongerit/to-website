@@ -18,3 +18,15 @@ $margin-bottom-lg: 60px;
     margin-bottom: $margin-bottom-lg;
   }
 }
+
+%spacer {
+  margin-bottom: $margin-bottom-md;
+
+  @include when-wider-than(tablet) {
+    margin-bottom: $margin-bottom-md;
+  }
+
+  @include when-wider-than(small_desktop) {
+    margin-bottom: $margin-bottom-lg;
+  }
+}

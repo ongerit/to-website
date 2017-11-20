@@ -3,11 +3,11 @@
     <navigation />
 
     <div class="home">
-        <p>good</p><marquee title='News' link='news'/>
-        <p>I surf the web looking interesting</p><marquee title='Links' link='links'/>
-        <p>then i build cool things for my</p><marquee title='Clients' link='clients'/>
-        <p>I try to build this for them that just</p><marquee title='Work' link='work'/></p>
-        <p>remote work? here is my </p><marquee title='Contact' link='contact'/>
+        <span><p>good</p><marquee title='News' link='news'/></span>
+        <!-- <span><p>I surf the web for</p><marquee title='Links' link='links'/></span> -->
+        <span><p>then i make cool suff for my</p><marquee title='Clients' link='clients'/></span>
+        <span><p>check out my</p><marquee title='Work' link='work'/></span>
+        <span><p> and here's my</p><marquee title='Contact' link='contact'/></span>
     </div>
   </section>
 </template>

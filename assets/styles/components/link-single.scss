@@ -11,6 +11,10 @@
     transition: 2s opacity;
   }
 
+  a {
+    color: $white;
+  }
+
   &__nav {
     ul {
       list-style: none;

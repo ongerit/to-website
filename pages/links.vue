@@ -35,4 +35,10 @@ export default {
 
 <style lang="scss">
   @import "../assets/styles/index";
+
+  .container {
+    .marquee {
+      @extend %spacer;
+    }
+  }
 </style>

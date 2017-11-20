@@ -1,4 +1,4 @@
-@import "../assets/styles/utils/animations";
+@import "/utils/animations";
 @import "/utils/colors";
 @import "/globals/typography";
 @import "/globals/grid";
@@ -23,10 +23,19 @@ body {
     }
   }
 
+  h3,
+  h2,
+  h4,
+  h5,
+  h6 {
+    color: $white;
+  }
+
   .home {
     @extend %grid;
     align-items: center;
     justify-content: center;
+    opacity: 0;
 
     p {
       color: $white;
@@ -34,11 +43,27 @@ body {
       display: none;
     }
 
-    .marquee {
+    > span {
+      display: flex;
+      position: relative;
+      float: right;
+      left: 0;
+      width: 100%;
+      justify-content: flex-end;
+      align-items: flex-end;
       margin-bottom: 30px;
+    }
+
+    .marquee {
     }
   }
 
+  &.loaded {
+    .home {
+      opacity: 1;
+      transition: 2s opacity;
+    }
+  }
   .animated {
     &:before {
       animation: cover-down 2s forwards;
@@ -53,9 +78,13 @@ body {
       align-items: center;
       flex-wrap: wrap;
       margin: 0 auto;
+
       p {
         display: inline-block;
-        padding: 0 20px;
+        font-size: 20px;
+        margin-right: 15px;
+        line-height: 0;
+        display: none;
       }
 
       .marquee {
@@ -63,6 +92,12 @@ body {
           padding-right: 20px;
         }
       }
+    }
+  }
+
+  @include when-wider-than(small_desktop) {
+    .home p {
+      font-size: 30px;
     }
   }
 }

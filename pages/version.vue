@@ -3,7 +3,7 @@
       <navigation />
       <marquee title="Versions"/>
     <div class="version">
-      <version-item title="Catlett" version="1" :tech="['scss', 'vue', 'es6', 'grunt', 'node', 'webpack']"/>
+      <version-item title="Catlett" version="3" :tech="['scss', 'vue', 'es6', 'nuxt', 'node', 'webpack', 'eslint', 'sendgrid', 'axios']"/>
       <version-item title="Basquiat" version="2"  :tech="['scss', 'vue',  'jquery', 'grunt', 'node', 'bower']"/>
       <version-item title="Alston" version="1"  :tech="['scss', 'jquery', 'grunt', 'node', 'bower']"/>
     </div>
@@ -41,6 +41,13 @@ export default {
 <style lang="scss">
   @import "../assets/styles/index";
   @import "../assets/styles/globals/grid";
+
+  .container {
+    .marquee {
+      @extend %spacer;
+    }
+  }
+
   .version {
     @extend %grid;
     opacity: 0;

@@ -18,16 +18,12 @@ export default {
         'link': '/news'
       },
       {
-        'name': 'clients.',
-        'link': '/clients'
-      },
-      {
         'name': 'work.',
         'link': '/work'
       },
       {
-        'name': 'links.',
-        'link': '/links'
+        'name': 'clients.',
+        'link': '/clients'
       },
       {
         'name': 'contact.',

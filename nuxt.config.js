@@ -1,3 +1,6 @@
+require('dotenv').config()
+const bodyParser = require('body-parser')
+
 module.exports = {
   plugins: [
     { src: '~plugins/ga.js', ssr: false }
@@ -23,7 +26,12 @@ module.exports = {
   /*
   ** Build configuration
   */
+  serverMiddleware: [
+    // body-parser middleware
+    bodyParser.json()
+  ],
   build: {
+    // vendor: ['axios'], // Add axios in the vendor.bundle.js
     /*
     ** Run ESLint on save
     */
@@ -35,6 +43,17 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+      const babelLoader = config.module.rules.find(
+        rule => rule.loader === 'babel-loader'
+      )
+      // babelLoader.exclude = /node_modules\/(?![@sendgrid])/
+      babelLoader.options.presets.push('es2015')
+      config.node = {
+        console: true,
+        fs: 'empty',
+        net:'empty',
+        tls:'empty'
       }
     }
   }

@@ -81,19 +81,24 @@
       display: inline-block;
       overflow: hidden;
       position: relative;
+      opacity: 0;
 
       &:before {
         content: '';
         width: 100%;
         background-color: $pink;
         position: absolute;
-        height: 60px;
+        height: 80px;
       }
     }
   }
   &--animated {
     h2 span {
+      opacity: 1;
+      transition: .2s opactity;
       &:before {
+        opacity: 1;
+        transition: .2s opacity;
         animation: marquee-right 0.5s forwards;
       }
     }

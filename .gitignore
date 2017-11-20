@@ -12,3 +12,4 @@ dist
 
 # Server auth
 variables.env
+.env

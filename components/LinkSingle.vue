@@ -6,16 +6,18 @@
       </ul>
     </div> -->
       <div class="link-single__content">
-        <p class="link-single__date">10.31.2017</p>
+        <p class="link-single__date">11.20.2017</p>
+        <a href="http://www.thomasongeri.com" title="ThomasOngeri.com">
         <div class="link-single__copy">
           <p>NEW SITE LAUNCH</p>
           <h3>Launching the 3rd version of my personal portfolio. Stay tuned for more...</h3>
           <p>THOMAS ONGERI</p>
         </div>
+      </a>
         <div class="link-single__cta">
-          <p>like</p>
+          <!-- <p>like</p>
           <p>bookmark</p>
-          <p>+ submit reviews</p>
+          <p>+ submit reviews</p> -->
         </div>
       </div>
     </div>

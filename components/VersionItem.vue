@@ -8,8 +8,14 @@
         <h3>{{title}} | v {{version}}.0</h3>
       </a>
       <ul>
-        <li v-for="item in tech">{{item}}</li>
-        <li v-if="techSize > 5 || limit" @click="limit = 'fun'">+</li>
+        <li v-if="techSize > 5" v-for="(n,index) in techlimit">
+            {{tech[index]}}
+        </li>
+
+        <li v-if="techSize <= 5" v-for="item in tech">
+            {{item}}
+        </li>
+        <li v-if="techSize > 5 && limit" v-on:click='addMoreTech'>+</li>
      </ul>
     </div>
   </div>
@@ -21,7 +27,14 @@ export default {
   data () {
     return {
       'techSize': this.tech.length,
-      limit: false
+      techlimit: 4,
+      limit: true
+    }
+  },
+  methods: {
+    addMoreTech () {
+      this.limit = !this.limit
+      this.techlimit = this.techSize
     }
   }
 }
