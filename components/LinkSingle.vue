@@ -6,7 +6,7 @@
       </ul>
     </div> -->
       <div class="link-single__content">
-        <p class="link-single__date">11.20.2017</p>
+        <p class="link-single__date">11.21.2017</p>
         <a href="http://www.thomasongeri.com" title="ThomasOngeri.com">
         <div class="link-single__copy">
           <p>NEW SITE LAUNCH</p>
