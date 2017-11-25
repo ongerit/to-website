@@ -3,7 +3,7 @@
   <div>
     <navigation />
     <marquee class="spacer" title="Contact" />
-    <!-- <p class="contact__thank-you"></p>
+    <p class="contact__thank-you"></p>
     <div class="contact">
       <form class="contact__form" action="">
         <input class="contact__name contact__first" name="first_name" placeholder="First Name">
@@ -12,7 +12,7 @@
         <textarea class="contact__message"name="message" cols="40" rows="5" placeholder="Message"></textarea>
         <p class="contact__error"></p>
         <p><input @click.prevent='validateForm' class="contact__submit" type="submit" value="Send Message"></p>
-      </form> -->
+      </form>
       <div class="contact__social social-item">
         <social-item class="icon-github" name='github' link="//www.bitly.com/GITOngeri"/>
         <social-item class="icon-linkedin" name="linkedin" link="//www.bit.ly/thomas_ongeri"/>
@@ -52,76 +52,76 @@ export default {
         }, 1000)
       })
     },
-    // validateEmail (email) {
-    //   // eslint-disable-next-line no-useless-escape
-    //   const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    //   return re.test(email)
-    // },
-    // validateForm () {
-    //   const EMAIL = document.querySelector('input[name*="email"]')
-    //   const FNAME = document.querySelector('input[name*="first_name"]')
-    //   const LNAME = document.querySelector('input[name*="last_name"]')
-    //   const MESSAGE = document.querySelector('textarea[name*="message"]')
-    //
-    //   const EMAIL_VALUE = EMAIL.value
-    //   const FNAME_VALUE = FNAME.value
-    //   const LNAME_VALUE = LNAME.value
-    //   const MESSAGE_VALUE = MESSAGE.value
-    //
-    //   const NOTE = document.querySelector('.contact__error')
-    //   const THANK_YOU = document.querySelector('.contact__thank-you')
-    //   const FORM = document.querySelector('form')
-    //   // Rest form
-    //   EMAIL.classList.remove('contact__error')
-    //   FNAME.classList.remove('contact__error')
-    //   LNAME.classList.remove('contact__error')
-    //   MESSAGE.classList.remove('contact__error--border')
-    //
-    //   NOTE.textContent = ''
-    //
-    //   if (EMAIL_VALUE === null && LNAME_VALUE === null && EMAIL_VALUE === null && MESSAGE_VALUE === null) {
-    //     FNAME.classList.add('contact__error')
-    //     EMAIL.classList.add('contact__error')
-    //     MESSAGE.classList.add('contact__error--border')
-    //     NOTE.textContent = 'Please enter missing fields'
-    //     return
-    //   }
-    //
-    //   if (FNAME_VALUE === null) {
-    //     NOTE.textContent = 'Please enter your first name'
-    //     FNAME.classList.add('contact__error--border')
-    //     return
-    //   }
-    //
-    //   if (LNAME_VALUE === null) {
-    //     NOTE.textContent = 'Please enter your last name'
-    //     LNAME.classList.add('contact__error--border')
-    //     return
-    //   }
-    //
-    //   if (this.validateEmail(EMAIL_VALUE) && FNAME_VALUE && LNAME_VALUE && MESSAGE_VALUE) {
-    //     this.sendFormData(EMAIL_VALUE, FNAME_VALUE, LNAME_VALUE, MESSAGE_VALUE)
-    //     FORM.textContent = ''
-    //     THANK_YOU.textContent = 'Thank you for your message, I will respond to you shortly!'
-    //   } else {
-    //     NOTE.textContent = 'Please enter a valid email.'
-    //   }
-    // },
-    // sendFormData (EMAIL, FNAME, LNAME, MESSAGE) {
-    //   // const FORM = document.querySelector('form.contact__form')
-    //   // const EMAIL = document.querySelector('input[name*="email"]').value
-    //   // const FNAME = document.querySelector('input[name*="first_name"]').value
-    //   // const LNAME = document.querySelector('input[name*="last_name"]').value
-    //   // const MESSAGE = document.querySelector('textarea[name*="message"]').value
-    //   const VARS_OBJ = DOMPurify.sanitize(`{"email": "${EMAIL}", "message": "${MESSAGE}", "fname": "${FNAME}", "lname": "${LNAME}"}`)
-    //
-    //   this.$store.commit('SEND_MESSAGE', VARS_OBJ)
-    //
-    //   // send the data using post with element values
-    //   axios.post('/sendgrid/send', JSON.stringify({VARS_OBJ}), {headers: {'Content-Type': 'application/json'}})
-    //     .then((res) => { console.log(res) })
-    //     .catch((err) => { console.log(err) })
-    // }
+    validateEmail (email) {
+      // eslint-disable-next-line no-useless-escape
+      const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      return re.test(email)
+    },
+    validateForm () {
+      const EMAIL = document.querySelector('input[name*="email"]')
+      const FNAME = document.querySelector('input[name*="first_name"]')
+      const LNAME = document.querySelector('input[name*="last_name"]')
+      const MESSAGE = document.querySelector('textarea[name*="message"]')
+
+      const EMAIL_VALUE = EMAIL.value
+      const FNAME_VALUE = FNAME.value
+      const LNAME_VALUE = LNAME.value
+      const MESSAGE_VALUE = MESSAGE.value
+
+      const NOTE = document.querySelector('.contact__error')
+      const THANK_YOU = document.querySelector('.contact__thank-you')
+      const FORM = document.querySelector('form')
+      // Rest form
+      EMAIL.classList.remove('contact__error')
+      FNAME.classList.remove('contact__error')
+      LNAME.classList.remove('contact__error')
+      MESSAGE.classList.remove('contact__error--border')
+
+      NOTE.textContent = ''
+
+      if (EMAIL_VALUE === null && LNAME_VALUE === null && EMAIL_VALUE === null && MESSAGE_VALUE === null) {
+        FNAME.classList.add('contact__error')
+        EMAIL.classList.add('contact__error')
+        MESSAGE.classList.add('contact__error--border')
+        NOTE.textContent = 'Please enter missing fields'
+        return
+      }
+
+      if (FNAME_VALUE === null) {
+        NOTE.textContent = 'Please enter your first name'
+        FNAME.classList.add('contact__error--border')
+        return
+      }
+
+      if (LNAME_VALUE === null) {
+        NOTE.textContent = 'Please enter your last name'
+        LNAME.classList.add('contact__error--border')
+        return
+      }
+
+      if (this.validateEmail(EMAIL_VALUE) && FNAME_VALUE && LNAME_VALUE && MESSAGE_VALUE) {
+        this.sendFormData(EMAIL_VALUE, FNAME_VALUE, LNAME_VALUE, MESSAGE_VALUE)
+        FORM.textContent = ''
+        THANK_YOU.textContent = 'Thank you for your message, I will respond to you shortly!'
+      } else {
+        NOTE.textContent = 'Please enter a valid email.'
+      }
+    },
+    sendFormData (EMAIL, FNAME, LNAME, MESSAGE) {
+      // const FORM = document.querySelector('form.contact__form')
+      // const EMAIL = document.querySelector('input[name*="email"]').value
+      // const FNAME = document.querySelector('input[name*="first_name"]').value
+      // const LNAME = document.querySelector('input[name*="last_name"]').value
+      // const MESSAGE = document.querySelector('textarea[name*="message"]').value
+      const VARS_OBJ = DOMPurify.sanitize(`{"email": "${EMAIL}", "message": "${MESSAGE}", "fname": "${FNAME}", "lname": "${LNAME}"}`)
+
+      this.$store.commit('SEND_MESSAGE', VARS_OBJ)
+
+      // send the data using post with element values
+      axios.post('/sendgrid/send', JSON.stringify({VARS_OBJ}), {headers: {'Content-Type': 'application/json'}})
+        .then((res) => { console.log(res) })
+        .catch((err) => { console.log(err) })
+    }
   },
   mounted () {
     this.animateElement()
