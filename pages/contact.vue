@@ -26,7 +26,7 @@
 </template>
 
 <script>
-// import axios from 'axios'
+import axios from 'axios'
 // import $ from 'jquery'
 import Navigation from '~/components/Navigation'
 import Marquee from '~/components/Marquee'
@@ -34,7 +34,7 @@ import SocialItem from '~/components/SocialItem'
 
 // [TO] Prevent XSS hacking
 // import mail from '~/assets/scripts/helpers'
-// const DOMPurify = require('dompurify')
+const DOMPurify = require('dompurify')
 
 export default {
   components: {
