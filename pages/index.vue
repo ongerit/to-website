@@ -1,7 +1,6 @@
 <template>
   <section class="container">
     <navigation />
-
     <div class="home">
         <span><p>good</p><marquee title='News' link='news'/></span>
         <!-- <span><p>I surf the web for</p><marquee title='Links' link='links'/></span> -->
@@ -9,15 +8,17 @@
         <span><p>check out my</p><marquee title='Work' link='work'/></span>
         <span><p> and here's my</p><marquee title='Contact' link='contact'/></span>
     </div>
+    <footer />
   </section>
 </template>
-
 <script>
+import Footer from '~/components/Footer'
 import Navigation from '~/components/Navigation'
 import Marquee from '~/components/Marquee'
 
 export default {
   components: {
+    Footer,
     Navigation,
     Marquee
   },
