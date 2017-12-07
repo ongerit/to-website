@@ -19,6 +19,8 @@
         <social-item class="icon-twitter" name='twitter' link="//www.bitly.com/TwitOngeri"/>
         <social-item class="icon-instagram" name="instagram" link='//www.instagram.com/tomkins__'/>
         <social-item class="icon-paypal" name="Palypal" link='//paypal.me/Ongeri'/>
+        <br />
+        <a href="mailto:tom@thomasongeri.com?Subject=Greetings%20this%20is%20" target="_top">tom@thomasongeri.com</a>
       </div>
     </div>
   </div>
