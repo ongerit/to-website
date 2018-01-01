@@ -20,7 +20,7 @@
         <social-item class="icon-instagram" name="instagram" link='//www.instagram.com/tomkins__'/>
         <social-item class="icon-paypal" name="Palypal" link='//paypal.me/Ongeri'/>
         <br />
-        <a href="mailto:tom@thomasongeri.com?Subject=Greetings%20this%20is%20" target="_top">tom@thomasongeri.com</a>
+        <a class="contact__link" href="mailto:tom@thomasongeri.com?Subject=Greetings%20this%20is%20" target="_top">tom@thomasongeri.com</a>
       </div>
     </div>
   </div>
@@ -119,8 +119,7 @@ export default {
 
       this.$store.commit('SEND_MESSAGE', VARS_OBJ)
 
-      // send the data using post with element values
-      axios.post('/sendgrid/send', JSON.stringify({VARS_OBJ}), {headers: {'Content-Type': 'application/json'}})
+      axios.post('/sendgrid/p.php', JSON.stringify({VARS_OBJ}), {headers: {'Content-Type': 'application/json'}})
         .then((res) => { console.log(res) })
         .catch((err) => { console.log(err) })
     }
@@ -238,6 +237,15 @@ export default {
   &__thank-you {
     @extend %grid;
     color: $white;
+  }
+
+  &__link {
+  padding: 0 15px;
+  color: $white;
+
+    &:hover {
+      color: $pink;
+    }
   }
 
   &__success {
