@@ -13,3 +13,4 @@ dist
 # Server auth
 variables.env
 .env
+static/sendgrid/cred.php
