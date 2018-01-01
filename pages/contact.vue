@@ -119,8 +119,8 @@ export default {
       const VARS_OBJ = DOMPurify.sanitize(`{"email": "${EMAIL}", "message": "${MESSAGE}", "fname": "${FNAME}", "lname": "${LNAME}"}`)
 
       this.$store.commit('SEND_MESSAGE', VARS_OBJ)
-
       console.log(VARS_OBJ)
+      console.log(JSON.stringify({VARS_OBJ}), 'STRING JSON')
 
       axios.post('/sendgrid/p.php', JSON.stringify({VARS_OBJ}), {headers: {'Content-Type': 'application/json'}})
         .then((res) => { console.log(res) })
