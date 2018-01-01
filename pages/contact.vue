@@ -104,7 +104,7 @@ export default {
       if (this.validateEmail(EMAIL_VALUE) && FNAME_VALUE && LNAME_VALUE && MESSAGE_VALUE) {
         this.sendFormData(EMAIL_VALUE, FNAME_VALUE, LNAME_VALUE, MESSAGE_VALUE)
         FORM.textContent = ''
-        THANK_YOU.textContent = '<span>Thank you for your message, I will respond to you shortly!</span>'
+        THANK_YOU.textContent = 'Thank you for your message, I will respond to you shortly!'
       } else {
         NOTE.textContent = 'Please enter a valid email.'
       }
@@ -236,11 +236,8 @@ export default {
   }
 
   &__thank-you {
+    @extend %grid;
     color: $white;
-
-    span {
-      @extend %grid;
-    }
   }
 
   &__link {
