@@ -110,6 +110,7 @@ export default {
       }
     },
     sendFormData (EMAIL, FNAME, LNAME, MESSAGE) {
+      console.log('SEND ME')
       // const FORM = document.querySelector('form.contact__form')
       // const EMAIL = document.querySelector('input[name*="email"]').value
       // const FNAME = document.querySelector('input[name*="first_name"]').value
