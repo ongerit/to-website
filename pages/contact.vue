@@ -110,19 +110,14 @@ export default {
       }
     },
     sendFormData (EMAIL, FNAME, LNAME, MESSAGE) {
-      console.log('SEND ME')
-      // const FORM = document.querySelector('form.contact__form')
-      // const EMAIL = document.querySelector('input[name*="email"]').value
-      // const FNAME = document.querySelector('input[name*="first_name"]').value
-      // const LNAME = document.querySelector('input[name*="last_name"]').value
-      // const MESSAGE = document.querySelector('textarea[name*="message"]').value
       const VARS_OBJ = DOMPurify.sanitize(`{"email": "${EMAIL}", "message": "${MESSAGE}", "fname": "${FNAME}", "lname": "${LNAME}"}`)
 
       this.$store.commit('SEND_MESSAGE', VARS_OBJ)
-      console.log(VARS_OBJ)
-      console.log(JSON.stringify({VARS_OBJ}), 'STRING JSON')
+      console.log('SEND_MESSAGE', VARS_OBJ)
 
-      axios.post('/sendgrid/p.php', JSON.stringify({VARS_OBJ}), {headers: {'Content-Type': 'application/json'}})
+      console.log(JSON.stringify(DOMPurify.sanitize(`{"email": "${EMAIL}", "message": "${MESSAGE}", "fname": "${FNAME}", "lname": "${LNAME}"}`)))
+
+      axios.post('/sendgrid/p.php', JSON.stringify(DOMPurify.sanitize(`{"email": "${EMAIL}", "message": "${MESSAGE}", "fname": "${FNAME}", "lname": "${LNAME}"}`)), {headers: {'Content-Type': 'application/json'}})
         .then((res) => { console.log(res) })
         .catch((err) => { console.log(err) })
     }
