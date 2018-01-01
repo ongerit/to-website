@@ -119,6 +119,8 @@ export default {
 
       this.$store.commit('SEND_MESSAGE', VARS_OBJ)
 
+      console.log(VARS_OBJ)
+
       axios.post('/sendgrid/p.php', JSON.stringify({VARS_OBJ}), {headers: {'Content-Type': 'application/json'}})
         .then((res) => { console.log(res) })
         .catch((err) => { console.log(err) })
