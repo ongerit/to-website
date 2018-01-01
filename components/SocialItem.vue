@@ -23,7 +23,7 @@ export default {
     display: inline-block;
     color: $white;
     padding: 0 15px;
-    font-size: 60px;
+    font-size: 50px;
     cursor: pointer;
     text-decoration: none;
 
