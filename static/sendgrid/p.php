@@ -10,12 +10,6 @@
   $apiKey = SG_API_KEY;
   $sgEmail = SG_EMAIL;
 
-  print($sgEmail);
-  print($user_first_name);
-  print($user_email);
-  print($user_last_name);
-  print($user_message);
-
 	//[TO] Send transactional Email
   function send_transactional_email($apiKey, $sgEmail, $user_email, $user_last_name, $user_first_name, $user_message) {
       $from = new SendGrid\Email(null, $sgEmail);
