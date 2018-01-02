@@ -104,7 +104,7 @@ export default {
       if (this.validateEmail(EMAIL_VALUE) && FNAME_VALUE && LNAME_VALUE && MESSAGE_VALUE) {
         this.sendFormData(EMAIL_VALUE, FNAME_VALUE, LNAME_VALUE, MESSAGE_VALUE)
         FORM.textContent = ''
-        THANK_YOU.textContent = 'Thank you for your message, I will respond to you shortly!'
+        THANK_YOU.textContent = `Thank you for your message, ${FNAME_VALUE}. I will respond to you shortly!`
       } else {
         NOTE.textContent = 'Please enter a valid email.'
       }
@@ -112,12 +112,15 @@ export default {
     sendFormData (EMAIL, FNAME, LNAME, MESSAGE) {
       const VARS_OBJ = DOMPurify.sanitize(`{"email": "${EMAIL}", "message": "${MESSAGE}", "fname": "${FNAME}", "lname": "${LNAME}"}`)
 
+      const params = new URLSearchParams();
+      params.append('email', `${EMAIL}`)
+      params.append('message', `${MESSAGE}`)
+      params.append('fname', `${FNAME}`)
+      params.append('lname', `${LNAME}`)
+
       this.$store.commit('SEND_MESSAGE', VARS_OBJ)
-      console.log('SEND_MESSAGE', VARS_OBJ)
 
-      console.log(JSON.stringify(DOMPurify.sanitize(`{"email": "${EMAIL}", "message": "${MESSAGE}", "fname": "${FNAME}", "lname": "${LNAME}"}`)))
-
-      axios.post('/sendgrid/p.php', JSON.stringify(DOMPurify.sanitize(`{"email": "${EMAIL}", "message": "${MESSAGE}", "fname": "${FNAME}", "lname": "${LNAME}"}`)), {headers: {'Content-Type': 'application/json'}})
+      axios.post('/sendgrid/p.php', params.toString())
         .then((res) => { console.log(res) })
         .catch((err) => { console.log(err) })
     }
