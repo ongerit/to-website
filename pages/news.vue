@@ -5,16 +5,23 @@
       <marquee title='News' link='news'/>
       <link-single
       date='02.01.2018'
-      link='\/\/thomasongeri.com/workout/'
+      link='\/\/www.thomasongeri.com/workout/'
       title='PROJECT: Daily Workouts of the day'
       desc='Personal project, Using Spartan race api to generate weekly workouts.'
       author='Thomas Ongeri'/>
 
       <link-single
       date='01.01.2018'
-      link='\/\/ind-distribution.com/'
+      link='\/\/www.ind-distribution.com/'
       title='CLIENT: IND Distribution'
       desc='Client project managing their aws server, magento 2.x cms, and react frontend.'
+      author='Thomas Ongeri'/>
+
+      <link-single
+      date='11.23.2017'
+      link='\/\/ala.thomasongeri.com/'
+      title='PROJECT: Intro to JS to African Leadership Academy'
+      desc='Gave 40 min lecture to students at the African Leadership Academy.'
       author='Thomas Ongeri'/>
 
       <link-single
