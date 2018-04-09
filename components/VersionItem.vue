@@ -17,7 +17,6 @@
 <script>
 export default {
   props: ['title', 'version', 'tech']
-  }
 }
 </script>
 
