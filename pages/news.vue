@@ -3,7 +3,26 @@
     <div>
       <navigation />
       <marquee title='News' link='news'/>
-      <link-single />
+      <link-single
+      date='02.01.2018'
+      link='\/\/thomasongeri.com/workout/'
+      title='PROJECT: Daily Workouts of the day'
+      desc='Personal project, Using Spartan race api to generate weekly workouts.'
+      author='Thomas Ongeri'/>
+
+      <link-single
+      date='01.01.2018'
+      link='\/\/ind-distribution.com/'
+      title='CLIENT: IND Distribution'
+      desc='Client project managing their aws server, magento 2.x cms, and react frontend.'
+      author='Thomas Ongeri'/>
+
+      <link-single
+      date='11.21.2017'
+      link='http:\/\/www.thomasongeri.com'
+      title='WORK: New portfolio launch'
+      desc='Launching the 3rd version of my personal portfolio. Stay tuned for more...'
+      author='Thomas Ongeri'/>
     </div>
   </section>
 </template>

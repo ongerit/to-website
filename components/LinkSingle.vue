@@ -1,23 +1,18 @@
 <template>
   <div class="link-single">
-    <!-- <div class="link-single__nav">
-      <ul>
-        <li v-for="items in nav">{{items.name}}.</li>
-      </ul>
-    </div> -->
       <div class="link-single__content">
-        <p class="link-single__date">11.21.2017</p>
-        <a href="http://www.thomasongeri.com" title="ThomasOngeri.com">
-        <div class="link-single__copy">
-          <p>NEW SITE LAUNCH</p>
-          <h3>Launching the 3rd version of my personal portfolio. Stay tuned for more...</h3>
-          <p>THOMAS ONGERI</p>
+        <p class="link-single__date">{{date}}</p>
+        <div class="link-single__desc">
+          <a :href='link' :title='title' target="_blank">
+            <div class="link-single__copy">
+              <p>{{title}}</p>
+              <h3>{{desc}}</h3>
+              <p>{{author}}</p>
+            </div>
+          </a>
         </div>
-      </a>
-        <div class="link-single__cta">
-          <!-- <p>like</p>
-          <p>bookmark</p>
-          <p>+ submit reviews</p> -->
+
+        <!-- <div class="link-single__cta"> -->
         </div>
       </div>
     </div>
@@ -26,6 +21,7 @@
 
 <script>
 export default {
+  props: ['title', 'link', 'desc', 'author', 'date'],
   data () {
     return {
       nav: [

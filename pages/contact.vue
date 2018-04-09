@@ -112,7 +112,7 @@ export default {
     sendFormData (EMAIL, FNAME, LNAME, MESSAGE) {
       const VARS_OBJ = DOMPurify.sanitize(`{"email": "${EMAIL}", "message": "${MESSAGE}", "fname": "${FNAME}", "lname": "${LNAME}"}`)
 
-      const params = new URLSearchParams();
+      const params = new URLSearchParams()
       params.append('email', `${EMAIL}`)
       params.append('message', `${MESSAGE}`)
       params.append('fname', `${FNAME}`)

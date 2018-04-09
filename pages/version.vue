@@ -3,9 +3,9 @@
       <navigation />
       <marquee title="Versions"/>
     <div class="version">
-      <version-item title="Catlett" version="3" :tech="['scss', 'vue', 'es6', 'nuxt', 'node', 'webpack', 'eslint', 'sendgrid', 'axios']"/>
-      <version-item title="Basquiat" version="2"  :tech="['scss', 'vue',  'jquery', 'grunt', 'node', 'bower']"/>
-      <version-item title="Alston" version="1"  :tech="['scss', 'jquery', 'grunt', 'node', 'bower']"/>
+      <version-item title="Catlett" version="3" v-bind:tech="['scss', 'vue', 'es6', 'nuxt', 'node', 'webpack', 'eslint', 'sendgrid', 'axios']"></version-item>
+      <version-item title="Basquiat" version="2"  v-bind:tech="['scss', 'vue',  'jquery', 'grunt', 'node', 'bower']"></version-item>
+      <version-item title="Alston" version="1"  v-bind:tech="['scss', 'jquery', 'grunt', 'node', 'bower']"></version-item>
     </div>
   </section>
 </template>

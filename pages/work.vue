@@ -1,10 +1,9 @@
 <template>
   <section class="container">
       <navigation />
-      <marquee title="Featured"/>
+      <marquee title='Featured' link='featured'/>
     <div class="work">
       <work-item title="National Geographic" cover="nat-geo.png" :tech="['scss', 'vue', 'es6', 'grunt', 'node', 'webpack']"/>
-      <!-- <work-item title="College Fashionista" cover="cf.png"  :tech="['scss', 'wordpress',  'jquery', 'grunt', 'node', 'bower', 'php']"/> -->
       <work-item title="NBC"  cover="nbc.png" :tech="['scss', 'jquery', 'lodash', 'ramen', 'node', 'bower', 'react', 'underscore']"/>
       <work-item title="Juilliard"  cover="juilliard.png" :tech="['drupal', 'php', 'mysql', 'bash', 'scss', 'jquery', 'grunt', 'node', 'bower']"/>
       <work-item title="Tough Mudder"  cover="toughmudder.png" :tech="['drupal', 'php', 'mysql', 'bash', 'scss', 'jquery', 'grunt', 'node', 'bower']"/>

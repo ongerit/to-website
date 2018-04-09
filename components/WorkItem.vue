@@ -1,21 +1,14 @@
 <template>
-  <div class="version-item">
+  <div class="work-item">
     <a href="#" :alt='title'>
       <img :src='`/clients/${cover}`' :title='title'/>
     </a>
-    <div class="version-item__wrapper">
+    <div class="work-item__wrapper">
       <a href="#" :alt='title' target="_blank">
         <h3>{{title}}</h3>
       </a>
       <ul>
-        <li v-if="techSize > 5" v-for="(n,index) in techlimit">
-            {{tech[index]}}
-        </li>
-
-        <li v-if="techSize <= 5" v-for="item in tech">
-            {{item}}
-        </li>
-        <li v-if="techSize > 5 && limit" v-on:click='addMoreTech'>+</li>
+        <li v-for="item in tech">{{item}}</li>
      </ul>
     </div>
   </div>
@@ -23,20 +16,7 @@
 
 <script>
 export default {
-  props: ['title', 'version', 'tech', 'cover'],
-  data () {
-    return {
-      techSize: this.tech.length,
-      techlimit: 4,
-      limit: true
-    }
-  },
-  methods: {
-    addMoreTech () {
-      this.limit = !this.limit
-      this.techlimit = this.techSize
-    }
-  }
+  props: ['title','cover','tech']
 }
 </script>
 
@@ -44,7 +24,7 @@ export default {
 @import "../assets/styles/utils/when-than";
 @import "../assets/styles/utils/colors";
 
-.version-item {
+.work-item {
   width: 100%;
   color: $white;
   background: $black-3;
@@ -118,9 +98,6 @@ export default {
   @include when-wider-than(large_desktop) {
     width: calc(33% - 50px);
     margin-bottom: 55px;
-    // &:not(:last-child) {
-    //   margin-right: 50px;
-    // }
   }
 }
 </style>

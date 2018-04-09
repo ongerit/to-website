@@ -8,14 +8,7 @@
         <h3>{{title}} | v {{version}}.0</h3>
       </a>
       <ul>
-        <li v-if="techSize > 5" v-for="(n,index) in techlimit">
-            {{tech[index]}}
-        </li>
-
-        <li v-if="techSize <= 5" v-for="item in tech">
-            {{item}}
-        </li>
-        <li v-if="techSize > 5 && limit" v-on:click='addMoreTech'>+</li>
+        <li v-for="item in tech">{{item}}</li>
      </ul>
     </div>
   </div>
@@ -23,19 +16,7 @@
 
 <script>
 export default {
-  props: ['title', 'version', 'tech'],
-  data () {
-    return {
-      'techSize': this.tech.length,
-      techlimit: 4,
-      limit: true
-    }
-  },
-  methods: {
-    addMoreTech () {
-      this.limit = !this.limit
-      this.techlimit = this.techSize
-    }
+  props: ['title', 'version', 'tech']
   }
 }
 </script>

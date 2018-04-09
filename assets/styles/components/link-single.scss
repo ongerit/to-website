@@ -4,8 +4,8 @@
 .link-single {
   color: $white;
   margin: 15px 20px;
-
   opacity: 0;
+
   .loaded & {
     opacity: 1;
     transition: 2s opacity;
@@ -43,7 +43,9 @@
       padding-bottom: 5px;
     }
   }
-
+  &__desc {
+    width: 75%;
+  }
   &__cta {
     margin-top: 50px;
     p {

@@ -9,7 +9,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'thomasongeri.com',
+    title: 'Thomas Ongeri | thomasongeri.com',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -22,7 +22,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#fe005c' },
   /*
   ** Build configuration
   */
