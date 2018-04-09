@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  props: ['title','cover','tech']
+  props: ['title', 'cover', 'tech']
 }
 </script>
 

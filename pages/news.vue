@@ -3,6 +3,14 @@
     <div>
       <navigation />
       <marquee title='News' link='news'/>
+
+      <link-single
+      date='03.01.2018'
+      link='\/\/newsapp.thomasongeri.com/'
+      title='PROJECT: News Application'
+      desc='Welcome to Newsapp. Aggregate news articles from various news sources. Built on react.js.'
+      author='Thomas Ongeri'/>
+
       <link-single
       date='02.01.2018'
       link='\/\/www.thomasongeri.com/workout/'

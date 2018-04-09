@@ -36,11 +36,20 @@ body {
     align-items: center;
     justify-content: center;
     opacity: 0;
+    transition: opacity 1s ease-in-out;
 
     p {
       color: $white;
       font-size: 30px;
-      display: none;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    &__blurb {
+      line-height: 28px !important;
+      text-align: right;
+      opacity: 0 !important;
+      transition: opacity 1s ease-in-out;
     }
 
     > span {
@@ -84,7 +93,6 @@ body {
         font-size: 20px;
         margin-right: 15px;
         line-height: 0;
-        display: none;
       }
 
       .marquee {
@@ -98,6 +106,14 @@ body {
   @include when-wider-than(small_desktop) {
     .home p {
       font-size: 30px;
+    }
+  }
+
+  .illuminate {
+    .home__blurb,
+    p {
+      opacity: .4 !important;
+      transition: opacity 1s ease-in-out;
     }
   }
 }
