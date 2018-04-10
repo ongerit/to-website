@@ -2,7 +2,7 @@
   <section class="container" v-on:mouseover="displayBodyText">
     <navigation />
     <div class="home">
-        <p class="home__blurb">Hi! I’m Thomas Ongeri. I’m a web developer currently residing in Brooklyn, New York.</p>
+      <p class="home__blurb">Hi! I’m Thomas Ongeri. I’m a web developer currently residing in Brooklyn, New York.</p>
         <span><p>catch up on my</p><marquee title='News' link='news'/></span>
         <span><p>view some of my</p><marquee title='Clients' link='clients'/></span>
         <span><p>check out my</p><marquee title='Work' link='work'/></span>

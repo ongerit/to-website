@@ -16,7 +16,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Thomas Ongeri v.3' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v2' }
     ]
   },
   /*

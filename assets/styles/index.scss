@@ -43,12 +43,16 @@ body {
       font-size: 30px;
       opacity: 0;
       transition: opacity 1s ease-in-out;
+      display: none;
     }
 
     &__blurb {
-      line-height: 28px !important;
-      text-align: right;
+      line-height: 30px !important;
       opacity: 0 !important;
+      margin-bottom: 40px;
+      padding-left: 30%;
+      display: none;
+      text-align: right;
       transition: opacity 1s ease-in-out;
     }
 
@@ -87,6 +91,10 @@ body {
       align-items: center;
       flex-wrap: wrap;
       margin: 0 auto;
+
+      &__blurb {
+        display: inline-block;
+      }
 
       p {
         display: inline-block;
