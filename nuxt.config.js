@@ -13,9 +13,8 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Thomas Ongeri is a web developer currently residing in Brooklyn, New York.' }
+      { hid: 'description', name: 'description', content: 'Thomas Ongeri is a web developer currently residing in Brooklyn, New York.' },
       { hid: 'keywords', name: 'keywords', content: 'vuejs, nuxt, javascript, tutorials, development, software, news, clients, work, contact, plotly, collegefashionista, dow jones, xfinity, maybelline, juilliard, aba, savage, nbc, natgeo, tough mudder, javascript, code, american express, express, ejs, webpack, react, lodash, node, go, drupal' }
-
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v2' }
