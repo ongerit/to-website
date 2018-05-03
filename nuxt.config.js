@@ -31,6 +31,9 @@ module.exports = {
     // body-parser middleware
     bodyParser.json()
   ],
+  modules: [
+    '@nuxtjs/sitemap'
+  ],
   build: {
     // vendor: ['axios'], // Add axios in the vendor.bundle.js
     /*

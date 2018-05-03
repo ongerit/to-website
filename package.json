@@ -13,12 +13,13 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^0.1.1",
     "axios": "^0.17.0",
     "body-parser": "^1.18.2",
     "cross-env": "^5.1.1",
     "dompurify": "^1.0.2",
     "express": "^4.16.2",
-    "nuxt": "^1.0.0-rc11",
+    "nuxt": "^1.4.0",
     "source-map-support": "^0.5.0"
   },
   "devDependencies": {
