@@ -2,7 +2,7 @@
   <section class="container">
     <div>
       <navigation />
-      <marquee title='News' link='news'/>
+      <marquee title='News' />
 
       <link-single
       date='03.01.2018'
