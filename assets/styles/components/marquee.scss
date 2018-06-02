@@ -43,7 +43,7 @@
       width: 100%;
       position: absolute;
       background-color: $pink;
-      transition: 0.5s border-radius, 0.3s bottom;
+      transition: all .5s;
     }
 
     &:hover {
@@ -121,6 +121,7 @@
         right: -20px;
         height: 20px;
         width: 20px;
+        transition: all .5s;
       }
 
       &:hover {
