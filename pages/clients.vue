@@ -37,7 +37,6 @@ export default {
 </script>
 
 <style lang="scss">
-  // @import "~/assets/styles/index";
   @import "../assets/styles/globals/icons";
   @import "../assets/styles/index";
 </style>
