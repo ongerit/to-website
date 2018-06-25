@@ -1,9 +1,18 @@
 <template>
   <div>
     <nuxt/>
+    <foot />
   </div>
 </template>
+<script>
+import Foot from '~/components/Foot'
 
+export default {
+  components: {
+    Foot
+  }
+}
+</script>
 <style>
 html {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

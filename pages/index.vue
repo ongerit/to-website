@@ -8,17 +8,14 @@
         <span><p>check out my</p><marquee title='Work' link='work'/></span>
         <span><p> and here's my</p><marquee title='Contact' link='contact'/></span>
     </div>
-    <foot />
   </section>
 </template>
 <script>
-import Foot from '~/components/Footer'
 import Navigation from '~/components/Navigation'
 import Marquee from '~/components/Marquee'
 
 export default {
   components: {
-    Foot,
     Navigation,
     Marquee
   },

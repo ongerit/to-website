@@ -29,6 +29,7 @@ export default {
 
   .social {
     padding: 50px 0;
+    float: right;
     width: 300px;
     display: grid;
     grid-gap: 10px;
@@ -36,11 +37,10 @@ export default {
     justify-items: right;
   
     a {
+      color: $grey;
       font-size: 20px;
       padding: 0;
       text-decoration: none;
     }
   }
-
-
 </style>
