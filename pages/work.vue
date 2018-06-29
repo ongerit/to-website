@@ -3,12 +3,12 @@
       <navigation />
       <marquee title='Featured' link='featured'/>
     <div class="work">
-      <work-item title="National Geographic" cover="nat-geo.png" :tech="['scss', 'vue', 'es6', 'grunt', 'node', 'webpack']"/>
-      <work-item title="NBC"  cover="nbc.png" :tech="['scss', 'jquery', 'lodash', 'ramen', 'node', 'bower', 'react', 'underscore']"/>
+      <work-item title="National Geographic" cover="nat-geo.png" :tech="['lodash','scss', 'react, 'es6','nodejs', 'drupal', 'webpack']"/>
+      <work-item title="NBC"  cover="nbc.png" :tech="['scss', 'es6', 'lodash', 'ramen', 'node', 'react', 'underscore']"/>
       <work-item title="Juilliard"  cover="juilliard.png" :tech="['drupal', 'php', 'mysql', 'bash', 'scss', 'jquery', 'grunt', 'node', 'bower']"/>
       <work-item title="Tough Mudder"  cover="toughmudder.png" :tech="['drupal', 'php', 'mysql', 'bash', 'scss', 'jquery', 'grunt', 'node', 'bower']"/>
       <work-item title="College Fashionista"  cover="cf.png" :tech="['wordpress', 'php', 'mysql', 'bash', 'rackspace','scss', 'jquery', 'grunt', 'node', 'bower']"/>
-      <work-item title="Plotly"  cover="plotly.png" :tech="['scss', 'jquery', 'react', 'node', 'nextjs']"/>
+      <work-item title="Plotly"  cover="plotly.png" :tech="['scss', 'es6', 'react', 'node', 'nextjs']"/>
       <work-item title="Savage Bureau"  cover="savage.png" :tech="['ejs', 'scss', 'jquery', 'grunt', 'node', 'bower']"/>
       <work-item title="American Express"  cover="american.png" :tech="['scss', 'jquery', 'vue', 'node']"/>
       <work-item title="Xfinity Mobile"  cover="xfinity.png" :tech="['angular', 'lodash', 'scss', 'jquery', 'grunt', 'node']"/>
