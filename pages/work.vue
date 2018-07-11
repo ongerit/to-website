@@ -3,16 +3,17 @@
       <navigation />
       <marquee title='Featured' link='featured'/>
     <div class="work">
-      <work-item title="National Geographic" cover="nat-geo.png" :tech="['lodash','scss', 'react, 'es6','nodejs', 'drupal', 'webpack']"/>
-      <work-item title="NBC"  cover="nbc.png" :tech="['scss', 'es6', 'lodash', 'ramen', 'node', 'react', 'underscore']"/>
-      <work-item title="Juilliard"  cover="juilliard.png" :tech="['drupal', 'php', 'mysql', 'bash', 'scss', 'jquery', 'grunt', 'node', 'bower']"/>
-      <work-item title="Tough Mudder"  cover="toughmudder.png" :tech="['drupal', 'php', 'mysql', 'bash', 'scss', 'jquery', 'grunt', 'node', 'bower']"/>
-      <work-item title="College Fashionista"  cover="cf.png" :tech="['wordpress', 'php', 'mysql', 'bash', 'rackspace','scss', 'jquery', 'grunt', 'node', 'bower']"/>
-      <work-item title="Plotly"  cover="plotly.png" :tech="['scss', 'es6', 'react', 'node', 'nextjs']"/>
-      <work-item title="Savage Bureau"  cover="savage.png" :tech="['ejs', 'scss', 'jquery', 'grunt', 'node', 'bower']"/>
-      <work-item title="American Express"  cover="american.png" :tech="['scss', 'jquery', 'vue', 'node']"/>
-      <work-item title="Xfinity Mobile"  cover="xfinity.png" :tech="['angular', 'lodash', 'scss', 'jquery', 'grunt', 'node']"/>
-      <work-item title="Dow Jones"  cover="dow-jones.png" :tech="['css', 'jquery', 'drupal']"/>
+      <work-item url="https://www.nationalgeographic.com/" title="National Geographic"  cover="nat-geo.png" :tech="['lodash', 'scss', 'react', 'es6', 'nodejs', 'drupal','webpack']"/>
+      <work-item url="https://www.nbcnews.com/better" title="NBC"  cover="nbc.png" :tech="['scss', 'es6', 'lodash', 'ramen', 'node', 'react', 'underscore']"/>
+      <work-item url="https://www.juilliard.edu/" title="Juilliard"  cover="juilliard.png" :tech="['drupal', 'php', 'mysql', 'bash', 'scss', 'jquery', 'grunt', 'node', 'bower']"/>
+      <work-item url="https://toughmudder.com/" title="Tough Mudder"  cover="toughmudder.png" :tech="['drupal', 'php', 'mysql', 'bash', 'scss', 'jquery', 'grunt', 'node', 'bower']"/>
+      <work-item url="http://collegefashionista.com/" title="College Fashionista"  cover="cf.png" :tech="['wordpress', 'php', 'mysql', 'bash', 'rackspace','scss', 'jquery', 'grunt', 'node', 'bower']"/>
+      <work-item url="https://plot.ly/" title="Plotly"  cover="plotly.png" :tech="['scss', 'es6', 'react', 'node', 'nextjs']"/>
+      <work-item url="http://savagebureau.com/" title="Savage Bureau"  cover="savage.png" :tech="['ejs', 'scss', 'jquery', 'grunt', 'node', 'bower']"/>
+      <work-item url="https://www.americanexpress.com/" title="American Express"  cover="american.png" :tech="['scss', 'jquery', 'vue', 'node']"/>
+      <work-item url="https://www.xfinity.com/mobile/" title="Xfinity Mobile"  cover="xfinity.png" :tech="['angular', 'lodash', 'scss', 'jquery', 'grunt', 'node']"/>
+      <work-item url="https://www.dowjones.com/" title="Dow Jones"  cover="dow-jones.png" :tech="['css', 'jquery', 'drupal']"/>
+
     </div>
   </section>
 </template>
@@ -46,30 +47,30 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../assets/styles/index";
-  @import "../assets/styles/globals/grid";
+@import "../assets/styles/index";
+@import "../assets/styles/globals/grid";
 
-  .container {
-    .marquee {
-      @extend %spacer;
-    }
+.container {
+  .marquee {
+    @extend %spacer;
+  }
+}
+
+.work {
+  @extend %grid;
+  display: flex;
+  opacity: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .loaded & {
+    opacity: 1;
+    transition: 2s opacity;
   }
 
-  .work {
-    @extend %grid;
+  &-item {
     display: flex;
-    opacity: 0;
-    flex-wrap: wrap;
     justify-content: space-between;
-
-    .loaded & {
-      opacity: 1;
-      transition: 2s opacity;
-    }
-
-    &-item {
-      display: flex;
-      justify-content: space-between;
-    }
   }
+}
 </style>

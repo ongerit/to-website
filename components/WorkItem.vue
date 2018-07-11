@@ -1,10 +1,10 @@
 <template>
   <div class="work-item">
-    <a href="#" :alt='title'>
+    <a :href='url' :alt='title'>
       <img :src='`/clients/${cover}`' :title='title'/>
     </a>
     <div class="work-item__wrapper">
-      <a href="#" :alt='title' target="_blank">
+      <a :href='url' :alt='title' target="_blank">
         <h3>{{title}}</h3>
       </a>
       <ul>
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  props: ['title', 'cover', 'tech']
+  props: ['title', 'cover', 'tech', 'url']
 }
 </script>
 
