@@ -49,7 +49,7 @@ export default {
 <style lang="scss">
 @import "../assets/styles/index";
 @import "../assets/styles/globals/grid";
-
+@import "../assets/styles/utils/when-than";
 .container {
   .marquee {
     @extend %spacer;
@@ -58,19 +58,19 @@ export default {
 
 .work {
   @extend %grid;
-  display: flex;
+  grid-template-columns: repeat(3, 1fr);
   opacity: 0;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  grid-gap: 50px;
 
+
+  @include when-wider-than(tablet){
+   display: grid
+  } 
+  
   .loaded & {
     opacity: 1;
     transition: 2s opacity;
   }
 
-  &-item {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 </style>

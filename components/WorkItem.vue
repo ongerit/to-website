@@ -62,7 +62,6 @@ export default {
   }
 
   @include when-wider-than(tablet) {
-    width: calc(50% - 20px);
     margin-right: 20px;
     margin-bottom: 30px;
 
@@ -72,17 +71,8 @@ export default {
   }
 
   @include when-wider-than(small_desktop) {
-    width: calc(33% - 30px);
     margin-right: 30px;
     margin-bottom: 40px;
-
-    &:nth-child(2n) {
-      margin-right: 20px;
-    }
-
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
 
     img {
       filter: invert(60%) grayscale(100%);
@@ -96,7 +86,6 @@ export default {
   }
 
   @include when-wider-than(large_desktop) {
-    width: calc(33% - 50px);
     margin-bottom: 55px;
   }
 }
