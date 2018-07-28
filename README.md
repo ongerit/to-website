@@ -1,6 +1,7 @@
 # thomasongeri.com
 
-> Thomas Ongeri v.3
+[Thomas Ongeri v.3](http://thomasongeri.com/)
+
 
 ## Build Setup
 
