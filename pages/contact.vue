@@ -166,13 +166,13 @@ export default {
 
   &__form {
     width: 100%;
-    max-width: 300px;
     text-align: center;
     align-content: center;
     opacity: 0;
     margin-bottom: 20px;
 
     @include when-wider-than(tablet) {
+      max-width: 300px;
       padding-right: 15px;
       width: 50%;
     }
