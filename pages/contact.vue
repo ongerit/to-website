@@ -9,9 +9,11 @@
         <input class="contact__name contact__first" name="first_name" placeholder="First Name">
         <input class="contact__name contact__last" name="last_name" placeholder="Last Name">
         <input class="contact__email" name="email" placeholder="Email">
-        <textarea class="contact__message"name="message" cols="40" rows="5" placeholder="Message"></textarea>
+        <textarea class="contact__message" name="message" cols="40" rows="5" placeholder="Message"></textarea>
         <p class="contact__error"></p>
-        <p><input @click.prevent='validateForm' class="contact__submit" type="submit" value="Send Message"></p>
+        <div 
+          @click.prevent='validateForm' 
+          class="contact__submit">Send Message</div>
       </form>
       <div class="contact__social social-item">
         <social-item class="icon-github" name='github' link="//www.bitly.com/GITOngeri"/>
@@ -192,12 +194,16 @@ export default {
   &__message {
     padding-top: 15px;
     line-height: 20px;
+    margin-bottom: 0;
   }
 
   &__name {
-    width: calc(50% - 7.5px);
-    display: inline-block;
-    margin-right: 15px;
+    
+    @include when-wider-than(tablet) {
+      width: calc(50% - 7.5px);
+      display: inline-block;
+      margin-right: 15px;
+    }
 
     &:nth-child(2n) {
       margin-right: 0px;
