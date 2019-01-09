@@ -1,5 +1,7 @@
 <template>
   <section class="container" v-on:mouseover="displayBodyText">
+    <promo  v-if="displayPromo" />
+    <p>{{displayPromo}}</p>
     <navigation />
     <div class="home">
       <p class="home__blurb">Hi! I’m Thomas Ongeri. I’m a web developer currently residing in Brooklyn, New York.</p>
@@ -11,13 +13,20 @@
   </section>
 </template>
 <script>
-import Navigation from '~/components/Navigation'
 import Marquee from '~/components/Marquee'
+import Navigation from '~/components/Navigation'
+import Promo from '~/components/Promo'
 
 export default {
   components: {
+    Marquee,
     Navigation,
-    Marquee
+    Promo
+  },
+  data () {
+    return {
+      displayPromo: false
+    }
   },
   methods: {
     animateElement () {
@@ -28,6 +37,12 @@ export default {
           $body.classList.add('loaded')
         }, 1000)
       })
+    },
+    isPromo () {
+      const urlParams = new URLSearchParams(window.location.search)
+      const promo = urlParams.get('p')
+      console.log({promo})
+      this.displayPromo = promo ? true : ''
     },
     displayBodyText () {
       const ELEMENT = this.$el.classList
@@ -41,6 +56,7 @@ export default {
   },
   mounted () {
     this.animateElement()
+    this.isPromo()
   }
 }
 </script>
