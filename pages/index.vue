@@ -41,7 +41,6 @@ export default {
     isPromo () {
       const urlParams = new URLSearchParams(window.location.search)
       const promo = urlParams.get('p')
-      console.log({promo})
       this.displayPromo = promo ? true : ''
     },
     displayBodyText () {
