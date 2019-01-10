@@ -31,7 +31,6 @@ export default {
       transition: 2s all;
     }
 
-
     h1 {
       text-align: center;
       color: $white;

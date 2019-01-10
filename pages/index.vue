@@ -1,7 +1,6 @@
 <template>
   <section class="container" v-on:mouseover="displayBodyText">
     <promo  v-if="displayPromo" />
-    <p>{{displayPromo}}</p>
     <navigation />
     <div class="home">
       <p class="home__blurb">Hi! I’m Thomas Ongeri. I’m a web developer currently residing in Brooklyn, New York.</p>
