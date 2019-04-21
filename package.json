@@ -20,7 +20,7 @@
     "cross-env": "^5.1.1",
     "dompurify": "^1.0.2",
     "express": "^4.16.2",
-    "nuxt": "^1.4.0",
+    "nuxt": "^1.4.5",
     "source-map-support": "^0.5.0"
   },
   "devDependencies": {

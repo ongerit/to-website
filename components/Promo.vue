@@ -5,14 +5,14 @@
 </template>
 <script>
 export default {
-  props: ["route"],
-  data() {
+  props: ['route'],
+  data () {
     return {
       desc:
         "👋 SONY, If you're looking to purchase spidermanfarfromhome.com please shoot me a message."
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang='scss'>
