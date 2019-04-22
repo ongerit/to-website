@@ -200,7 +200,7 @@ export default {
   &__name {
     
     @include when-wider-than(tablet) {
-      width: calc(50% - 7.5px);
+      width: calc(49% - 7.5px);
       display: inline-block;
       margin-right: 15px;
     }

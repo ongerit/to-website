@@ -80,20 +80,6 @@ export default {
       transition: all .5s ease-out;
       opacity: 0;
     }
-
-    &:hover {
-      &:after {
-        height: 15px;
-        bottom: 10px;
-        transition: 0.5s bottom .2s, 0.3s border-radius .5s, 0.3s height .8s;
-      }
-
-      &:before {
-        width: 100%;
-        max-width: 282px;
-        transition: all .5s ease-in .25s;
-      }
-    }
   }
 
   h2 {
@@ -163,11 +149,16 @@ export default {
         &:after {
           height: 20px;
           bottom: 20px;
+          bottom: 10px;
+          transition: 0.5s bottom .2s, 0.3s border-radius .5s, 0.3s height .8s;
         }
 
         &:before {
           padding-right: 10px;
           opacity: 1;
+          width: 100%;
+          max-width: 282px;
+          transition: all .5s ease-in .25s;
         }
       }
     }
