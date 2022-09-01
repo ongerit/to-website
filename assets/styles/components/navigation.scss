@@ -1,6 +1,6 @@
-@import "../assets/styles/utils/colors";
-@import "../assets/styles/utils/when-than";
-@import "../assets/styles/globals/grid";
+@import "../utils/colors";
+@import "../utils/when-than";
+@import "../globals/grid";
 
 .navigation {
   @extend %grid;

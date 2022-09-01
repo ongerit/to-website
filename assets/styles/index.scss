@@ -1,8 +1,8 @@
-@import "/utils/animations";
-@import "/utils/colors";
-@import "/globals/typography";
-@import "/globals/grid";
-@import "/globals/zindex";
+@import "./utils/animations";
+@import "./utils/colors";
+@import "./globals/typography";
+@import "./globals/grid";
+@import "./globals/zindex";
 
 body {
   background: $bg;
