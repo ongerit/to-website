@@ -120,12 +120,14 @@ export default {
       params.append('fname', `${FNAME}`)
       params.append('lname', `${LNAME}`)
 
-      this.$store.commit('SEND_MESSAGE', VARS_OBJ)
-
       axios.post('/sendgrid/p.php', params.toString())
         .then((res) => { console.log(res) })
         .catch((err) => { console.log(err) })
+      
+      console.log("this logs", this,this.$store);
+      this.$store.commit('SEND_MESSAGE', VARS_OBJ);
     }
+
   },
   mounted () {
     this.animateElement()
