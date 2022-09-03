@@ -112,7 +112,7 @@ func main() {
 	http.HandleFunc("/", sendgridApi)
 
 	fmt.Printf("Starting server for testing HTTP POST http://localhost:8080...\n")
-	if err := http.ListenAndServe(":2098", nil); err != nil {
+	if err := http.ListenAndServe(":90", nil); err != nil {
 		log.Fatal(err)
 	}
 
