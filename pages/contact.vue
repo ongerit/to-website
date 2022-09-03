@@ -122,10 +122,7 @@ export default {
 
       axios.post('/sendgrid/p.php', params.toString())
         .then((res) => { console.log(res) })
-        .catch((err) => { console.log(err) })
-      
-      console.log("this logs", this,this.$store);
-      this.$store.commit('SEND_MESSAGE', VARS_OBJ);
+        .catch((err) => { console.log(err) }) 
     }
 
   },
