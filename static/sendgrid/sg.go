@@ -17,8 +17,6 @@ func send_grid_information(
 	user_last_name string,
 	user_first_name string,
 	user_message string) {
-
-	// prevent sending emails
 	from := mail.NewEmail( user_email, sgEmail)
 	subject := "Email from thomasongeri.com"
 	to := mail.NewEmail("To me", "ongerit@gmail.com")
@@ -67,10 +65,8 @@ func add_users_contact_to_sendgrid(apiKey string, user_email string , user_first
 }
 // TODO: Finish the additional adds
 // func send_email_with_template(apiKey, user_email, user_last_name, user_first_name, sgEmail){
-
 // }
 // func send_transactional_email(apiKey, sgEmail, user_email, user_last_name, user_first_name, user_message){
-
 // }
 
 func sendgridApi(w http.ResponseWriter, r *http.Request) {
@@ -116,7 +112,7 @@ func main() {
 	http.HandleFunc("/", sendgridApi)
 
 	fmt.Printf("Starting server for testing HTTP POST http://localhost:8080...\n")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	if err := http.ListenAndServe(":2098", nil); err != nil {
 		log.Fatal(err)
 	}
 
