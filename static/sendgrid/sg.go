@@ -1,15 +1,18 @@
 // using SendGrid's Go Library
 // https://github.com/sendgrid/sendgrid-go
 package main
+
 import (
 	"fmt"
-	"github.com/sendgrid/sendgrid-go"
-	"github.com/sendgrid/sendgrid-go/helpers/mail"
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/sendgrid/sendgrid-go"
+	"github.com/sendgrid/sendgrid-go/helpers/mail"
 )
-	// Run Functions here
+
+// Run Functions here
 func send_grid_information(
 	apiKey string,
 	sgEmail string,
@@ -17,11 +20,11 @@ func send_grid_information(
 	user_last_name string,
 	user_first_name string,
 	user_message string) {
-	from := mail.NewEmail( user_email, sgEmail)
-	subject := "Email from thomasongeri.com"
+	from := mail.NewEmail(user_email, sgEmail)
+	subject := fmt.Sprintf("Email from %s |  thomasongeri.com", user_email)
 	to := mail.NewEmail("To me", "ongerit@gmail.com")
-	plainTextContent := "Thank you for your message!"
-	htmlContent := "<strong>Thank you for your message!</strong>"
+	plainTextContent := user_message
+	htmlContent := fmt.Sprintf("<strong>%s</strong>", user_message)
 
 	message := mail.NewSingleEmail(from, subject, to, plainTextContent, htmlContent)
 	client := sendgrid.NewSendClient(apiKey)
@@ -36,8 +39,7 @@ func send_grid_information(
 	}
 }
 
-
-func add_users_contact_to_sendgrid(apiKey string, user_email string , user_first_name string, user_last_name string){
+func add_users_contact_to_sendgrid(apiKey string, user_email string, user_first_name string, user_last_name string) {
 	host := "https://api.sendgrid.com"
 	body := fmt.Sprintf(`{
 		"contacts": [
@@ -47,7 +49,7 @@ func add_users_contact_to_sendgrid(apiKey string, user_email string , user_first
 		"last_name": "%s" 
 		}
 		]
-		}`,user_email,user_first_name,user_last_name )
+		}`, user_email, user_first_name, user_last_name)
 
 	fmt.Println(body)
 	request := sendgrid.GetRequest(apiKey, "/v3/marketing/contacts", host)
@@ -55,14 +57,15 @@ func add_users_contact_to_sendgrid(apiKey string, user_email string , user_first
 	request.Body = []byte(body)
 	response, err := sendgrid.API(request)
 	if err != nil {
-					log.Println(err)
+		log.Println(err)
 	} else {
-					fmt.Println(response.StatusCode)
-					fmt.Println(response.Body)
-					fmt.Println(response.Headers)
+		fmt.Println(response.StatusCode)
+		fmt.Println(response.Body)
+		fmt.Println(response.Headers)
 	}
 
 }
+
 // TODO: Finish the additional adds
 // func send_email_with_template(apiKey, user_email, user_last_name, user_first_name, sgEmail){
 // }
