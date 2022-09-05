@@ -120,7 +120,7 @@ export default {
       params.append('fname', `${FNAME}`)
       params.append('lname', `${LNAME}`)
 
-      axios.post('/sendgrid/p.php', params.toString())
+      axios.post('/sg', params.toString())
         .then((res) => { console.log(res) })
         .catch((err) => { console.log(err) }) 
     }
