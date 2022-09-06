@@ -25,6 +25,13 @@ export default {
 
   .footer {
     @extend %grid;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    @include when-wider-than(tablet) {
+      position: relative;
+    }
   }
 
   .social {

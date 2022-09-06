@@ -163,15 +163,22 @@ export default {
     text-align: center;
   }
 
+  &__social {
+    display: none;
+    @include when-wider-than(tablet) {
+      display: block;
+    }
+  }
+
   &__form {
     width: 100%;
-    max-width: 300px;
     text-align: center;
     align-content: center;
     opacity: 0;
     margin-bottom: 20px;
 
     @include when-wider-than(tablet) {
+      max-width: 300px;
       padding-right: 15px;
       width: 50%;
     }
@@ -197,8 +204,7 @@ export default {
   }
 
   &__name {
-    
-    @include when-wider-than(tablet) {
+    @include when-wider-than(small_desktop) {
       width: calc(49% - 7.5px);
       display: inline-block;
       margin-right: 15px;
