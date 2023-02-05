@@ -21,7 +21,8 @@ jobs:
           git fetch origin
           git reset --hard origin/main
           git pull --force origin main
+          nvm use v16.13.1
           rm -rf node_modules 
           npm install
-          npm run generate
+          npm run build
           
