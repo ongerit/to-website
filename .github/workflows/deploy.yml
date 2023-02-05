@@ -26,5 +26,5 @@ jobs:
           git pull --force origin main
           rm -rf node_modules 
           npm install
-          npm run build
+          npm run generate
           
