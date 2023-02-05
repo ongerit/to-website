@@ -17,11 +17,12 @@ jobs:
         script: |
           zsh
           source /home/${{secrets.SSH_USERNAME}}/.profile
+          nvm install v16.13.1
+          nvm use v16.13.1
           cd /var/www/html/portfolio
           git fetch origin
           git reset --hard origin/main
           git pull --force origin main
-          nvm use v16.13.1
           rm -rf node_modules 
           npm install
           npm run build
