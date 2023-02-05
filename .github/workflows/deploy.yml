@@ -18,6 +18,12 @@ jobs:
           zsh
           source /home/${{secrets.SSH_USERNAME}}/.profile
           cd /var/www/html/portfolio
+          git fetch origin
+          git reset --hard origin/main
+          git pull --force origin main
+          rm -rf node_modules 
+          yarn install nuxt
+          npm run generate
 
     - name: Start sendgrid mail service
       uses: appleboy/ssh-action@master

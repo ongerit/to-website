@@ -1,32 +1,31 @@
 <template>
-<section class="container">
-  <div>
-    <navigation />
-    <marquee class="spacer" title="Contact" />
-    <p class="contact__thank-you"></p>
-    <div class="contact">
-      <form class="contact__form" action="">
-        <input class="contact__name contact__first" name="first_name" placeholder="First Name">
-        <input class="contact__name contact__last" name="last_name" placeholder="Last Name">
-        <input class="contact__email" name="email" placeholder="Email">
-        <textarea class="contact__message" name="message" cols="40" rows="5" placeholder="Message"></textarea>
-        <p class="contact__error"></p>
-        <div 
-          @click.prevent='validateForm' 
-          class="contact__submit">Send Message</div>
-      </form>
-      <div class="contact__social social-item">
-        <social-item class="icon-github" name='github' link="//www.bitly.com/GITOngeri"/>
-        <social-item class="icon-linkedin" name="linkedin" link="//www.bit.ly/thomas_ongeri"/>
-        <social-item class="icon-twitter" name='twitter' link="//www.bitly.com/TwitOngeri"/>
-        <social-item class="icon-instagram" name="instagram" link='//www.instagram.com/tomkins__'/>
-        <social-item class="icon-paypal" name="Palypal" link='//paypal.me/Ongeri'/>
-        <br />
-        <a class="contact__link" href="mailto:tom@thomasongeri.com?Subject=Hey%20thomas%20amazing%20website" target="_top">tom@thomasongeri.com</a>
+  <section class="container">
+    <div>
+      <navigation />
+      <marquee class="spacer" title="Contact" />
+      <p class="contact__thank-you"></p>
+      <div class="contact">
+        <form class="contact__form" action="">
+          <input class="contact__name contact__first" name="first_name" placeholder="First Name">
+          <input class="contact__name contact__last" name="last_name" placeholder="Last Name">
+          <input class="contact__email" name="email" placeholder="Email">
+          <textarea class="contact__message" name="message" cols="40" rows="5" placeholder="Message"></textarea>
+          <p class="contact__error"></p>
+          <div @click.prevent='validateForm' class="contact__submit">Send Message</div>
+        </form>
+        <div class="contact__social social-item">
+          <social-item class="icon-github" name='github' link="//www.bitly.com/GITOngeri" />
+          <social-item class="icon-linkedin" name="linkedin" link="//www.bit.ly/thomas_ongeri" />
+          <social-item class="icon-twitter" name='twitter' link="//www.bitly.com/TwitOngeri" />
+          <social-item class="icon-instagram" name="instagram" link='//www.instagram.com/tomkins__' />
+          <social-item class="icon-paypal" name="Palypal" link='//paypal.me/Ongeri' />
+          <br />
+          <a class="contact__link" href="mailto:tom@thomasongeri.com?Subject=Hey%20thomas%20amazing%20website"
+            target="_top">tom@thomasongeri.com</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 </template>
 
 <script>
@@ -46,8 +45,13 @@ export default {
     Marquee,
     SocialItem
   },
+  data() {
+    return {
+      error: null
+    }
+  },
   methods: {
-    animateElement () {
+    animateElement() {
       this.$el.classList.add('animated')
       this.$nextTick(() => {
         setTimeout(() => {
@@ -56,12 +60,12 @@ export default {
         }, 1000)
       })
     },
-    validateEmail (email) {
+    validateEmail(email) {
       // eslint-disable-next-line no-useless-escape
       const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       return re.test(email)
     },
-    validateForm () {
+    validateForm() {
       const EMAIL = document.querySelector('input[name*="email"]')
       const FNAME = document.querySelector('input[name*="first_name"]')
       const LNAME = document.querySelector('input[name*="last_name"]')
@@ -105,13 +109,11 @@ export default {
 
       if (this.validateEmail(EMAIL_VALUE) && FNAME_VALUE && LNAME_VALUE && MESSAGE_VALUE) {
         this.sendFormData(EMAIL_VALUE, FNAME_VALUE, LNAME_VALUE, MESSAGE_VALUE)
-        FORM.textContent = ''
-        THANK_YOU.textContent = `Thank you for your message, ${FNAME_VALUE}. I will respond to you shortly!`
       } else {
         NOTE.textContent = 'Please enter a valid email.'
       }
     },
-    sendFormData (EMAIL, FNAME, LNAME, MESSAGE) {
+    sendFormData(EMAIL, FNAME, LNAME, MESSAGE) {
       const VARS_OBJ = DOMPurify.sanitize(`{"email": "${EMAIL}", "message": "${MESSAGE}", "fname": "${FNAME}", "lname": "${LNAME}"}`)
 
       const params = new URLSearchParams()
@@ -121,26 +123,38 @@ export default {
       params.append('lname', `${LNAME}`)
 
       axios.post('/sg', params.toString())
-        .then((res) => { console.log(res) })
-        .catch((err) => { console.log(err) }) 
+        .then((res) => {
+          if (res.status === 200) {
+            const THANK_YOU = document.querySelector('.contact__thank-you')
+            const FORM = document.querySelector('form')
+            FORM.textContent = ''
+            THANK_YOU.textContent = `Thank you for your message, ${FNAME_VALUE}. I will respond to you shortly!`
+          }
+        })
+        .catch((err) => {
+          const NOTE = document.querySelector('.contact__error')
+          this.$set(this, 'error', 'There seems to have been an error, your message was not sent')
+          NOTE.textContent = this.error
+        })
     }
 
   },
-  mounted () {
+  mounted() {
     this.animateElement()
-  }
+  },
 }
 </script>
 
 <style lang="scss">
-  // @import "~/assets/styles/index";
-  @import "../assets/styles/index";
-  @import "../assets/styles/utils/colors";
-  @import "../assets/styles/globals/grid";
+// @import "~/assets/styles/index";
+@import "../assets/styles/index";
+@import "../assets/styles/utils/colors";
+@import "../assets/styles/globals/grid";
 
 .spacer {
   @extend %spacer;
 }
+
 .contact {
   @extend %grid;
   position: relative;
@@ -165,6 +179,7 @@ export default {
 
   &__social {
     display: none;
+
     @include when-wider-than(tablet) {
       display: block;
     }
@@ -251,8 +266,8 @@ export default {
   }
 
   &__link {
-  padding: 0 15px;
-  color: $white;
+    padding: 0 15px;
+    color: $white;
 
     &:hover {
       color: $pink;
