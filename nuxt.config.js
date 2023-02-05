@@ -12,7 +12,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "Thomas Ongeri is a web developer currently residing in Brooklyn, New York.",
+          "Thomas Ongeri is an Engineering Manager currently residing in Brooklyn, New York.",
       },
       {
         hid: "keywords",
