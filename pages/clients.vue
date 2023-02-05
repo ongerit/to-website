@@ -2,8 +2,8 @@
   <section class="container">
     <div>
       <navigation />
-      <marquee title="Clients"/>
-      <brand/>
+      <marquee title="Clients" />
+      <brand />
     </div>
   </section>
 </template>
@@ -20,7 +20,7 @@ export default {
     Brand
   },
   methods: {
-    animateElement () {
+    animateElement() {
       this.$el.classList.add('animated')
       this.$nextTick(() => {
         setTimeout(() => {
@@ -30,13 +30,13 @@ export default {
       })
     }
   },
-  mounted () {
+  mounted() {
     this.animateElement()
   }
 }
 </script>
 
 <style lang="scss">
-  @import "../assets/styles/globals/icons";
-  @import "../assets/styles/index";
+@import "../assets/styles/globals/icons";
+@import "../assets/styles/index";
 </style>
