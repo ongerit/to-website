@@ -30,14 +30,10 @@
 
 <script>
 import axios from 'axios'
-// import $ from 'jquery'
 import Navigation from '~/components/Navigation'
 import Marquee from '~/components/Marquee'
 import SocialItem from '~/components/SocialItem'
-
-// [TO] Prevent XSS hacking
-// import mail from '~/assets/scripts/helpers'
-const DOMPurify = require('dompurify')
+import DOMPurify from 'dompurify'
 
 export default {
   components: {
@@ -55,62 +51,60 @@ export default {
       this.$el.classList.add('animated')
       this.$nextTick(() => {
         setTimeout(() => {
-          const BODY = document.querySelector('body')
-          BODY.classList.add('loaded')
+          const body = document.querySelector('body')
+          body.classList.add('loaded')
         }, 1000)
       })
     },
     validateEmail(email) {
-      // eslint-disable-next-line no-useless-escape
       const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       return re.test(email)
     },
     validateForm() {
-      const EMAIL = document.querySelector('input[name*="email"]')
-      const FNAME = document.querySelector('input[name*="first_name"]')
-      const LNAME = document.querySelector('input[name*="last_name"]')
-      const MESSAGE = document.querySelector('textarea[name*="message"]')
+      const email = document.querySelector('input[name*="email"]')
+      const fname = document.querySelector('input[name*="first_name"]')
+      const lname = document.querySelector('input[name*="last_name"]')
+      const message = document.querySelector('textarea[name*="message"]')
 
-      const EMAIL_VALUE = EMAIL.value
-      const FNAME_VALUE = FNAME.value
-      const LNAME_VALUE = LNAME.value
-      const MESSAGE_VALUE = MESSAGE.value
+      const emailValue = email.value
+      const fnameValue = fname.value
+      const lnameValue = lname.value
+      const messageValue = message.value
 
-      const NOTE = document.querySelector('.contact__error')
-      const THANK_YOU = document.querySelector('.contact__thank-you')
-      const FORM = document.querySelector('form')
-      // Rest form
-      EMAIL.classList.remove('contact__error')
-      FNAME.classList.remove('contact__error')
-      LNAME.classList.remove('contact__error')
-      MESSAGE.classList.remove('contact__error--border')
+      const note = document.querySelector('.contact__error')
+      const thankYou = document.querySelector('.contact__thank-you')
+      const form = document.querySelector('form')
+      // Reset form
+      email.classList.remove('contact__error')
+      fname.classList.remove('contact__error')
+      lname.classList.remove('contact__error')
+      message.classList.remove('contact__error--border')
+      note.textContent = ''
 
-      NOTE.textContent = ''
-
-      if (EMAIL_VALUE === null && LNAME_VALUE === null && EMAIL_VALUE === null && MESSAGE_VALUE === null) {
-        FNAME.classList.add('contact__error')
-        EMAIL.classList.add('contact__error')
-        MESSAGE.classList.add('contact__error--border')
-        NOTE.textContent = 'Please enter missing fields'
+      if (!emailValue || !fnameValue || !lnameValue || !messageValue) {
+        fname.classList.add('contact__error')
+        email.classList.add('contact__error')
+        message.classList.add('contact__error--border')
+        note.textContent = 'Please enter missing fields'
         return
       }
 
-      if (FNAME_VALUE === null) {
-        NOTE.textContent = 'Please enter your first name'
-        FNAME.classList.add('contact__error--border')
+      if (!fnameValue) {
+        note.textContent = 'Please enter your first name'
+        fname.classList.add('contact__error--border')
         return
       }
 
-      if (LNAME_VALUE === null) {
-        NOTE.textContent = 'Please enter your last name'
-        LNAME.classList.add('contact__error--border')
+      if (!lnameValue) {
+        note.textContent = 'Please enter your last name'
+        lname.classList.add('contact__error--border')
         return
       }
 
-      if (this.validateEmail(EMAIL_VALUE) && FNAME_VALUE && LNAME_VALUE && MESSAGE_VALUE) {
-        this.sendFormData(EMAIL_VALUE, FNAME_VALUE, LNAME_VALUE, MESSAGE_VALUE)
+      if (this.validateEmail(emailValue)) {
+        this.sendFormData(emailValue, fnameValue, lnameValue, messageValue)
       } else {
-        NOTE.textContent = 'Please enter a valid email.'
+        note.textContent = 'Please enter a valid email.'
       }
     },
     sendFormData(EMAIL, FNAME, LNAME, MESSAGE) {
@@ -139,6 +133,7 @@ export default {
     }
 
   },
+
   mounted() {
     this.animateElement()
   },

@@ -28,21 +28,20 @@ export default {
     Marquee,
     WorkItem
   },
+  mounted() {
+    this.animateElement();
+  },
   methods: {
-    animateElement () {
-      this.$el.classList.add('animated')
+    animateElement() {
+      this.$el.classList.add('animated');
       this.$nextTick(() => {
         setTimeout(() => {
-          const $body = document.querySelector('body')
-          $body.classList.add('loaded')
-        }, 1000)
-      })
+          document.querySelector('body').classList.add('loaded');
+        }, 1000);
+      });
     }
-  },
-  mounted () {
-    this.animateElement()
   }
-}
+};
 </script>
 
 <style lang="scss">
