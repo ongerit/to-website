@@ -107,30 +107,31 @@ export default {
         note.textContent = 'Please enter a valid email.'
       }
     },
-    sendFormData(EMAIL, FNAME, LNAME, MESSAGE) {
-      const VARS_OBJ = DOMPurify.sanitize(`{"email": "${EMAIL}", "message": "${MESSAGE}", "fname": "${FNAME}", "lname": "${LNAME}"}`)
+    async sendFormData(email, fname, lname, message) {
+      const data = {
+        email,
+        fname,
+        lname,
+        message
+      }
 
-      const params = new URLSearchParams()
-      params.append('email', `${EMAIL}`)
-      params.append('message', `${MESSAGE}`)
-      params.append('fname', `${FNAME}`)
-      params.append('lname', `${LNAME}`)
+      try {
+        const response = await axios.post('/sg', data)
 
-      axios.post('/sg', params.toString())
-        .then((res) => {
-          if (res.status === 200) {
-            const THANK_YOU = document.querySelector('.contact__thank-you')
-            const FORM = document.querySelector('form')
-            FORM.textContent = ''
-            THANK_YOU.textContent = `Thank you for your message, ${FNAME_VALUE}. I will respond to you shortly!`
-          }
-        })
-        .catch((err) => {
-          const NOTE = document.querySelector('.contact__error')
-          this.$set(this, 'error', 'There seems to have been an error, your message was not sent')
-          NOTE.textContent = this.error
-        })
+        if (response.status === 200) {
+          const thankYouMessage = `Thank you for your message, ${fname}. I will respond to you shortly!`
+          const thankYouEl = document.querySelector('.contact__thank-you')
+          const formEl = document.querySelector('form')
+          formEl.textContent = ''
+          thankYouEl.textContent = thankYouMessage
+        }
+      } catch (error) {
+        const errorEl = document.querySelector('.contact__error')
+        this.$set(this, 'error', 'There seems to have been an error, your message was not sent')
+        errorEl.textContent = this.error
+      }
     }
+
 
   },
 
