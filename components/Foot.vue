@@ -29,9 +29,6 @@ export default {
     position: absolute;
     bottom: 0;
     width: 100%;
-    @include when-wider-than(tablet) {
-      position: relative;
-    }
   }
 
   .social {

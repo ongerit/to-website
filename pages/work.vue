@@ -13,7 +13,6 @@
       <work-item url="https://www.americanexpress.com/" title="American Express"  cover="american.png" :tech="['scss', 'jquery', 'vue', 'node']"/>
       <work-item url="https://www.xfinity.com/mobile/" title="Xfinity Mobile"  cover="xfinity.png" :tech="['angular', 'lodash', 'scss', 'jquery', 'grunt', 'node']"/>
       <work-item url="https://www.dowjones.com/" title="Dow Jones"  cover="dow-jones.png" :tech="['css', 'jquery', 'drupal']"/>
-
     </div>
   </section>
 </template>
