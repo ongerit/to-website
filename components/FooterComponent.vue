@@ -11,7 +11,6 @@
 </template>
 <script>
 import SocialItem from '~/components/SocialItem'
-
 export default {
   components: {
     SocialItem

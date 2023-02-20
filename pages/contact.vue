@@ -6,11 +6,15 @@
       <p class="contact__thank-you"></p>
       <div class="contact">
         <form class="contact__form" action="">
-          <input class="contact__name contact__first" name="first_name" placeholder="First Name">
-          <input class="contact__name contact__last" name="last_name" placeholder="Last Name">
-          <input class="contact__email" name="email" placeholder="Email">
-          <textarea class="contact__message" name="message" cols="40" rows="5" placeholder="Message"></textarea>
-          <p class="contact__error"></p>
+          <input :class="[{ 'contact__error': fnameClass }, 'contact__name', 'contact__first']" name="first_name"
+            placeholder="First Name" v-model="firstName">
+          <input :class="[{ 'contact__error': lnameClass }, 'contact__name', 'contact__last']" name="last_name"
+            placeholder="Last Name" v-model="lastName">
+          <input :class="[{ 'contact__error': emailClass }, 'contact__email']" name="email" placeholder="Email"
+            v-model="email">
+          <textarea class="contact__message" name="message" cols="40" rows="5" placeholder="Message"
+            v-model="message"></textarea>
+          <p class="contact__error">{{ errorMessage }}</p>
           <div @click.prevent='validateForm' class="contact__submit">Send Message</div>
         </form>
         <div class="contact__social social-item">
@@ -43,7 +47,16 @@ export default {
   },
   data() {
     return {
-      error: null
+      error: null,
+      errorMessage: '',
+      fnameClass: '',
+      lnameClass: '',
+      emailClass: '',
+      messageClass: '',
+      firstName: '',
+      lastName: '',
+      email: '',
+      message: '',
     }
   },
   methods: {
@@ -61,50 +74,27 @@ export default {
       return re.test(email)
     },
     validateForm() {
-      const email = document.querySelector('input[name*="email"]')
-      const fname = document.querySelector('input[name*="first_name"]')
-      const lname = document.querySelector('input[name*="last_name"]')
-      const message = document.querySelector('textarea[name*="message"]')
+      const emailValue = this.email
+      const fnameValue = this.firstName
+      const lnameValue = this.lastName
+      const messageValue = this.message
 
-      const emailValue = email.value
-      const fnameValue = fname.value
-      const lnameValue = lname.value
-      const messageValue = message.value
-
-      const note = document.querySelector('.contact__error')
-      const thankYou = document.querySelector('.contact__thank-you')
-      const form = document.querySelector('form')
-      // Reset form
-      email.classList.remove('contact__error')
-      fname.classList.remove('contact__error')
-      lname.classList.remove('contact__error')
-      message.classList.remove('contact__error--border')
-      note.textContent = ''
+      this.fnameClass = ''
+      this.emailClass = ''
+      this.messageClass = ''
+      this.errorMessage = ''
+      this.thankYouMessage = ''
 
       if (!emailValue || !fnameValue || !lnameValue || !messageValue) {
-        fname.classList.add('contact__error')
-        email.classList.add('contact__error')
-        message.classList.add('contact__error--border')
-        note.textContent = 'Please enter missing fields'
-        return
-      }
-
-      if (!fnameValue) {
-        note.textContent = 'Please enter your first name'
-        fname.classList.add('contact__error--border')
-        return
-      }
-
-      if (!lnameValue) {
-        note.textContent = 'Please enter your last name'
-        lname.classList.add('contact__error--border')
-        return
-      }
-
-      if (this.validateEmail(emailValue)) {
-        this.sendFormData(emailValue, fnameValue, lnameValue, messageValue)
+        this.fnameClass = 'contact__error'
+        this.emailClass = 'contact__error'
+        this.messageClass = 'contact__error--border'
+        this.errorMessage = 'Please enter missing fields'
+      } else if (!this.validateEmail(emailValue)) {
+        this.emailClass = 'contact__error--border'
+        this.errorMessage = 'Please enter a valid email.'
       } else {
-        note.textContent = 'Please enter a valid email.'
+        this.sendFormData(emailValue, fnameValue, lnameValue, messageValue)
       }
     },
     async sendFormData(email, fname, lname, message) {
@@ -248,9 +238,6 @@ export default {
 
   &__error {
     color: $pink;
-    padding: 0;
-    line-height: 20px;
-
     &--border {
       border: 2px solid red;
     }

@@ -1,17 +1,17 @@
 <template>
-
-  <div>
-
+  <main :style="{ position: 'relative' }">
     <nuxt />
-
-    <foot />
-
-  </div>
-
+    <FooterComponent />
+  </main>
 </template>
 
 <script>
- import Foot from '~/components/Foot' export default { components: { Foot } }
+import FooterComponent from '~/components/FooterComponent';
+export default {
+  components: {
+    FooterComponent
+  }
+};
 </script>
 
 <script type="text/javascript">
@@ -22,8 +22,7 @@ s = d.createElement('script'); s.async = 1; s.src = u + new Date().getTime(); h.
 
 <style>
 html {
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -40,14 +39,9 @@ html {
   margin: 0;
 }
 
-html {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
@@ -96,10 +90,10 @@ img {
 a {
   text-decoration: none;
   cursor: pointer;
+}
 
-  &:hover {
-    text-decoration: underline;
-  }
+a:hover {
+  text-decoration: underline;
 }
 
 input::-ms-clear {
