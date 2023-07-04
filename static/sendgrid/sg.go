@@ -116,7 +116,7 @@ func sendgridApi(w http.ResponseWriter, r *http.Request) {
 		apiKey := os.Getenv("SENDGRID_API_KEY")
 		sgEmail := "tom@thomasongeri.com"
 		
-		fmt.Fprintf(w, "Post from website! r.PostFrom = %v\n", data)
+		fmt.Fprintf(w, "Post from website! data = %v\n", data)
 
 		// value from post request
 		user_email := data.Email
