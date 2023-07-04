@@ -24,8 +24,8 @@ func send_grid_information(
 	from := mail.NewEmail(user_email, sgEmail)
 	subject := fmt.Sprintf("Email from %s |  thomasongeri.com", user_email)
 	to := mail.NewEmail("To me", "ongerit@gmail.com")
-	plainTextContent := user_message
-	htmlContent := fmt.Sprintf("<strong>%s</strong>", user_message)
+	plainTextContent := fmt.Sprintf("Name: %s %s\n\nMessage:\n%s", user_first_name, user_last_name, user_message)
+	htmlContent := fmt.Sprintf("<strong>Name:</strong> %s %s<br><br><strong>Message:</strong><br>%s", user_first_name, user_last_name, user_message)
 
 	message := mail.NewSingleEmail(from, subject, to, plainTextContent, htmlContent)
 	client := sendgrid.NewSendClient(apiKey)
