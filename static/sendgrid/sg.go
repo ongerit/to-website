@@ -42,18 +42,15 @@ func send_grid_information(
 
 func add_users_contact_to_sendgrid(apiKey string, user_email string, user_first_name string, user_last_name string) {
 	host := "https://api.sendgrid.com"
-	body := fmt.Sprintf(`{
-		"contacts": [
+	body := fmt.Sprintf(` [
 		{
 		"email": "%s",
 		"first_name": "%s" ,
 		"last_name": "%s" 
 		}
-		]
-		}`, user_email, user_first_name, user_last_name)
+		]`, user_email, user_first_name, user_last_name)
 
-	fmt.Println(body)
-	request := sendgrid.GetRequest(apiKey, "/v3/marketing/contacts", host)
+	request := sendgrid.GetRequest(apiKey, "/v3/contactdb/recipients", host)
 	request.Method = "PUT"
 	request.Body = []byte(body)
 	response, err := sendgrid.API(request)
