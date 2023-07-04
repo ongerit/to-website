@@ -94,8 +94,6 @@ func sendgridApi(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		fmt.Fprintf(w, "Post from website! r.PostFrom = %v\n", r.PostForm)
-
 		if r.Header.Get("Content-Type") != "application/json" {
 			http.Error(w, "Content-Type header is not application/json", http.StatusBadRequest)
 			return
@@ -113,12 +111,13 @@ func sendgridApi(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, "Failed to parse JSON payload", http.StatusBadRequest)
 			return
 		}
-		
-
+				
 		// global keys
 		apiKey := os.Getenv("SENDGRID_API_KEY")
 		sgEmail := "tom@thomasongeri.com"
 		
+		fmt.Fprintf(w, "Post from website! r.PostFrom = %v\n", data)
+
 		// value from post request
 		user_email := data.Email
 		user_first_name := data.FName
