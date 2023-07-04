@@ -17,6 +17,15 @@ $ npm run start
 $ npm run generate
 ```
 
+# Sending emails
+
+emails are sent using sendgrid and can be found in  `/static/sendgrid`
+The files are writen in go (sg.go) and php (p.php).
+
+# run using go
+
+`go run sg.go`
+
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
 ## Special Directories

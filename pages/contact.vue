@@ -106,7 +106,13 @@ export default {
       }
 
       try {
-        const response = await axios.post('/sg', data)
+        let url = '/sg';
+
+        if (process.env.VUE_APP_ENV === 'dev') {
+          url = 'http://localhost:9090'
+        }
+
+        const response = await axios.post(url, data)
 
         if (response.status === 200) {
           const thankYouMessage = `Thank you for your message, ${fname}. I will respond to you shortly!`
@@ -238,6 +244,7 @@ export default {
 
   &__error {
     color: $pink;
+
     &--border {
       border: 2px solid red;
     }

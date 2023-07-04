@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"encoding/json"
 
 	"github.com/sendgrid/sendgrid-go"
 	"github.com/sendgrid/sendgrid-go/helpers/mail"
@@ -73,6 +74,13 @@ func add_users_contact_to_sendgrid(apiKey string, user_email string, user_first_
 // }
 
 func sendgridApi(w http.ResponseWriter, r *http.Request) {
+
+	// Set CORS headers
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+	w.Header().Set("Referrer-Policy", "no-referrer")
+
 	if r.URL.Path != "/" {
 		http.Error(w, "404 not found.", http.StatusNotFound)
 		return
@@ -85,16 +93,37 @@ func sendgridApi(w http.ResponseWriter, r *http.Request) {
 			fmt.Fprintf(w, "ParseForm() err: %v", err)
 			return
 		}
+
 		fmt.Fprintf(w, "Post from website! r.PostFrom = %v\n", r.PostForm)
+
+		if r.Header.Get("Content-Type") != "application/json" {
+			http.Error(w, "Content-Type header is not application/json", http.StatusBadRequest)
+			return
+		}
+
+		// Parse the JSON payload
+		var data struct {
+			Email    string `json:"email"`
+			FName    string `json:"fname"`
+			LName    string `json:"lname"`
+			Message  string `json:"message"`
+		}
+
+		if err := json.NewDecoder(r.Body).Decode(&data); err != nil {
+			http.Error(w, "Failed to parse JSON payload", http.StatusBadRequest)
+			return
+		}
+		
 
 		// global keys
 		apiKey := os.Getenv("SENDGRID_API_KEY")
 		sgEmail := "tom@thomasongeri.com"
+		
 		// value from post request
-		user_email := r.FormValue("email")
-		user_first_name := r.FormValue("fname")
-		user_last_name := r.FormValue("lname")
-		user_message := r.FormValue("message")
+		user_email := data.Email
+		user_first_name := data.FName
+		user_last_name := data.LName
+		user_message := data.Message
 
 		fmt.Fprintf(w, "Email = %s\n", user_email)
 		fmt.Fprintf(w, "FName = %s\n", user_first_name)

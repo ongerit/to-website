@@ -38,7 +38,11 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['@nuxtjs/dotenv'],
+
+  dotenv: {
+    filename: process.env.NODE_ENV === 'production' ? '.env.production' : '.env.develop',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
