@@ -2,6 +2,12 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Thomas Ongeri | thomasongeri.com",
+    script: [
+      {
+        src: 'https://tag.clearbitscripts.com/v1/pk_92f42a6ac7c2d0c7ce0754938ddc154d/tags.js',
+        referrerpolicy: 'strict-origin-when-cross-origin',
+      },
+    ],
     htmlAttrs: {
       lang: "en",
     },

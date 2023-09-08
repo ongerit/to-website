@@ -14,24 +14,6 @@ export default {
 };
 </script>
 
-<script>
-  function loadClearbitScript() {
-    var script = document.createElement('script');
-    script.src = 'https://tag.clearbitscripts.com/v1/pk_92f42a6ac7c2d0c7ce0754938ddc154d/tags.js';
-    script.referrerpolicy = 'strict-origin-when-cross-origin';
-    document.head.appendChild(script);
-  }
-
-  if (typeof document !== 'undefined') {
-    if (document.head) {
-      loadClearbitScript();
-    } else {
-      document.addEventListener('DOMContentLoaded', loadClearbitScript);
-    }
-  }
-</script>
-
-
 html {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
