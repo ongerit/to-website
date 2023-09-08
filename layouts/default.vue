@@ -14,13 +14,10 @@ export default {
 };
 </script>
 
-<script type="text/javascript">
- if(typeof document !== 'undefined' ) { (function (d, u, h, s) { h = d.getElementsByTagName('head')[0];
-s = d.createElement('script'); s.async = 1; s.src = u + new Date().getTime(); h.appendChild(s);
-})(document, 'https://grow.clearbitjs.com/api/pixel.js?v='); }
-</script>
-
+<script src="https://tag.clearbitscripts.com/v1/pk_92f42a6ac7c2d0c7ce0754938ddc154d/tags.js" referrerpolicy="strict-origin-when-cross-origin"></script>
 <style>
+
+
 html {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
