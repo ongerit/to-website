@@ -41,5 +41,5 @@ export default {
 </script>
 
 <style lang='scss'>
-  @import "../assets/styles/components/navigation";
+  @impor "../assets/styles/components/navigation";
 </style>

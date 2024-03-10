@@ -1,0 +1,87 @@
+@import "../utils/colors.scss";
+@import "../utils/when-than";
+
+.link-single {
+  color: $white;
+  margin: 15px 20px;
+  opacity: 0;
+
+  .loaded & {
+    opacity: 1;
+    transition: 2s opacity;
+  }
+
+  a {
+    color: $white;
+  }
+
+  &__nav {
+    ul {
+      list-style: none;
+      color: $white;
+      float: right;
+    }
+    li {
+      display: inline-block;
+      padding-right: 20px;
+    }
+  }
+
+  &__copy {
+    h3 {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    justify-content: space-between;
+
+    p {
+      padding-bottom: 5px;
+    }
+  }
+  &__desc {
+    width: 75%;
+  }
+  &__cta {
+    margin-top: 50px;
+    p {
+      display: inline-block;
+      padding-right: 15px;
+    }
+  }
+
+  @include when-wider-than(tablet) {
+    margin: 40px 46px;
+
+    &__content {
+      flex-direction: row;
+    }
+
+    &__nav {
+      margin-bottom: 20px;
+    }
+
+    &__date {
+      max-width: calc(2/12 *100%);
+      padding-right: 20px;
+    }
+
+    &__copy {
+      max-width: calc(7/12 *100%);
+      padding-right: 20px;
+    }
+
+    &__cta {
+      max-width: calc(100%/3);
+
+      p {
+        display: block;
+        padding-right: 15px;
+      }
+    }
+  }
+}
