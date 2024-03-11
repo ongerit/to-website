@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Marquee from './Marquee';
 import Navigation from './Navigation';
-import Promo from './Promo';
 import '../assets/styles/index.scss';
 
 const App: React.FC = () => {
@@ -38,9 +37,6 @@ const App: React.FC = () => {
 
   return (
     <section className='loaded'>
-      {displayPromo && <Promo />}
-      <p style={{ display: 'none' }}>{String(displayPromo)}</p>
-      <Navigation />
       <div className="home">
         <p className="home__blurb">Hi! I’m Thomas Ongeri. I’m an engineering manager, from Brooklyn, New York.</p>
         <span><p></p><Marquee title='News' link='news' text='catch up on my'/></span>
