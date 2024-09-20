@@ -18,13 +18,8 @@ jobs:
           zsh
           source /home/${{secrets.SSH_USERNAME}}/.profile
           source ~/.nvm/nvm.sh
-          nvm install v16.13.1
-          nvm use v16.13.1
           cd /var/www/html/portfolio
           git fetch origin
-          git reset --hard origin/main
-          git pull --force origin main
-          rm -rf node_modules 
-          npm install
-          NODE_ENV=production npm run generate
+          git reset --hard origin/simple
+          git pull --force origin simple
           
