@@ -5,17 +5,17 @@
       <marquee class="spacer" title="Contact" />
       <p class="contact__thank-you"></p>
       <div class="contact">
-        <form class="contact__form" action="">
-          <input :class="[{ 'contact__error': fnameClass }, 'contact__name', 'contact__first']" name="first_name"
-            placeholder="First Name" v-model="firstName">
-          <input :class="[{ 'contact__error': lnameClass }, 'contact__name', 'contact__last']" name="last_name"
-            placeholder="Last Name" v-model="lastName">
-          <input :class="[{ 'contact__error': emailClass }, 'contact__email']" name="email" placeholder="Email"
-            v-model="email">
+        <form class="contact__form" @submit.prevent="validateForm">
+          <input :class="['contact__name', 'contact__first', { 'contact__error': fnameClass }]" name="first_name"
+            placeholder="First Name" v-model="firstName" required>
+          <input :class="['contact__name', 'contact__last', { 'contact__error': lnameClass }]" name="last_name"
+            placeholder="Last Name" v-model="lastName" required>
+          <input :class="['contact__email', { 'contact__error': emailClass }]" name="email" type="email" placeholder="Email"
+            v-model="email" required>
           <textarea class="contact__message" name="message" cols="40" rows="5" placeholder="Message"
-            v-model="message"></textarea>
+            v-model="message" required></textarea>
           <p class="contact__error">{{ errorMessage }}</p>
-          <div @click.prevent='validateForm' class="contact__submit">Send Message</div>
+          <button type="submit" class="contact__submit">Send Message</button>
         </form>
         <div class="contact__social social-item">
           <social-item class="icon-github" name='github' link="//www.bitly.com/GITOngeri" />
@@ -49,10 +49,9 @@ export default {
     return {
       error: null,
       errorMessage: '',
-      fnameClass: '',
-      lnameClass: '',
-      emailClass: '',
-      messageClass: '',
+      fnameClass: false,
+      lnameClass: false,
+      emailClass: false,
       firstName: '',
       lastName: '',
       email: '',
@@ -70,39 +69,27 @@ export default {
       })
     },
     validateEmail(email) {
-      const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       return re.test(email)
     },
     validateForm() {
-      const emailValue = this.email
-      const fnameValue = this.firstName
-      const lnameValue = this.lastName
-      const messageValue = this.message
+      this.fnameClass = !this.firstName
+      this.lnameClass = !this.lastName
+      this.emailClass = !this.email || !this.validateEmail(this.email)
 
-      this.fnameClass = ''
-      this.emailClass = ''
-      this.messageClass = ''
-      this.errorMessage = ''
-      this.thankYouMessage = ''
-
-      if (!emailValue || !fnameValue || !lnameValue || !messageValue) {
-        this.fnameClass = 'contact__error'
-        this.emailClass = 'contact__error'
-        this.messageClass = 'contact__error--border'
-        this.errorMessage = 'Please enter missing fields'
-      } else if (!this.validateEmail(emailValue)) {
-        this.emailClass = 'contact__error--border'
-        this.errorMessage = 'Please enter a valid email.'
+      if (this.fnameClass || this.lnameClass || this.emailClass || !this.message) {
+        this.errorMessage = 'Please fill in all fields correctly.'
       } else {
-        this.sendFormData(emailValue, fnameValue, lnameValue, messageValue)
+        this.errorMessage = ''
+        this.sendFormData()
       }
     },
-    async sendFormData(email, fname, lname, message) {
+    async sendFormData() {
       const data = {
-        email,
-        fname,
-        lname,
-        message
+        email: DOMPurify.sanitize(this.email),
+        fname: DOMPurify.sanitize(this.firstName),
+        lname: DOMPurify.sanitize(this.lastName),
+        message: DOMPurify.sanitize(this.message)
       }
 
       try {
@@ -115,20 +102,16 @@ export default {
         const response = await axios.post(url, data)
 
         if (response.status === 200) {
-          const thankYouMessage = `Thank you for your message, ${fname}. I will respond to you shortly!`
+          const thankYouMessage = `Thank you for your message, ${this.firstName}. I will respond to you shortly!`
           const thankYouEl = document.querySelector('.contact__thank-you')
           const formEl = document.querySelector('form')
-          formEl.textContent = ''
+          formEl.reset()
           thankYouEl.textContent = thankYouMessage
         }
       } catch (error) {
-        const errorEl = document.querySelector('.contact__error')
-        this.$set(this, 'error', 'There seems to have been an error, your message was not sent')
-        errorEl.textContent = this.error
+        this.errorMessage = 'There seems to have been an error, your message was not sent. Please try again later.'
       }
     }
-
-
   },
 
   mounted() {
@@ -145,6 +128,10 @@ export default {
 
 .spacer {
   @extend %spacer;
+}
+
+textarea,input {
+  box-sizing: border-box;
 }
 
 .contact {
@@ -186,7 +173,6 @@ export default {
 
     @include when-wider-than(tablet) {
       max-width: 300px;
-      padding-right: 15px;
       width: 50%;
     }
   }
@@ -212,7 +198,6 @@ export default {
 
   &__name {
     @include when-wider-than(small_desktop) {
-      width: calc(49% - 7.5px);
       display: inline-block;
       margin-right: 15px;
     }
@@ -244,10 +229,6 @@ export default {
 
   &__error {
     color: $pink;
-
-    &--border {
-      border: 2px solid red;
-    }
   }
 
   &__thank-you {
