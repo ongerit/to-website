@@ -84,10 +84,15 @@
                 lightModeIcon.style.display = 'none';
             }
         }
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.body.classList.add('dark-mode');
+
+        function applyPreferredColorScheme() {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('dark-mode');
+            }
+            updateDarkModeIcon();
         }
-        document.addEventListener('DOMContentLoaded', updateDarkModeIcon);
+
+        document.addEventListener('DOMContentLoaded', applyPreferredColorScheme);
 
         function trackEmailClick() {
             gtag('event', 'email_click', {
