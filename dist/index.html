@@ -88,12 +88,19 @@
             document.body.classList.add('dark-mode');
         }
         document.addEventListener('DOMContentLoaded', updateDarkModeIcon);
+
+        function trackEmailClick() {
+            gtag('event', 'email_click', {
+                'event_category': 'engagement',
+                'event_label': 'Email Click'
+            });
+            window.location.href = 'mailto:' + atob('dG9tQHRob21hc29uZ2VyaS5jb20=');
+        }
     </script>
 </head>
 
 <body>
-    <a id="hi" href="javascript:void(0);"
-        onclick="window.location.href = 'mailto:' + atob('dG9tQHRob21hc29uZ2VyaS5jb20=');">contact me</a>
+    <a id="hi" href="javascript:void(0);" onclick="trackEmailClick();">contact me</a>
     <div id="toggle" onclick="toggleDarkMode()">
         <span id="darkModeIcon">☀️</span>
         <span id="lightModeIcon" style="display: none;">🌔</span>
