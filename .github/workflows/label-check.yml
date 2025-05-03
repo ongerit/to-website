@@ -1,0 +1,21 @@
+name: Require AI Label
+
+on:
+  pull_request:
+    types: [opened, edited, labeled, unlabeled, synchronize]
+
+jobs:
+  check-for-ai-label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if PR has required AI label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const labels = context.payload.pull_request.labels.map(label => label.name);
+            const requiredLabels = ['AI/helpful', 'AI/unhelpful'];
+            const hasRequiredLabel = labels.some(label => requiredLabels.includes(label));
+
+            if (!hasRequiredLabel) {
+              core.setFailed(`PR must have at least one of the required labels: ${requiredLabels.join(', ')}`);
+            }
