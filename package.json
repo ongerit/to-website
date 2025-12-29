@@ -9,11 +9,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxt/components": "^2.2.1",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/sitemap": "^2.4.0",
     "axios": "^0.27.2",
+    "consola": "^3.4.2",
     "core-js": "^3.19.3",
     "dompurify": "^2.4.0",
+    "node-fetch-native": "^1.6.7",
     "nuxt": "^2.15.8",
     "sass": "^1.54.8",
     "sass-loader": "^10.3.1",
@@ -21,5 +24,6 @@
     "vue-server-renderer": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
     "webpack": "^4.46.0"
-  }
+  },
+  "packageManager": "yarn@4.5.1+sha512.341db9396b6e289fecc30cd7ab3af65060e05ebff4b3b47547b278b9e67b08f485ecd8c79006b405446262142c7a38154445ef7f17c1d5d1de7d90bf9ce7054d"
 }

@@ -1,11 +1,23 @@
 <template>
   <section class="container">
-      <navigation />
-      <marquee title="Versions"/>
+    <Navigation />
+    <Marquee title="Versions" />
     <div class="version">
-      <version-item title="Catlett" version="3" v-bind:tech="['scss', 'vue', 'es6', 'nuxt', 'node', 'webpack', 'eslint', 'sendgrid', 'axios']"></version-item>
-      <version-item title="Basquiat" version="2"  v-bind:tech="['scss', 'vue',  'jquery', 'grunt', 'node', 'bower']"></version-item>
-      <version-item title="Alston" version="1"  v-bind:tech="['scss', 'jquery', 'grunt', 'node', 'bower']"></version-item>
+      <VersionItem
+        title="Catlett"
+        version="3"
+        :tech="['scss', 'vue', 'es6', 'nuxt', 'node', 'webpack', 'eslint', 'sendgrid', 'axios']"
+      />
+      <VersionItem
+        title="Basquiat"
+        version="2"
+        :tech="['scss', 'vue', 'jquery', 'grunt', 'node', 'bower']"
+      />
+      <VersionItem
+        title="Alston"
+        version="1"
+        :tech="['scss', 'jquery', 'grunt', 'node', 'bower']"
+      />
     </div>
   </section>
 </template>
@@ -23,11 +35,15 @@ export default {
   },
   methods: {
     animateElement () {
-      this.$el.classList.add('animated')
+      if (this.$el) {
+        this.$el.classList.add('animated')
+      }
       this.$nextTick(() => {
         setTimeout(() => {
           const $body = document.querySelector('body')
-          $body.classList.add('loaded')
+          if ($body) {
+            $body.classList.add('loaded')
+          }
         }, 1000)
       })
     }
@@ -39,26 +55,26 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../assets/styles/index";
-  @import "../assets/styles/globals/grid";
+@import "../assets/styles/index";
+@import "../assets/styles/globals/grid";
 
-  .container {
-    .marquee {
-      @extend %spacer;
-    }
+.container {
+  .marquee {
+    @extend %spacer;
+  }
+}
+
+.version {
+  @extend %grid;
+  opacity: 0;
+  transition: 2s opacity;
+  &.loaded, .loaded & {
+    opacity: 1;
   }
 
-  .version {
-    @extend %grid;
-    opacity: 0;
-    .loaded & {
-      opacity: 1;
-      transition: 2s opacity;
-    }
-
-    @include when-wider-than(tablet) {
-      display: flex;
-      justify-content: space-between;
-    }
+  @include when-wider-than(tablet) {
+    display: flex;
+    justify-content: space-between;
   }
+}
 </style>
