@@ -7,6 +7,11 @@
 body {
   background: $bg;
   height: 100vh;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+  a {
+    text-decoration: none;
+  }
 
   .container {
     display: flex;
