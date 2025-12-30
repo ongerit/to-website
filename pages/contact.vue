@@ -121,10 +121,10 @@ export default {
 </script>
 
 <style lang="scss">
-// @import "~/assets/styles/index";
-@import "../assets/styles/index";
-@import "../assets/styles/utils/colors";
-@import "../assets/styles/globals/grid";
+// @use "~/assets/styles/index" as *;
+@use "../assets/styles/index" as *;
+@use "../assets/styles/utils/colors" as *;
+@use "../assets/styles/globals/grid" as *;
 
 .spacer {
   @extend %spacer;

@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../assets/styles/index";
+  @use "../assets/styles/index" as *;
 
   .container {
     .marquee {

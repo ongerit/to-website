@@ -1,5 +1,5 @@
-@import "../utils/colors.scss";
-@import "../utils/when-than";
+@use "../utils/colors" as *;
+@use "../utils/when-than" as *;
 
 .link-single {
   color: $white;

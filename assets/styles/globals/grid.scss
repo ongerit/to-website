@@ -1,4 +1,4 @@
-@import "../utils/when-than.scss";
+@use "../utils/when-than" as *;
 $margin-bottom: 20px;
 $margin-bottom-md: 40px;
 $margin-bottom-lg: 60px;

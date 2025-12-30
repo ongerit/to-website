@@ -20,8 +20,8 @@ export default {
 </script>
 
 <style lang='scss'>
-@import "../assets/styles/utils/when-than";
-@import "../assets/styles/utils/colors";
+@use "../assets/styles/utils/when-than" as *;
+@use "../assets/styles/utils/colors" as *;
 
 .brand-item {
   width: 50%;

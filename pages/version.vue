@@ -55,8 +55,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/styles/index";
-@import "../assets/styles/globals/grid";
+@use "../assets/styles/index" as *;
+@use "../assets/styles/globals/grid" as *;
 
 .container {
   .marquee {
