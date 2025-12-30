@@ -90,3 +90,7 @@ sw.*
 *.swp
 
 static/sendgrid/cred.php
+.yarn/
+.yarnrc.yml
+package-lock.json
+yarn.lock
