@@ -4,7 +4,7 @@
     <p style="display:none">{{displayPromo}}</p>
     <navigation />
     <div class="home">
-      <p class="home__blurb">Hi! I’m Thomas Ongeri. I’m an engineering manager, from Brooklyn, New York.</p>
+      <p class="home__blurb">Hi! I’m Thomas Ongeri. I’m an engineering leader</p>
         <span><p></p><marquee title='News' link='news' text='catch up on my'/></span>
         <span><p></p><marquee title='Clients' link='clients' text='view some of my'/></span>
         <span><p></p><marquee title='Work' link='work' text='check out my'/></span>
@@ -43,7 +43,7 @@ export default {
       const promo = urlParams.get('p')
       this.displayPromo = promo ? true : ''
     },
-    displayBodyText () {
+  displayBodyText () {
       const ELEMENT = this.$el.classList
       ELEMENT.add('illuminate')
       this.$nextTick(() => {
@@ -59,6 +59,7 @@ export default {
   }
 }
 </script>
+
 
 <style lang="scss">
   @import '../assets/styles/index';
