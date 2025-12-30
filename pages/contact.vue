@@ -124,6 +124,7 @@ export default {
 // @use "~/assets/styles/index" as *;
 @use "../assets/styles/index" as *;
 @use "../assets/styles/utils/colors" as *;
+@use "../assets/styles/utils/when-than" as *;
 @use "../assets/styles/globals/grid" as *;
 
 .spacer {

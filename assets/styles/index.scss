@@ -1,5 +1,6 @@
 @use "./utils/animations" as *;
 @use "./utils/colors" as *;
+@use "./utils/when-than" as *;
 @use "./globals/typography" as *;
 @use "./globals/grid" as *;
 @use "./globals/zindex" as *;
@@ -71,9 +72,6 @@ body {
       justify-content: flex-end;
       align-items: flex-end;
       margin-bottom: 30px;
-    }
-
-    .marquee {
     }
   }
 

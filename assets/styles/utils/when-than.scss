@@ -1,3 +1,6 @@
+@use "sass:map";
+@use "sass:meta";
+
 $breakpoints-s: 320;
 $breakpoints-m: 540;
 $breakpoints-l: 960;
@@ -19,10 +22,10 @@ $breakpoints: (
 
 $there-is-no-higher-breakpoint: 9999em;
 
-$allowed-breakpoint-targets: inspect(map-keys($breakpoints));
+$allowed-breakpoint-targets: meta.inspect(map.keys($breakpoints));
 
 @function get-breakpoint($target) {
-    $breakpoint: map-get($breakpoints, $target);
+    $breakpoint: map.get($breakpoints, $target);
 
     @if $breakpoint == null {
         @warn("You tried to respond_to '#{$target}'. Please use one of these available breakpoints - #{$allowed-breakpoint-targets}");
@@ -43,7 +46,7 @@ $allowed-breakpoint-targets: inspect(map-keys($breakpoints));
 
   @if length($possible-nexts) > 1 {
     $next-breakpoint: nth($possible-nexts, 2);
-    @return map-get($breakpoints, $next-breakpoint);
+    @return map.get($breakpoints, $next-breakpoint);
   }
 
   @return $there-is-no-higher-breakpoint;
