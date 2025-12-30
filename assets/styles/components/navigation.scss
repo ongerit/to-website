@@ -1,6 +1,6 @@
-@import "../utils/colors";
-@import "../utils/when-than";
-@import "../globals/grid";
+@use "../utils/colors" as *;
+@use "../utils/when-than" as *;
+@use "../globals/grid" as *;
 
 .navigation {
   @extend %grid;

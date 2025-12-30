@@ -24,12 +24,12 @@ export default {
 }
 </script>
 <style lang='scss'>
-@import "../assets/styles/utils/colors";
-@import "../assets/styles/utils/animations";
-@import "../assets/styles/utils/when-than";
-@import "../assets/styles/globals/typography";
-@import "../assets/styles/globals/grid";
-@import "../assets/styles/globals/zindex";
+@use "../assets/styles/utils/colors" as *;
+@use "../assets/styles/utils/animations" as *;
+@use "../assets/styles/utils/when-than" as *;
+@use "../assets/styles/globals/typography" as *;
+@use "../assets/styles/globals/grid" as *;
+@use "../assets/styles/globals/zindex" as *;
 
 .marquee {
   // @extend %grid;

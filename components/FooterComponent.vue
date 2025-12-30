@@ -19,8 +19,8 @@ export default {
 </script>
 
 <style lang='scss'>
-@import "../assets/styles/utils/colors";
-@import "../assets/styles/globals/grid";
+@use "../assets/styles/utils/colors" as *;
+@use "../assets/styles/globals/grid" as *;
 
   .footer {
     @extend %grid;

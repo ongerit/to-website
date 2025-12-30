@@ -35,5 +35,5 @@ export default {
 </script>
 
 <style lang='scss'>
-@import "../assets/styles/components/link-single";
+@use "../assets/styles/components/link-single" as *;
 </style>

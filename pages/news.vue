@@ -71,6 +71,6 @@ export default {
 </script>
 
 <style lang="scss">
-  // @import '~/assets/styles/index';
-  @import '../assets/styles/index';
+  // @use '~/assets/styles/index' as *;
+  @use '../assets/styles/index' as *;
 </style>
