@@ -51,5 +51,38 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    loaders: {
+      sass: {
+        implementation: require('sass-embedded'),
+        sassOptions: {
+          silenceDeprecations: ['legacy-js-api'],
+        },
+      },
+      scss: {
+        implementation: require('sass-embedded'),
+        sassOptions: {
+          silenceDeprecations: ['legacy-js-api'],
+        },
+      },
+    },
+    extend(config, { isClient, isServer }) {
+      const sassLoader = config.module.rules.find(
+        (rule) => rule.test && rule.test.toString().includes('scss')
+      );
+
+      if (sassLoader && sassLoader.oneOf) {
+        sassLoader.oneOf.forEach((oneOfRule) => {
+          oneOfRule.use.forEach((loader) => {
+            if (loader.loader && loader.loader.includes('sass-loader')) {
+              loader.options = {
+                ...loader.options,
+                implementation: require('sass-embedded'),
+              };
+            }
+          });
+        });
+      }
+    },
+  },
 };
