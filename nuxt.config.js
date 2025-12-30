@@ -18,7 +18,7 @@ export default {
         hid: "description",
         name: "description",
         content:
-          "Thomas Ongeri is an Engineering Manager currently residing in Brooklyn, New York.",
+          "Hi! I’m Thomas Ongeri. I’m an engineering leader passionate about building high-impact teams and developing innovative software solutions.",
       },
       {
         hid: "keywords",
