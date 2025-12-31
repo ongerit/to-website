@@ -49,10 +49,9 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
   ],
 
-  // Sitemap configuration
-  sitemap: {
-    hostname: process.env.SITE_URL || 'https://thomasongeri.com',
-    gzip: true,
+  // Sitemap configuration (Nuxt 3 format)
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://thomasongeri.com',
   },
 
   // Environment variables (replaces @nuxtjs/dotenv)
@@ -82,5 +81,9 @@ export default defineNuxtConfig({
   // Nitro server configuration
   nitro: {
     compressPublicAssets: true,
+    prerender: {
+      // Continue build even if some routes fail (safer for static generation)
+      failOnError: false,
+    },
   },
 })

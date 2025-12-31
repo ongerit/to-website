@@ -1,7 +1,7 @@
 <template>
   <section class="container" ref="containerRef">
       <navigation />
-      <marquee title='Work' link='featured'/>
+      <marquee title='Work' link='#'/>
     <div class="work">
       <work-item url="https://www.nationalgeographic.com/" title="National Geographic"  cover="nat-geo.png" :tech="['lodash', 'scss', 'react', 'es6', 'nodejs', 'drupal','webpack']"/>
       <work-item url="https://www.nbcnews.com/better" title="NBC"  cover="nbc.png" :tech="['scss', 'es6', 'lodash', 'ramen', 'node', 'react', 'underscore']"/>
