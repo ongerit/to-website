@@ -31,9 +31,22 @@ export default {
   border-radius: 1.5%;
   margin-bottom: 15px;
   display: inline-block;
+  box-sizing: border-box;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
 
   &__wrapper {
     padding: 15px;
+
+    h3 {
+      font-size: 18px;
+      word-wrap: break-word;
+    }
   }
 
   a {
@@ -43,17 +56,20 @@ export default {
   ul {
     list-style: none;
     padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   li {
     background: $black-2;
-    padding: 8px 8px;
+    padding: 6px 8px;
     border-radius: 2%;
     margin: 0 5px 5px 0;
     min-width: 20px;
     display: inline-block;
     cursor: pointer;
     transition: 1s background;
+    font-size: 12px;
 
     &:hover {
       background: $pink;
@@ -68,11 +84,20 @@ export default {
     &:nth-child(2n) {
       margin-right: 0;
     }
+
+    &__wrapper {
+      h3 {
+        font-size: 20px;
+      }
+    }
+
+    li {
+      padding: 8px 8px;
+      font-size: 14px;
+    }
   }
 
   @include when-wider-than(small_desktop) {
-    margin-right: 30px;
-    margin-bottom: 40px;
 
     img {
       filter: invert(60%) grayscale(100%);

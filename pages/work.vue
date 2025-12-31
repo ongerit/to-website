@@ -56,14 +56,20 @@ export default {
 
 .work {
   @extend %grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-template-columns: 1fr;
   opacity: 0;
   grid-gap: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
 
+  @include when-wider-than(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  @include when-wider-than(tablet){
-   display: grid
-  } 
+  @include when-wider-than(small_desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
   
   .loaded & {
     opacity: 1;
