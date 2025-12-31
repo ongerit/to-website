@@ -1,88 +1,89 @@
-export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
-  head: {
-    title: "Thomas Ongeri | thomasongeri.com",
-    script: [
-      {
-        src: 'https://tag.clearbitscripts.com/v1/pk_92f42a6ac7c2d0c7ce0754938ddc154d/tags.js',
-        referrerpolicy: 'strict-origin-when-cross-origin',
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  compatibilityDate: '2024-11-01',
+
+  devtools: { enabled: true },
+
+  // App configuration (replaces head)
+  app: {
+    head: {
+      title: "Thomas Ongeri | thomasongeri.com",
+      htmlAttrs: {
+        lang: "en",
       },
-    ],
-    htmlAttrs: {
-      lang: "en",
+      meta: [
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          name: "description",
+          content: "Hi! I'm Thomas Ongeri. I'm an engineering leader passionate about building high-impact teams and developing innovative software solutions.",
+        },
+        {
+          name: "keywords",
+          content: "spidermanfarfromhome.com, spiderman, far from home, vuejs, nuxt, javascript, tutorials, development, software, news, clients, work, contact, plotly, collegefashionista, dow jones, xfinity, maybelline, juilliard, aba, savage, nbc, natgeo, tough mudder, javascript, code, american express, express, ejs, webpack, react, lodash, node, go, drupal",
+        },
+        { name: "format-detection", content: "telephone=no" },
+      ],
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+      ],
+      script: [
+        {
+          src: 'https://tag.clearbitscripts.com/v1/pk_92f42a6ac7c2d0c7ce0754938ddc154d/tags.js',
+          referrerpolicy: 'strict-origin-when-cross-origin',
+        },
+      ],
     },
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        hid: "description",
-        name: "description",
-        content:
-          "Hi! I’m Thomas Ongeri. I’m an engineering leader passionate about building high-impact teams and developing innovative software solutions.",
-      },
-      {
-        hid: "keywords",
-        name: "keywords",
-        content:
-          "spidermanfarfromhome.com, spiderman, far from home, vuejs, nuxt, javascript, tutorials, development, software, news, clients, work, contact, plotly, collegefashionista, dow jones, xfinity, maybelline, juilliard, aba, savage, nbc, natgeo, tough mudder, javascript, code, american express, express, ejs, webpack, react, lodash, node, go, drupal",
-      },
-      { name: "format-detection", content: "telephone=no" },
-    ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    // Page transition (replaces loading)
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
-  loading: { color: '#fe005c' },
-  // Global CSS: https://go.nuxtjs.dev/config-css
+
+  // CSS
   css: [],
 
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
+  // Auto-import components (default in Nuxt 3, but explicit for clarity)
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  // Modules
+  modules: [
+    '@nuxtjs/sitemap',
+  ],
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/dotenv'],
-
-  dotenv: {
-    filename: process.env.NODE_ENV === 'production' ? '.env.production' : '.env.develop',
+  // Sitemap configuration (Nuxt 3 format)
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://thomasongeri.com',
   },
 
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    loaders: {
-      sass: {
-        implementation: require('sass-embedded'),
-        sassOptions: {
-          silenceDeprecations: ['legacy-js-api'],
-        },
-      },
-      scss: {
-        implementation: require('sass-embedded'),
-        sassOptions: {
+  // Environment variables (replaces @nuxtjs/dotenv)
+  // Nuxt 3 automatically loads .env files based on NODE_ENV
+  runtimeConfig: {
+    // Private keys (only available server-side)
+    // Add private keys here if needed
+
+    // Public keys (available on client)
+    public: {
+      environment: process.env.NODE_ENV || 'development',
+    }
+  },
+
+  // Vite configuration for SASS (replaces webpack build config)
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
           silenceDeprecations: ['legacy-js-api'],
         },
       },
     },
-    extend(config, { isClient, isServer }) {
-      const sassLoader = config.module.rules.find(
-        (rule) => rule.test && rule.test.toString().includes('scss')
-      );
+  },
 
-      if (sassLoader && sassLoader.oneOf) {
-        sassLoader.oneOf.forEach((oneOfRule) => {
-          oneOfRule.use.forEach((loader) => {
-            if (loader.loader && loader.loader.includes('sass-loader')) {
-              loader.options = {
-                ...loader.options,
-                implementation: require('sass-embedded'),
-              };
-            }
-          });
-        });
-      }
+  // Nitro server configuration
+  nitro: {
+    compressPublicAssets: true,
+    prerender: {
+      // Continue build even if some routes fail (safer for static generation)
+      failOnError: false,
     },
   },
-};
+})

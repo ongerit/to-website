@@ -1,7 +1,7 @@
 <template>
-  <section class="container">
+  <section class="container" ref="containerRef">
       <navigation />
-      <marquee title='Work' link='featured'/>
+      <marquee title='Work' link='#'/>
     <div class="work">
       <work-item url="https://www.nationalgeographic.com/" title="National Geographic"  cover="nat-geo.png" :tech="['lodash', 'scss', 'react', 'es6', 'nodejs', 'drupal','webpack']"/>
       <work-item url="https://www.nbcnews.com/better" title="NBC"  cover="nbc.png" :tech="['scss', 'es6', 'lodash', 'ramen', 'node', 'react', 'underscore']"/>
@@ -18,27 +18,24 @@
 </template>
 
 <script>
-import Navigation from '~/components/Navigation'
-import Marquee from '~/components/Marquee'
-import WorkItem from '~/components/WorkItem'
-
 export default {
-  components: {
-    Navigation,
-    Marquee,
-    WorkItem
-  },
   mounted() {
     this.animateElement();
   },
   methods: {
     animateElement() {
-      this.$el.classList.add('animated');
-      this.$nextTick(() => {
-        setTimeout(() => {
-          document.querySelector('body').classList.add('loaded');
-        }, 1000);
-      });
+      const element = this.$refs.containerRef;
+      if (element) {
+        element.classList.add('animated');
+        this.$nextTick(() => {
+          setTimeout(() => {
+            const body = document.querySelector('body');
+            if (body) {
+              body.classList.add('loaded');
+            }
+          }, 1000);
+        });
+      }
     }
   }
 };

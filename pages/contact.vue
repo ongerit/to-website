@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container" ref="containerRef">
     <div>
       <navigation />
       <marquee class="spacer" title="Contact" />
@@ -33,18 +33,9 @@
 </template>
 
 <script>
-import axios from 'axios'
-import Navigation from '~/components/Navigation'
-import Marquee from '~/components/Marquee'
-import SocialItem from '~/components/SocialItem'
 import DOMPurify from 'dompurify'
 
 export default {
-  components: {
-    Navigation,
-    Marquee,
-    SocialItem
-  },
   data() {
     return {
       error: null,
@@ -60,13 +51,18 @@ export default {
   },
   methods: {
     animateElement() {
-      this.$el.classList.add('animated')
-      this.$nextTick(() => {
-        setTimeout(() => {
-          const body = document.querySelector('body')
-          body.classList.add('loaded')
-        }, 1000)
-      })
+      const element = this.$refs.containerRef
+      if (element) {
+        element.classList.add('animated')
+        this.$nextTick(() => {
+          setTimeout(() => {
+            const body = document.querySelector('body')
+            if (body) {
+              body.classList.add('loaded')
+            }
+          }, 1000)
+        })
+      }
     },
     validateEmail(email) {
       const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -93,21 +89,24 @@ export default {
       }
 
       try {
-        let url = '/sg';
+        const config = useRuntimeConfig()
+        let url = '/sg'
 
-        if (process.env.VUE_APP_ENV === 'dev') {
+        if (config.public.environment === 'development') {
           url = 'http://localhost:9090'
         }
 
-        const response = await axios.post(url, data)
+        const response = await $fetch(url, {
+          method: 'POST',
+          body: data
+        })
 
-        if (response.status === 200) {
-          const thankYouMessage = `Thank you for your message, ${this.firstName}. I will respond to you shortly!`
-          const thankYouEl = document.querySelector('.contact__thank-you')
-          const formEl = document.querySelector('form')
-          formEl.reset()
-          thankYouEl.textContent = thankYouMessage
-        }
+        const thankYouMessage = `Thank you for your message, ${this.firstName}. I will respond to you shortly!`
+        const thankYouEl = document.querySelector('.contact__thank-you')
+        const formEl = document.querySelector('form')
+        if (formEl) formEl.reset()
+        if (thankYouEl) thankYouEl.textContent = thankYouMessage
+
       } catch (error) {
         this.errorMessage = 'There seems to have been an error, your message was not sent. Please try again later.'
       }

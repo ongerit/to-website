@@ -1,19 +1,17 @@
 <template>
   <main :style="{ position: 'relative' }">
-    <nuxt />
+    <NuxtPage />
     <FooterComponent />
   </main>
 </template>
 
 <script>
-import FooterComponent from '~/components/FooterComponent';
 export default {
-  components: {
-    FooterComponent
-  }
+  // Components are auto-imported in Nuxt 3
 };
 </script>
 
+<style>
 html {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;

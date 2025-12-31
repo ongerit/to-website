@@ -1,5 +1,5 @@
 <template>
-  <section class="container" v-on:mouseover="displayBodyText">
+  <section class="container" ref="containerRef" v-on:mouseover="displayBodyText">
     <promo  v-if="displayPromo" />
     <p style="display:none">{{displayPromo}}</p>
     <navigation />
@@ -13,16 +13,7 @@
   </section>
 </template>
 <script>
-import Marquee from '~/components/Marquee'
-import Navigation from '~/components/Navigation'
-import Promo from '~/components/Promo'
-
 export default {
-  components: {
-    Marquee,
-    Navigation,
-    Promo
-  },
   data () {
     return {
       displayPromo: false
@@ -30,27 +21,36 @@ export default {
   },
   methods: {
     animateElement () {
-      this.$el.classList.add('animated')
-      this.$nextTick(() => {
-        setTimeout(() => {
-          const $body = document.querySelector('body')
-          $body.classList.add('loaded')
-        }, 1000)
-      })
+      const element = this.$refs.containerRef
+      if (element) {
+        element.classList.add('animated')
+        this.$nextTick(() => {
+          setTimeout(() => {
+            const $body = document.querySelector('body')
+            if ($body) {
+              $body.classList.add('loaded')
+            }
+          }, 1000)
+        })
+      }
     },
     isPromo () {
-      const urlParams = new URLSearchParams(window.location.search)
-      const promo = urlParams.get('p')
-      this.displayPromo = promo ? true : ''
+      if (import.meta.client) {
+        const urlParams = new URLSearchParams(window.location.search)
+        const promo = urlParams.get('p')
+        this.displayPromo = promo ? true : ''
+      }
     },
   displayBodyText () {
-      const ELEMENT = this.$el.classList
-      ELEMENT.add('illuminate')
-      this.$nextTick(() => {
-        setTimeout(() => {
-          ELEMENT.remove('illuminate')
-        }, 5000)
-      })
+      const element = this.$refs.containerRef
+      if (element) {
+        element.classList.add('illuminate')
+        this.$nextTick(() => {
+          setTimeout(() => {
+            element.classList.remove('illuminate')
+          }, 5000)
+        })
+      }
     }
   },
   mounted () {

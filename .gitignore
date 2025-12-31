@@ -94,3 +94,4 @@ static/sendgrid/cred.php
 .yarnrc.yml
 package-lock.json
 yarn.lock
+.output/
