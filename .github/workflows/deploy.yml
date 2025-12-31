@@ -15,15 +15,43 @@ jobs:
         key: ${{ secrets.SSH_KEY}} # Private or public key of the server
         username: ${{secrets.SSH_USERNAME}} # User of the server you want to ssh into
         script: |
-          zsh
-          source /home/${{secrets.SSH_USERNAME}}/.profile
-          source ~/.nvm/nvm.sh
-          nvm install v16.13.1
-          nvm use v16.13.1
+          set -euo pipefail
+
+          # Load shell/env (DO droplets often need this for nvm)
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+          [ -s "$HOME/.profile" ] && . "$HOME/.profile"
+          node -v || true
+          npm -v || true
+
+          # Use a modern Node for Nuxt 3 (recommended)
+          nvm install 20
+          nvm use 20
+          echo "🟢 Node: $(node -v)"
+          echo "🟢 NPM:  $(npm -v)"
+
           cd /var/www/html/portfolio
+
+          echo "📥 Updating repo..."
           git fetch origin
           git reset --hard origin/main
-          git pull --force origin main
-          rm -rf node_modules 
-          npm install
+
+          echo "🧹 Cleaning build artifacts..."
+          rm -rf .nuxt .output dist
+
+          echo "🎨 Ensuring Sass setup (avoid sass-embedded issues in prod)..."
+          npm uninstall sass-embedded || true
+          npm install --save-dev sass
+
+          echo "📦 Installing dependencies..."
+          # Prefer npm ci if you have a lockfile; fallback to npm install
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+          echo "🔨 Generating static site..."
           NODE_ENV=production npm run generate
+
+          echo "✅ Deploy complete."
