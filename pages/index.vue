@@ -4,7 +4,7 @@
     <p style="display:none">{{displayPromo}}</p>
     <navigation />
     <div class="home">
-      <p class="home__blurb">Hi! I’m Thomas Ongeri. I’m an engineering leader</p>
+      <p class="home__blurb">Hi! I'm Thomas. An engineering leader, I help teams build ✨ exceptional products.</p>
         <span><p></p><marquee title='News' link='news' text='catch up on my'/></span>
         <span><p></p><marquee title='Clients' link='clients' text='view some of my'/></span>
         <span><p></p><marquee title='Work' link='work' text='check out my'/></span>
