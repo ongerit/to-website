@@ -27,4 +27,3 @@ jobs:
           rm -rf node_modules 
           npm install
           NODE_ENV=production npm run generate
-          
