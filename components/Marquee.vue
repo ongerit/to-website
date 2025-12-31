@@ -1,5 +1,5 @@
 <template>
-  <div class="marquee">
+  <div class="marquee" ref="marqueeRef">
     <h2><a :data-before='text' :title='title' :href='link'><span>{{title}}</span></a></h2>
   </div>
 </template>
@@ -11,9 +11,11 @@ export default {
     animateElement () {
       this.$nextTick(() => {
         setTimeout(() => {
-          const $domElement = this.$el
-          const domElementName = $domElement.classList[0]
-          this.$el.classList.add(`${domElementName}--animated`)
+          const element = this.$refs.marqueeRef
+          if (element) {
+            const domElementName = element.classList[0]
+            element.classList.add(`${domElementName}--animated`)
+          }
         }, 2000)
       })
     }

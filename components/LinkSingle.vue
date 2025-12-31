@@ -1,20 +1,17 @@
 <template>
   <div class="link-single">
-      <div class="link-single__content">
-        <p class="link-single__date">{{date}}</p>
-        <div class="link-single__desc">
-          <a :href='link' :title='title' target="_blank">
-            <div class="link-single__copy">
-              <p>{{title}}</p>
-              <h3>{{desc}}</h3>
-              <p>{{author}}</p>
-            </div>
-          </a>
-        </div>
-
-        <!-- <div class="link-single__cta"> -->
-        </div>
+    <div class="link-single__content">
+      <p class="link-single__date">{{date}}</p>
+      <div class="link-single__desc">
+        <a :href='link' :title='title' target="_blank">
+          <div class="link-single__copy">
+            <p>{{title}}</p>
+            <h3>{{desc}}</h3>
+            <p>{{author}}</p>
+          </div>
+        </a>
       </div>
+      <!-- <div class="link-single__cta"></div> -->
     </div>
   </div>
 </template>

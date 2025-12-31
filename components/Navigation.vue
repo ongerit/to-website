@@ -2,7 +2,7 @@
   <div class="navigation">
     <div class="navigation__title"><a href="/">{{title}}</a><span><a :href='`/${version.link}`'> v.{{version.current}}</a></span></div>
     <ul v-show="$route.name !='index'" class="navigation__links">
-      <li v-for='item in nav'><a :title='item.name' :href='item.link'>{{item.name}}</a></li>
+      <li v-for='item in nav' :key="item.link"><a :title='item.name' :href='item.link'>{{item.name}}</a></li>
       <!-- <li>THOMAS ONGERI</li> -->
     </ul>
   </div>

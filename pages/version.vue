@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container" ref="containerRef">
     <Navigation />
     <Marquee title="Versions" />
     <div class="version">
@@ -23,20 +23,12 @@
 </template>
 
 <script>
-import Navigation from '~/components/Navigation'
-import Marquee from '~/components/Marquee'
-import VersionItem from '~/components/VersionItem'
-
 export default {
-  components: {
-    Navigation,
-    Marquee,
-    VersionItem
-  },
   methods: {
     animateElement () {
-      if (this.$el) {
-        this.$el.classList.add('animated')
+      const element = this.$refs.containerRef;
+      if (element) {
+        element.classList.add('animated')
       }
       this.$nextTick(() => {
         setTimeout(() => {

@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container" ref="containerRef">
       <navigation />
       <marquee title='Work' link='featured'/>
     <div class="work">
@@ -18,27 +18,24 @@
 </template>
 
 <script>
-import Navigation from '~/components/Navigation'
-import Marquee from '~/components/Marquee'
-import WorkItem from '~/components/WorkItem'
-
 export default {
-  components: {
-    Navigation,
-    Marquee,
-    WorkItem
-  },
   mounted() {
     this.animateElement();
   },
   methods: {
     animateElement() {
-      this.$el.classList.add('animated');
-      this.$nextTick(() => {
-        setTimeout(() => {
-          document.querySelector('body').classList.add('loaded');
-        }, 1000);
-      });
+      const element = this.$refs.containerRef;
+      if (element) {
+        element.classList.add('animated');
+        this.$nextTick(() => {
+          setTimeout(() => {
+            const body = document.querySelector('body');
+            if (body) {
+              body.classList.add('loaded');
+            }
+          }, 1000);
+        });
+      }
     }
   }
 };
