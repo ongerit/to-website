@@ -20,11 +20,6 @@ jobs:
           # Load shell/env (DO droplets often need this for nvm)
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-          [ -s "$HOME/.profile" ] && . "$HOME/.profile"
-          node -v || true
-          npm -v || true
-
-          # Use Node 18 LTS for better Nuxt 3 compatibility
           nvm install 18
           nvm use 18
           echo "🟢 Node: $(node -v)"
