@@ -15,6 +15,10 @@ jobs:
         key: ${{ secrets.SSH_KEY }} # Private or public key of the server
         username: ${{ secrets.SSH_USERNAME }} # User of the server you want to ssh into
         script: |
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+          nvm install 22
+          nvm use 22
           cd /var/www/html/portfolio
           git pull origin main
           npm install
