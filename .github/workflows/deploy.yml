@@ -12,8 +12,8 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.SSH_HOST }} # IP address of the server you wish to ssh into
-        key: ${{ secrets.SSH_KEY}} # Private or public key of the server
-        username: ${{secrets.SSH_USERNAME}} # User of the server you want to ssh into
+        key: ${{ secrets.SSH_KEY }} # Private or public key of the server
+        username: ${{ secrets.SSH_USERNAME }} # User of the server you want to ssh into
         script: |
           set -euo pipefail
 
@@ -38,9 +38,12 @@ jobs:
           # Will be handled by fresh install
 
           echo "📦 Installing dependencies (fresh install)..."
-          npm install
+          npm install --legacy-peer-deps
 
           echo "🔨 Generating static site..."
-          NODE_ENV=production npm run generate
+          NODE_ENV=production npm run generate || {
+            echo "❌ Generate failed, checking for errors..."
+            exit 1
+          }
 
           echo "✅ Deploy complete."
