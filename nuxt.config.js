@@ -29,8 +29,16 @@ export default defineNuxtConfig({
       ],
       script: [
         {
-          src: 'https://tag.clearbitscripts.com/v1/pk_92f42a6ac7c2d0c7ce0754938ddc154d/tags.js',
-          referrerpolicy: 'strict-origin-when-cross-origin',
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-6Y2Z4ZE8YB',
+          async: true,
+        },
+        {
+          children: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6Y2Z4ZE8YB');
+          `,
         },
       ],
     },
