@@ -24,9 +24,9 @@ jobs:
           node -v || true
           npm -v || true
 
-          # Use a modern Node for Nuxt 3 (recommended)
-          nvm install 20
-          nvm use 20
+          # Use Node 18 LTS for better Nuxt 3 compatibility
+          nvm install 18
+          nvm use 18
           echo "🟢 Node: $(node -v)"
           echo "🟢 NPM:  $(npm -v)"
 
@@ -36,20 +36,14 @@ jobs:
           git fetch origin
           git reset --hard origin/main
 
-          echo "🧹 Cleaning build artifacts..."
-          rm -rf .nuxt .output dist
+          echo "🧹 Cleaning build artifacts and node_modules..."
+          rm -rf .nuxt .output dist node_modules
 
           echo "🎨 Ensuring Sass setup (avoid sass-embedded issues in prod)..."
-          npm uninstall sass-embedded || true
-          npm install --save-dev sass
+          # Will be handled by fresh install
 
-          echo "📦 Installing dependencies..."
-          # Prefer npm ci if you have a lockfile; fallback to npm install
-          if [ -f package-lock.json ]; then
-            npm ci
-          else
-            npm install
-          fi
+          echo "📦 Installing dependencies (fresh install)..."
+          npm install
 
           echo "🔨 Generating static site..."
           NODE_ENV=production npm run generate
