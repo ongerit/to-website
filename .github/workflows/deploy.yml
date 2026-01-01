@@ -21,6 +21,7 @@ jobs:
           nvm use 22
           cd /var/www/html/portfolio
           git pull origin main
+          sudo chown -R github:www-data /var/www/html/portfolio
           sudo rm -rf node_modules
           sudo rm -rf .nuxt
           npm install
