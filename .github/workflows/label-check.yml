@@ -1,4 +1,4 @@
-name: Require AI Label
+name: Require AI Label on deploy
 
 on:
   pull_request:
